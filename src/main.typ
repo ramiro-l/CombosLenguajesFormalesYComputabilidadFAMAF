@@ -38,7 +38,7 @@
   [Defina $<< s_1, s_2, dots >>$.],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/2.2-codificacion-de-infinituplas-de-numeros",
   [
-    Dada una infinitupla $(s_1, s_2, dots) in omega^(#text_floor($NN$))$ usamos  *$<< s_1, s_2, dots >>$* para denotar al número $product_(i=1)^(infinity) "pr"(i)^(s_i)$ #footnote[Donde $"pr(i)"$ es la función que retorna el i-ésimo primo.]
+    Dada una infinitupla $(s_1, s_2, dots) in omega^(#text_floor($NN$))$, usamos *$<< s_1, s_2, dots >>$* para denotar al número $product_(i=1)^(infinity) "pr"(i)^(s_i)$ #footnote[Donde $"pr(i)"$ es la función que retorna el i-ésimo primo.]
   ],
 )
 
@@ -48,8 +48,8 @@
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/1.10-funciones-y-conjuntos-sigma-mixtos#definicion-de-funcion-sigma-mixta",
   [
     Sea $Sigma$ un alfabeto finito. Dada una función $f$, diremos que *$f$ es una función #sigmaa.mixta* si cumple las siguientes propiedades:
-    - Existe $n, m >= 0$, tales que $D_f c= #omega_sigma_n_m$
-    - Y ademas $I_f c= omega$ o $I_f c= #sigmaa.est$
+    - Existen $n, m >= 0$ tales que $D_f c= #omega_sigma_n_m$
+    - Además $I_f c= omega$ o $I_f c= #sigmaa.est$
   ],
 )
 
@@ -58,7 +58,7 @@
   [Defina "familia #sigmaa.indexada de funciones".],
   link_apunte: "recursion-primitiva-sobre-variable-alfabetica-con-valores-numericos",
   [
-    Dado un alfabeto $Sigma$, una *familia #sigmaa.indexada de funciones* sera una función $~G~$ tal que $D_(~G~) = Sigma$ y para cada $a in D_(~G~)$ se tiene que $~G~(a)$ es una función. \
+    Dado un alfabeto $Sigma$, una *familia #sigmaa.indexada de funciones* será una función $~G~$ tal que $D_(~G~) = Sigma$ y para cada $a in D_(~G~)$ se tiene que $~G~(a)$ es una función. \
     Notar que para cada $a in Sigma$ escribimos $~G~_a$ para denotar a la función $~G~(a)$.
   ],
 )
@@ -72,12 +72,12 @@
     Supongamos $Sigma$ un alfabeto finito. Sea
     $ f: #bloque_fijo -> omega $
     con $#conjuntos_omega c= omega$ y $#conjuntos_sigma c= #sigmaa.est$ conjuntos no vacíos y $~G~$ una familia #sigmaa.indexada de funciones tal que
-    $ ~G~_a : omega X #bloque_fijo X #sigmaa.est -> omega "para cada "a in Sigma $
-    Definamos *$R(f, ~G~)$*$= #bloque_fijo X #sigmaa.est -> omega$
+    $ ~G~_a : omega X #bloque_fijo X #sigmaa.est -> omega "para cada " a in Sigma $
+    Definamos *$R(f, ~G~)$*$: #bloque_fijo X #sigmaa.est -> omega$
     de la siguiente manera
 
-    - $R(f, ~G~)(arrow(x), arrow(alpha), epsilon) = f(arrow(x), arrow(alpha) )$
-    - $R(f, ~G~)(arrow(x), arrow(alpha),alpha a) = ~G~_a\(R(f, ~G~)(arrow(x), arrow(alpha),alpha), alpha)$
+    - $R(f, ~G~)(arrow(x), arrow(alpha), epsilon) = f(arrow(x), arrow(alpha))$
+    - $R(f, ~G~)(arrow(x), arrow(alpha), alpha a) = ~G~_a (R(f, ~G~)(arrow(x), arrow(alpha), alpha), alpha)$
 
     Diremos que $R(f, ~G~)$ es obtenida por _recursión primitiva_ a partir de $f$ y $~G~$.
   ],
@@ -94,11 +94,11 @@
     note: [ no hace falta que defina $|-$],
     link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.1-el-paradigma-de-turing#la-relacion-vdash",
     [
-      Para $d,d' in bold("Des")$ y $n >= 0$ escribimos *$d |-n d'$ *si existe $d_1,dots, d_(n+1) in bold("Des")$ tales que
+      Para $d,d' in bold("Des")$ y $n >= 0$, escribimos *$d |-n d'$* si existen $d_1,dots, d_(n+1) in bold("Des")$ tales que
       $
-        & d = d_1                               \
-        & d' = d_(n+1)                          \
-        & d_i |- d_(i+1), med" para" i=1,dots,n
+        & d = d_1                                \
+        & d' = d_(n+1)                           \
+        & d_i |- d_(i+1), med "para " i=1,dots,n
       $
       Luego definimos *$d |-* d'$* si y solo si $(exists n in omega) d |-n d'$.
     ],
@@ -109,11 +109,11 @@
     [Defina $L(M)$],
     link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.1-el-paradigma-de-turing#el-lenguaje-lm",
     [
-      Sea $M$ una maquina de Truing. Diremos que una palabra _$alpha in #sigmaa.est$ es aceptada por $M$ por alcance final_ cuando
-      $ #text_floor($q_0B alpha$) |-* d", con" d "tal que St"(d) in F. $
-      El *lenguaje aceptado por $M$ por alcance de estado final* se define de la siguiente manera
+      Sea $M$ una máquina de Turing. Diremos que una palabra $alpha in #sigmaa.est$ _es aceptada por $M$ por alcance final_ cuando
+      $ #text_floor($q_0B alpha$) |-* d", con "d" tal que St"(d) in F. $
+      El *lenguaje aceptado por $M$ por alcance de estado final* se define de la siguiente manera:
       $
-        L(M) = {alpha in #sigmaa.est : alpha "es aceptada por "M" por alcance final"}
+        L(M) = {alpha in #sigmaa.est : alpha " es aceptada por "M" por alcance final"}
       $
     ],
   )
@@ -123,7 +123,7 @@
     [Defina "$f$ es una función de tipo (n, m, s)".],
     link_apunte: "https://apunte-lenguajes-logica.netlify.app/1.10-funciones-y-conjuntos-sigma-mixtos#el-tipo-de-una-funcion-mixta",
     [
-      Dada una función $f$ #sigmaa.mixta con $n,m in omega$ tales que $D_f c= #omega_sigma_n_m$ y ademas $I_f c= omega$ entonces diremos que *$f$ es una función de tipo $(n, m, \#)$*. Si en cambio, $I_f c= #sigmaa.est$ entonces diremos que *$f$ es una función de tipo $(n, m, *)$*.
+      Dada una función #sigmaa.mixta $f$ con $n,m in omega$ tales que $D_f c= #omega_sigma_n_m$ y además $I_f c= omega$, entonces diremos que *$f$ es una función de tipo $(n, m, \#)$*.\ Si en cambio $I_f c= #sigmaa.est$, entonces diremos que *$f$ es una función de tipo $(n, m, *)$*.
     ],
   )
 
@@ -144,7 +144,7 @@
     [Defina $(x)_i$],
     link_apunte: "https://apunte-lenguajes-logica.netlify.app/2.2-codificacion-de-infinituplas-de-numeros",
     [
-      Para $i in NN$, usaremos *$(x)_i$* para denotar al i-ésimo elemento de la infinitupla $(x)$, es decir, al $s_i$ de la definición anterior. Se le suele llamar la "bajada i-ésima de x" al numero $(x)_i$. \ #comentario[(Ya que representa bajar al exponente de $"pr"(i)$ en la única factorización de $x$ como producto de primos)]
+      Para $i in NN$, usaremos *$(x)_i$* para denotar al i-ésimo elemento de la infinitupla $(x)$, es decir, al $s_i$ de la definición anterior. Se le suele llamar la "bajada i-ésima de x" al número $(x)_i$. \ #comentario[(Ya que representa bajar al exponente de $"pr"(i)$ en la única factorización de $x$ como producto de primos)]
     ],
   )
 ]
@@ -159,13 +159,13 @@
   note: [no hace falta que defina "función #sigmaa.recursiva".],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#conjuntos-sigma-recursivamente-enumerables",
   [
-    Un conjunto $S c= #omega_sigma_n_m$ sera llamado *#sigmaa.recursivamente.enumerable* cuando sea vacío o haya una función $F: omega -> #omega_sigma_n_m$ tal que $I_F = S$ y $F_((i))$ sea #sigmaa.recursiva, para cada $i in {1,dots,n+m}$.
+    Un conjunto $S c= #omega_sigma_n_m$ será llamado *#sigmaa.recursivamente.enumerable* cuando sea vacío o haya una función $F: omega -> #omega_sigma_n_m$ tal que $I_F = S$ y $F_((i))$ sea #sigmaa.recursiva, para cada $i in {1,dots,n+m}$.
     #footnote()[
       Dados $k,l,n,m in omega$ y $F: D_F c= omega^k X #sigmaa.est^l -> #omega_sigma_n_m$ con $n+m>=1$. Entonces denotaremos con $F_((i))$ a la función $p_i^(n,m) compose F$, por lo cual las funciones $F_((i))$ son #sigmaa.mixtas. Ya que
       $F_((i)): D_F c= omega^k X #sigmaa.est^l -> omega$ para $i=1,dots,n$
       y
       $F_((i)): D_F c= omega^k X #sigmaa.est^l -> #sigmaa.est$ para $i=n+1,dots,n+m$.
-      Ademas notar que $F = [F_((1)),dots,F_((n+m))]$.
+      Además notar que $F = [F_((1)),dots,F_((n+m))]$.
     ]
   ],
 )
@@ -175,7 +175,7 @@
   [Defina $s<$],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/2.1-ordenes-naturales-sobre-sigmaast#el-caso-general",
   [
-    Sea $Sigma = {a_1,dots,a_n}$ un alfabeto no vació, con $<=$ un orden total sobre $Sigma$ dado por $a_1 < a_2 < dots < a_n$.
+    Sea $Sigma = {a_1,dots,a_n}$ un alfabeto no vacío, con $<=$ un orden total sobre $Sigma$ dado por $a_1 < a_2 < dots < a_n$.
     Definimos la función $s< : #sigmaa.est -> #sigmaa.est$ de la siguiente manera
     $
       & s<((a_n)^m) = (a_1)^(m+1) quad " para cada" m>=0                                                                  \
@@ -189,12 +189,12 @@
   [Defina $*<$],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/2.1-ordenes-naturales-sobre-sigmaast#el-caso-general",
   [
-    Sea $Sigma = {a_1,dots,a_n}$ un alfabeto no vació, con $<=$ un orden total sobre $Sigma$ dado por $a_1 < a_2 < dots < a_n$.
+    Sea $Sigma = {a_1,dots,a_n}$ un alfabeto no vacío, con $<=$ un orden total sobre $Sigma$ dado por $a_1 < a_2 < dots < a_n$.
     Definimos la función $*< : omega -> #sigmaa.est$ de la siguiente manera
     $
       & *<(0) = epsilon \
       & *<(i+1) = s<(*<(i)) quad #comentario[
-          (tal que $s<$ es la definida anteriormente)
+          (donde $s<$ es la función definida justo antes)
         ]
     $
   ],
@@ -205,14 +205,14 @@
   [Defina $\#<$],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/2.1-ordenes-naturales-sobre-sigmaast#el-caso-general",
   [
-    Sea $Sigma = {a_1,dots,a_n}$ un alfabeto no vació, con $<=$ un orden total sobre $Sigma$ dado por $a_1 < a_2 < dots < a_n$.
+    Sea $Sigma = {a_1,dots,a_n}$ un alfabeto no vacío, con $<=$ un orden total sobre $Sigma$ dado por $a_1 < a_2 < dots < a_n$.
     Definimos la función $\#< : #sigmaa.est -> omega$ de la siguiente manera
     $
       & \#<(epsilon) = 0                                                                                     \
       & \#<(a_(i_k) dots a_(i_0)) = i_k n^k + dots + i_0 n^0 quad " para " i_0, i_1, dots, i_k in {1,dots,n} \
     $
-    #comentario[Otra forma (equivalente) de ver el caso recursivo seria \ *$\#<(alpha) = i_k n^k + dots + i_0 n^0$* con  $alpha = a_(i_k) dots a_(i_0)$ tal que $k in omega$ y $i_0, i_1, dots, i_k in {1,dots,n}$] #footnote([
-      Sabemos que $alpha$ puede escribirse de esa manera por que $alpha != epsilon$ y el lema 2.2 (del apunte) o lema 6 (de la guía 2).
+    #comentario[Otra forma (equivalente) de ver el caso recursivo sería \ *$\#<(alpha) = i_k n^k + dots + i_0 n^0$* con $alpha = a_(i_k) dots a_(i_0)$ tal que $k in omega$ y $i_0, i_1, dots, i_k in {1,dots,n}$] #footnote([
+      Sabemos que $alpha$ puede escribirse de esa manera porque $alpha != epsilon$ y el lema 2.2 (del apunte) o lema 6 (de la guía 2).
     ])
   ],
 )
@@ -232,7 +232,7 @@
       set enum(numbering: "(1)", indent: 12.8pt)
       [
         + El conjunto de datos de entrada de $PP$ es #omega_sigma_n_m.
-        + El conjunto de datos de salida esta contenido en $omega$.
+        + El conjunto de datos de salida está contenido en $omega$.
         + Si $(arrow(x), arrow(alpha)) in D_f$, entonces $PP$ se detiene partiendo de $(arrow(x), arrow(alpha))$, dando como dato de salida $f(arrow(x), arrow(alpha))$.
         + Si $(arrow(x), arrow(alpha)) in (#omega_sigma_n_m) - D_f$, entonces $PP$ no se detiene partiendo de $(arrow(x), arrow(alpha))$.
       ]
@@ -246,14 +246,14 @@
 #definitionStructure(
   1,
   [
-    Defina cuando un conjunto $S c= #omega_sigma_n_m$ es llamada #sigmaa.efectivamente.computable y defina "el procedimiento efectivo $PP$ que decide la pertenencia a $S$".],
+    Defina cuando un conjunto $S c= #omega_sigma_n_m$ es llamado #sigmaa.efectivamente.computable y defina "el procedimiento efectivo $PP$ que decide la pertenencia a $S$".],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/3.2-conjuntos-sigma-efectivamente-computables",
   [
-    Un conjunto $S c= #omega_sigma_n_m$ sera llamado *#sigmaa.efectivamente.computable* cuando la función característica $chi_S^(#omega_sigma_n_m)$ sea #sigmaa.efectivamente.computable.
+    Un conjunto $S c= #omega_sigma_n_m$ será llamado *#sigmaa.efectivamente.computable* cuando la función característica $chi_S^(#omega_sigma_n_m)$ sea #sigmaa.efectivamente.computable.
 
     Y el procedimiento efectivo *$PP$ que decide la pertenencia a $S$*, con respecto al conjunto #omega_sigma_n_m es aquel que computa a $chi_S^(#omega_sigma_n_m)$, es decir
     - El conjunto de datos de entrada de $PP$ es #omega_sigma_n_m, siempre termina y da como dato de salida un elemento de ${0,1}$.
-    - Dado $(arrow(x), arrow(alpha)) in #omega_sigma_n_m$, $PP$ da como salida el numero $1$ si $(arrow(x), arrow(alpha)) in S$ y al numero $0$ si $(arrow(x), arrow(alpha)) in.not S$.
+    - Dado $(arrow(x), arrow(alpha)) in #omega_sigma_n_m$, $PP$ da como salida el número $1$ si $(arrow(x), arrow(alpha)) in S$ y al número $0$ si $(arrow(x), arrow(alpha)) in.not S$.
   ],
 )
 
@@ -262,11 +262,11 @@
 #definitionStructure(
   1,
   [
-    Defina cuando un conjunto $S c= #omega_sigma_n_m$ es llamada #sigmaa.efectivamente.enumerable y defina "el procedimiento efectivo $PP$ que enumera a $S$".],
+    Defina cuando un conjunto $S c= #omega_sigma_n_m$ es llamado #sigmaa.efectivamente.enumerable y defina "el procedimiento efectivo $PP$ que enumera a $S$".],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/3.3-conjuntos-sigma-efectivamente-enumerables",
   [
     #text(size: 10.7107pt)[
-      Un conjunto $S c= #omega_sigma_n_m$ sera llamado *#sigmaa.efectivamente.enumerable* cuando sea vació o haya una función $F: omega -> #omega_sigma_n_m$ tal que $I_F = S$ y $F_((i))$ sea #sigmaa.efectivamente.computable, para cada $i in {1,dots,n+m}$.
+      Un conjunto $S c= #omega_sigma_n_m$ será llamado *#sigmaa.efectivamente.enumerable* cuando sea vacío o haya una función $F: omega -> #omega_sigma_n_m$ tal que $I_F = S$ y $F_((i))$ sea #sigmaa.efectivamente.computable, para cada $i in {1,dots,n+m}$.
     ]
 
     Y el procedimiento efectivo *$PP$ que enumera a $S$* se define como
@@ -283,7 +283,7 @@
   ],
 )
 
-En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que esta en #link(<procedimiento-efectivo>)[definiciones auxiliares].
+En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que está en #link(<procedimiento-efectivo>)[definiciones auxiliares].
 
 #pagebreak()
 
@@ -292,11 +292,11 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 #definitionStructure(
   1,
   [
-    Defina cuando una función $f: D_f c= #omega_sigma_n_m -> omega$ es llamada #sigmaa.turing.computable y defina "la maquina de Truing $M$ que computa a la función $f$".],
+    Defina cuando una función $f: D_f c= #omega_sigma_n_m -> omega$ es llamada #sigmaa.turing.computable y defina "la máquina de Turing $M$ que computa a la función $f$".],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.1-el-paradigma-de-turing.html#definicion%20de%20maquina%20de%20Turing%20con%20unit",
   [
     #show math.equation.where(block: true): set block(below: 1.2em, above: 0.8em)
-    Diremos que una función $f: D_f c= #omega_sigma_n_m -> omega$ es *#sigmaa.turing.computable* si existe una maquina de Truing con unit, $M = (Q, Sigma, Gamma, delta, q_0, B, unit, F)$ tal que
+    Diremos que una función $f: D_f c= #omega_sigma_n_m -> omega$ es *#sigmaa.turing.computable* si existe una máquina de Turing con unit, $M = (Q, Sigma, Gamma, delta, q_0, B, unit, F)$ tal que
     #block(above: 11pt, below: 11pt)[
       #set enum(numbering: "(1)", indent: 12pt, spacing: 11pt)
       + Si $(arrow(x), arrow(alpha)) in D_f$, entonces hay un $p in Q$ tal que $med med #text_floor([$ q_0 B med unit^(x_1) B dots B med unit^(x_n) B alpha_1 B dots B alpha_m $])
@@ -305,7 +305,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       + Si $(arrow(x), arrow(alpha)) in #omega_sigma_n_m - D_f$, entonces $M$ *no* se detiene partiendo de $#text_floor([$ q_0 B med unit^(x_1) B dots B med unit^(x_n) B alpha_1 B dots B alpha_m $])$
     ]
 
-    Cuando $M$ y $f$ cumplan los items (1) y (2), diremos que *$M$ que computa a la función $f$*.
+    Cuando $M$ y $f$ cumplan los items (1) y (2), diremos que *$M$ computa a la función $f$*.
   ],
 )
 
@@ -319,9 +319,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #show math.equation.where(block: true): set block(below: 1em, above: 1.2em)
     Sea $Sigma$ un alfabeto finito y sea $P: D_P c= omega X #omega_sigma_n_m -> omega$
     un predicado. Dado $(x->, alpha->) in #omega_sigma_n_m$, cuando exista al menos un $t in omega$ tal que $P(t, x->, alpha->) = 1$, usaremos #h(1.8cm)$min_t P(t, x->, alpha->)$ \
-    para denotar al menor de tales $t's$. Esta expresión esta definida solo para aquellas $(n+m)$-uplas $(x->, alpha->)$ para las cuales existe al menos un $t in omega$ tal que se da $P(t, x->, alpha->) = 1$ (obviamente también $(t, x->, alpha->) in D_p$).
+    para denotar al menor de tales $t's$. Esta expresión está definida solo para aquellas $(n+m)$-uplas $(x->, alpha->)$ para las cuales existe al menos un $t in omega$ tal que se da $P(t, x->, alpha->) = 1$ (obviamente también $(t, x->, alpha->) in D_P$).
 
-    Ahora si definamos
+    Ahora sí, definamos
     #show math.equation.where(block: true): set block(below: 0.8em, above: 0em)
     *$ M(P) = lambda x->alpha-> [ min_t P(t, x->, alpha->) ] $*
     Es decir que
@@ -342,11 +342,11 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/2.2-codificacion-de-infinituplas-de-numeros",
   [
     #box(inset: (top: -10.1pt, bottom: 8pt))[
-      La función _Lt_ $:NN -> omega$ de define de la siguiente manera
+      La función _Lt_ $:NN -> omega$ se define de la siguiente manera
       #box(inset: (bottom: -10.1pt))[
         $
           italic("Lt")(x) = cases(
-            max_i (x)_i != 0 quad "si" x!=0,
+            max_i (x)_i != 0 quad "si" x!=1,
             0 #h(2.1cm) quad "si" x=1
           )
         $
@@ -360,7 +360,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [Defina Conjunto rectangular],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/1.10-funciones-y-conjuntos-sigma-mixtos#conjuntos-rectangulares",
   [
-    Un conjunto #sigmaa.mixto *$S$* sea llamado *rectangular* si es de la forma $quad #bloque_fijo$ \
+    Un conjunto #sigmaa.mixto *$S$* será llamado *rectangular* si es de la forma $quad #bloque_fijo$ \
     con $S_1, dots, S_n c= omega$ y $L_1, dots, L_m c= #sigmaa.est$.
   ],
 )
@@ -397,7 +397,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       I_1 I_2 dots I_n
     $
-    donde $n >= 1$, $I_1, dots, I_n in #InsSigma$ y ademas cumple la siguiente propiedad llamada _ley de los GOTO_
+    donde $n >= 1$, $I_1, dots, I_n in #InsSigma$ y además cumple la siguiente propiedad llamada _ley de los GOTO_
     #align(center)[
       #par(justify: true)[
         _Para cada $i in {1,dots,n}$, si $"GOTO"L overline(m)$ es tramo final de $I_i$, \ entonces existe $j in {1,dots,n}$ tal que $I_j$ tiene label $L overline(m)$._
@@ -419,11 +419,11 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         epsilon #h(5.8cm) quad "caso contrario"
       )
     $
-    Notar que esa bien definido gracias al #link("https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#sintaxis-de-mathcalssigma")[Lema 4.40 del apunte]
+    Notar que está bien definido gracias al #link("https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#sintaxis-de-mathcalssigma")[Lema 4.40 del apunte]
     #footnote()[
       El lema 4.40 del apunte dice
       #enum(indent: 10pt, numbering: "(a)")[
-        Si $I_1, dots I_n = J_1, dots, J_m$ con $I_1, dots, I_n, J_1, dots, J_m in #InsSigma$, entonces $n = m$ y $I_i = J_i$ para cada $j >= 1$.
+        Si $I_1, dots I_n = J_1, dots, J_m$ con $I_1, dots, I_n, J_1, dots, J_m in #InsSigma$, entonces $n = m$ y $I_i = J_i$ para cada $i >= 1$.
       ][
         Si $~P~ in #ProSigma$, entonces existe una única sucesión de instrucciones $I_1, dots, I_n$ tal que $~P~ = I_1 I_2 dots I_n$.
       ]
@@ -436,7 +436,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [Defina $n(~P~)$],
   [
     Dado $~P~ in #ProSigma$ definimos $n(~P~)$ como el número de instrucciones que tiene el programa $~P~$. \
-    Notar que $n(~P~) in NN$ y esta unívocamente determinado por $~P~$ gracias al #link("https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#sintaxis-de-mathcalssigma")[Lema 4.40 del apunte] @lema-4.40.
+    Notar que $n(~P~) in NN$ y está unívocamente determinado por $~P~$ gracias al #link("https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#sintaxis-de-mathcalssigma")[Lema 4.40 del apunte] @lema-4.40.
   ],
 )
 
@@ -509,12 +509,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
                                   El verbo "realizarp" una actividad es realizarla si se puede.
                                 ]" " I_i^(~P~), "estando en el estado" (s->, sigma->)
       $
-      Para definiría formalmente damos los siguientes casos
-      #block(above: 12pt, below: 12pt)[
-        - Caso $i in.not {1,dots,n(~P~)}$. Entonces $#SP (i, s->, sigma->) = (i, s->, sigma->)$
-      ]
-      Cuando $i in.not {1,dots,n(~P~)}$ estamos hablando de la descripción instantánea luego de realizar $I_i^(~P~)$ estando en el estado $(s->, sigma->)$, por ello tenemos los siguientes casos
-      #block(above: 12.8pt, below: 0pt, width: 100%)[
+      Para definirla formalmente damos los siguientes casos \
+      Cuando *$i in {1,dots,n(~P~)}$* entonces
+      #block(above: 12.8pt, below: 13pt, width: 100%)[
         - Caso #box(width: 125pt)[$#Bas_fun = #N_k <- #N_k #menos_punto 1$]. Entonces $#SP_fun = (i+1, (s_1, dots, s_(k-1),s_k #menos_punto 1,s_(k+1), dots), sigma->)$
         - Caso #box(width: 125pt)[$#Bas_fun = #N_k <- #N_k + 1$]. Entonces $#SP_fun = (i+1, (s_1, dots, s_(k-1),s_k + 1,s_(k+1), dots), sigma->)$
         - Caso #box(width: 125pt)[$#Bas_fun = #N_k <- #N_n$]. Entonces $#SP_fun = (i+1, (s_1, dots, s_(k-1),s_n ,s_(k+1), dots), sigma->)$
@@ -543,9 +540,11 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         - Caso #box(width: 125pt)[$#Bas_fun = "GOTO" #L_m$]. Entonces $#SP_fun = (min{l: I_l^(~P~) "tiene label" #L_m}, s->, sigma->)$
         - Caso #box(width: 125pt)[$#Bas_fun = "SKIP"$]. Entonces $#SP_fun = (i+1, s->, sigma->)$
       ]
+      Pero cuando *$i in.not {1,dots,n(~P~)}$* simplemente, $#SP (i, s->, sigma->) = (i, s->, sigma->)$.
     ],
   )
 ]
+
 #definitionStructure(
   4,
   [Defina relativo al lenguaje #SSigma, "estado obtenido luego de $t$ pasos, partiendo del estado $(s->, sigma->)$"],
@@ -565,7 +564,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [Defina relativo al lenguaje #SSigma, "$~P~$ se detiene (luego de $t$ pasos), partiendo del estado $(s->, sigma->)$"],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#definicion-matematica-de-detencion",
   [
-    Cuando la primer coordenada de
+    Cuando la primera coordenada de
     #block(above: 0pt, below: 12pt, width: 100%)[
       $
         overbrace(S_(~P~)(dots S_(~P~)( S_(~P~) (1,s->, sigma->))), "t veces")
@@ -584,7 +583,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#funciones-sigma-computables",
   [
     Dados $x_1, dots, x_n in omega$ y $sigma_1, dots, sigma_m in #sigmaa.est$, usaremos $||x_1,dots,x_n,sigma_1,dots,sigma_m||$ para denotar el estado $((x_1,dots,x_n,0,dots),(sigma_1,dots,sigma_m, dots))$. \
-    Ahora si, dado $~P~ in #ProSigma$, definamos para cada par $n,m in omega$, la función #horquilla_n_m_num se la siguiente manera
+    Ahora sí, dado $~P~ in #ProSigma$, definamos para cada par $n,m in omega$, la función #horquilla_n_m_num de la siguiente manera
     #show math.equation.where(block: true): set par(leading: 0em)
     $
                    D_#horquilla_n_m_num & = {
@@ -625,13 +624,13 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#minimizacion-de-variable-alfabetica",
   [
     #show math.equation.where(block: true): set block(below: 1em, above: 1.3em)
-    Sea $Sigma$ un alfabeto no vacío, $<=$ un orden total sobre $Sigma$ #footnote([Recordar que $<=$ pude ser naturalmente extendido a un orden total sobre #sigmaa.est #link_arrow("https://apunte-lenguajes-logica.netlify.app/2.1-ordenes-naturales-sobre-sigmaast#extension-del-orden-total-de-sigma-a-sigmaast")]) y $P: D_P c= #omega_sigma_n_m X #sigmaa.est -> #sigmaa.est$ un predicado. Dado $(x->, alpha->) in #omega_sigma_n_m$, cuando exista al menos un $alpha in #sigmaa.est$ tal que $P(x->, alpha->, alpha) = 1$, usaremos
+    Sea $Sigma$ un alfabeto no vacío, $<=$ un orden total sobre $Sigma$ #footnote([Recordar que $<=$ puede ser naturalmente extendido a un orden total sobre #sigmaa.est #link_arrow("https://apunte-lenguajes-logica.netlify.app/2.1-ordenes-naturales-sobre-sigmaast#extension-del-orden-total-de-sigma-a-sigmaast")]) y $P: D_P c= #omega_sigma_n_m X #sigmaa.est -> #sigmaa.est$ un predicado. Dado $(x->, alpha->) in #omega_sigma_n_m$, cuando exista al menos un $alpha in #sigmaa.est$ tal que $P(x->, alpha->, alpha) = 1$, usaremos
     $
       min_alpha P(x->, alpha->, alpha)
     $
-    para denotar al menor de tales $alpha's$. Esta expresión esta definida solo para aquellas $(n+m)$-uplas $(x->, alpha->)$ para las cuales existe al menos un $alpha in #sigmaa.est$ tal que se da $P(x->, alpha->, alpha) = 1$ (obviamente también $(x->, alpha->, alpha) in D_p$).
+    para denotar al menor de tales $alpha's$. Esta expresión está definida solo para aquellas $(n+m)$-uplas $(x->, alpha->)$ para las cuales existe al menos un $alpha in #sigmaa.est$ tal que se da $P(x->, alpha->, alpha) = 1$ (obviamente también $(x->, alpha->, alpha) in D_p$).
     #show math.equation.where(block: true): set block(below: 1em, above: 1em)
-    Ahora si definamos
+    Ahora sí, definamos
     #align(center)[
       *$M<(P)$* $= lambda x->alpha-> [ min_alpha P(x->, alpha->, alpha) ]$
     ]
@@ -655,7 +654,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [Defina cuando un conjunto $S c= #omega_sigma_n_m$ es llamado #sigmaa.computable.],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#conjuntos-sigma-computables",
   [
-    Un conjunto $S c= #omega_sigma_n_m$ sera llamado *#sigmaa.computable* cuando la función $chi_S^(#omega_sigma_n_m)$ sea #sigmaa.computable.
+    Un conjunto $S c= #omega_sigma_n_m$ será llamado *#sigmaa.computable* cuando la función $chi_S^(#omega_sigma_n_m)$ sea #sigmaa.computable.
   ],
 )
 
@@ -664,7 +663,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [Defina cuando un conjunto $S c= #omega_sigma_n_m$ es llamado #sigmaa.enumerable.],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#conjuntos-sigma-enumerables",
   [
-    Un conjunto $S c= #omega_sigma_n_m$ sera llamado *#sigmaa.enumerable* cuando sea vació o haya una función $F: omega -> #omega_sigma_n_m$ tal que $I_F = S$ y $F_((i))$ sea #sigmaa.computable, para cada $i in {1,dots,n+m}$.
+    Un conjunto $S c= #omega_sigma_n_m$ será llamado *#sigmaa.enumerable* cuando sea vacío o haya una función $F: omega -> #omega_sigma_n_m$ tal que $I_F = S$ y $F_((i))$ sea #sigmaa.computable, para cada $i in {1,dots,n+m}$.
   ],
 )
 
@@ -676,10 +675,10 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Diremos que *el programa $~P~ in #SSigma$ enumera a $S$* cuando cumple lo siguiente
     #block()[
       #set list(spacing: 14pt)
-      - Para cada $x in omega$, tenemos que $~P~$ se detiene partiendo del estado $||x||$ y llega a un estado $((x_1, dots, x_n, y_1,dots), (sigma_1, dots, sigma_m,beta_1, dots))$ , donde $(x->, sigma->) in S$.
-      - Para cada $(x_1, dots, x_n, sigma_1, dots, sigma_m) in S$, hay un $x in omega$ tal que $~P~$ se detiene partiendo del estado $||x||$ y llega a un estado $((x_1, dots, x_n, y_1,dots), (sigma_1, dots, sigma_m,beta_1, dots))$
+      - Para cada $x in omega$, tenemos que $~P~$ se detiene partiendo del estado $||x||$ y llega a un estado $((x_1, dots, x_n, y_1,dots), (sigma_1, dots, sigma_m,beta_1, dots))$, donde $(x->, sigma->) in S$.
+      - Para cada $(x_1, dots, x_n, sigma_1, dots, sigma_m) in S$, hay un $x in omega$ tal que $~P~$ se detiene partiendo del estado $||x||$ y llega a un estado $((x_1, dots, x_n, y_1,dots), (sigma_1, dots, sigma_m,beta_1, dots))$.
     ]
-    (Nota que en los estados se agregan $y_1,dots$ y $beta_1, dots$ para representar "datos extra" que el programa pude haber producido ademas de los datos de salida relevantes $(x_1, dots, x_n, sigma_1, dots, sigma_m) med$)
+    (Notar que en los estados se agregan $y_1,dots$ y $beta_1, dots$ para representar "datos extra" que el programa puede haber producido además de los datos de salida relevantes $(x_1, dots, x_n, sigma_1, dots, sigma_m) med$)
   ],
 )
 
@@ -704,7 +703,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     }
     de la siguiente manera
     $
-      (med #i_nm (0,x->, alpha->, ~P~) med , med #E_nm_num (0,x->, alpha->, ~P~) med , med #E_nm_est (0,x->, alpha->, ~P~) med) = (med 1 med , med (x_0,dots,x_n,dots) med , med (alpha_0,dots,alpha_n,dots) med)
+      (med #i_nm (0,x->, alpha->, ~P~) med , med #E_nm_num (0,x->, alpha->, ~P~) med , med #E_nm_est (0,x->, alpha->, ~P~) med) = (med 1 med , med (x_1,dots,x_n,0,dots) med , med (alpha_1,dots,alpha_m,epsilon,dots) med)
     $
     #box(
       width: 0.7cm,
@@ -715,7 +714,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     ) $S_(~P~)(med #i_nm (t,x->, alpha->, ~P~) med , med #E_nm_num (t,x->, alpha->, ~P~) med , med #E_nm_est (t,x->, alpha->, ~P~) med)$
 
     Notar que $(#i_nm (t,x->, alpha->, ~P~), #E_nm_num (t,x->, alpha->, ~P~), #E_nm_est (t,x->, alpha->, ~P~))$ es la descripción instantánea luego de correr $~P~$ una cantidad $t$ de pasos, partiendo de $||x_1,dots,x_n,alpha_1,dots,alpha_m||$.
-    #footnote([Osea que para el paso $t$ podemos pensar que #i_nm representa "numero de instrucción", #E_nm_num representa "los valores numéricos" y #E_nm_est representa "los valores alfabéticos".]) Y ademas #i_nm es $(Sigma union Sigma_p)$-mixta pero #E_nm_num y #E_nm_est no.
+    #footnote([Osea que para el paso $t$ podemos pensar que #i_nm representa "número de instrucción", #E_nm_num representa "los valores numéricos" y #E_nm_est representa "los valores alfabéticos".]) Y además #i_nm es $(Sigma union Sigma_p)$-mixta pero #E_nm_num y #E_nm_est no.
   ],
 )
 
@@ -749,7 +748,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       bold(#Halt_nm) = lambda t x-> alpha-> [ #i_nm (t,x->,alpha->) = n(~P~)+1]
     $
-    Nota que $D_#Halt_nm = omega X #omega_sigma_n_m X #ProSigma$ (ojo, la notación lambda es respecto al alfabeto $(Sigma union Sigma_p)$).
+    Notar que $D_#Halt_nm = omega X #omega_sigma_n_m X #ProSigma$ (ojo, la notación lambda es respecto al alfabeto $(Sigma union Sigma_p)$).
 
     Dado que #Halt_nm es un predicado podemos definir *$#T_nm = M(#Halt_nm)$*. Osea, dado $(x->, alpha->, ~P~) in D_#T_nm$
     #show math.equation.where(block: true): set par(leading: 2pt)
@@ -768,11 +767,11 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [
     Cuando $Sigma_p c= Sigma$, podemos definir
     $
-      bold(#AutoHalt) = lambda ~P~ [(exists t in omega) italic("Halt"^(0,1) (t, ~P~, ~P~))]
+      bold(#AutoHalt) = lambda ~P~ [(exists t in omega) italic("Halt"^(0,1)) (t, ~P~, ~P~)]
     $
-    // Notar que el dominio de #AutoHalt es #ProSigma (es interesante porque esta probado que *no es* #sigmaa.recursivo).
+    // Notar que el dominio de #AutoHalt es #ProSigma (es interesante porque está probado que *no es* #sigmaa.recursivo).
     Pensándolo de otra manera, podemos decir que para cada $~P~ in ProSigma$ tenemos que
-    $ #AutoHalt = 1 bold("si y solo si") ~P~ "se detiene partiendo del estado" ~P~ "(i.e de si mismo)" $
+    $ #AutoHalt (~P~) = 1 bold("si y solo si") ~P~ "se detiene partiendo del estado" ~P~ "(i.e de sí mismo)" $
 
   ],
 )
@@ -787,7 +786,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       bold(italic(A)) & = {~P~ in #ProSigma : #AutoHalt (~P~) = 1} \
       bold(italic(N)) & = {~P~ in #ProSigma : #AutoHalt (~P~) = 0}
     $
-    // Aclarar que estos conjuntos son interesantes porque $italic(A)$ es #sigmaa.recursivamente.enumerable y *no es* #sigmaa.recursivo. Mas aun $italic(N)$ no es #sigmaa.recursivamente.enumerable.
+    // Aclarar que estos conjuntos son interesantes porque $italic(A)$ es #sigmaa.recursivamente.enumerable y *no es* #sigmaa.recursivo. Más aún, $italic(N)$ no es #sigmaa.recursivamente.enumerable.
   ],
 )
 
@@ -801,7 +800,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/1.10-funciones-y-conjuntos-sigma-mixtos#notacion-lambda",
   [
     #set enum(numbering: "(1) (i)", indent: 12.8pt)
-    Definamos primero una *expresión $E$* sera llamada *lambdificable con respecto a $Sigma$*.
+    Definamos primero cuándo una *expresión $E$* será llamada *lambdificable con respecto a $Sigma$*.
     Dado que no es un concepto matemáticamente preciso, daremos características que se deben cumplir
     + Puede involucrar variables:
       + Numéricas, valuadas en $omega$ y seleccionadas de #box(baseline: 50pt, inset: (left: 13pt))[
@@ -812,19 +811,19 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         ]
     + Puede no involucrar variables, por lo tanto produce un valor constante.
     + Para ciertas valuaciones de sus variables $E$ puede no estar definida. #comentario([(Por ejemplo $"Pred"(x)$ con $x = 0$)])
-    + Cuando $E$ este definida al valuar sus variables numéricas en $omega$ y alfabéticas en $#sigmaa.est$ deberá producir siempre un elemento de $omega$ o de #sigmaa.est.
-    + Se pueden usar expresiones del lenguaje natural. #comentario([(Por ejemplo _"es $x$ un numero primo"_)])
+    + Cuando $E$ esté definida al valuar sus variables numéricas en $omega$ y alfabéticas en $#sigmaa.est$ deberá producir siempre un elemento de $omega$ o de #sigmaa.est.
+    + Se pueden usar expresiones del lenguaje natural. #comentario([(Por ejemplo _"es $x$ un número primo"_)])
     + Las expresiones booleanas toman valores en ${0,1} in omega$.
 
-    Ahora definamos la *notación lambda*. Dada una expresión $E$ que sea lambdificable con respecto a un alfabeto fijo $Sigma$ y $x_1,dots,x_n,dots,alpha_1,dots,alpha_m$ las variables numéricas y alfabéticas que ocurren en $E$. Entonces
-    *$ lambda x_1 dots,x_n alpha_1 dots alpha_m [ E ] $*
+    Ahora definamos la *notación lambda*. Dada una expresión $E$ que sea lambdificable con respecto a un alfabeto fijo $Sigma$ y $x_1,dots,x_n,alpha_1,dots,alpha_m$ las variables numéricas y alfabéticas que ocurren en $E$. Entonces
+    *$ lambda x_1 dots x_n alpha_1 dots alpha_m [ E ] $*
     denota la función definida por
     $
-      D_(lambda x_1 dots,x_n alpha_1 dots alpha_m [ E ]) = { (k_1,dots,k_n,beta_1,dots,beta_m) in #omega_sigma_n_m : E "esta definida cuando se asignan" k_i med"a"med x_i med"y"med beta_j med"a"med alpha_j } \
-      lambda x_1 dots,x_n alpha_1 dots alpha_m [ E ] (k_1,dots,k_n,beta_1,dots,b_m) = "valor que toma" E "cuando se asignan" k_i med "a" med x_i med"y"med beta_j med"a"med alpha_j
+      D_(lambda x_1 dots x_n alpha_1 dots alpha_m [ E ]) = { (k_1,dots,k_n,beta_1,dots,beta_m) in #omega_sigma_n_m : E "está definida cuando se asignan" k_i med"a"med x_i med"y"med beta_j med"a"med alpha_j } \
+      lambda x_1 dots x_n alpha_1 dots alpha_m [ E ] (k_1,dots,k_n,beta_1,dots,beta_m) = "valor que toma" E "cuando se asignan" k_i med "a" med x_i med"y"med beta_j med"a"med alpha_j
     $
 
-    Notar que por (4) $lambda x_1 dots,x_n alpha_1 dots alpha_m [ E ]$ es #sigmaa.mixta de tipo $(n,m,s)$ con $s in {\#, *}$ según corresponda.
+    Notar que por (4) $lambda x_1 dots x_n alpha_1 dots alpha_m [ E ]$ es #sigmaa.mixta de tipo $(n,m,s)$ con $s in {\#, *}$ según corresponda.
   ],
 )
 
@@ -834,7 +833,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 
 #definitionStructure(
   1,
-  [Dada una función $f: D_f c= omega X #sigmaa.est -> omega$, describa que tipo de objeto es y que propiedades debe tener el macro $["V"2 <- f("V"1, "W"1) ]$
+  [Dada una función $f: D_f c= omega X #sigmaa.est -> omega$, describa qué tipo de objeto es y que propiedades debe tener el macro $["V"2 <- f("V"1, "W"1) ]$
   ],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#macros-asociados-a-funciones-sigma-computables",
   [
@@ -844,17 +843,17 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #let macro = $[ #V2 <- f(#V1, #W1) ]$
     Dada una función $f: D_f c= omega X #sigmaa.est -> omega$, el macro
     *$ #macro $*
-    es de tipo palabra y  cumple las siguientes propiedades
+    es de tipo palabra y cumple las siguientes propiedades
     #set enum(numbering: "(1) (a)")
     #block(above: 12pt, below: 12pt)[
       + Las variables oficiales son #V1, #V2 y #W1.
       + No tiene labels oficiales.
-      + Si remplazamos
+      + Si reemplazamos
         + Las variables oficiales (i.e. #V1, #V2, #W1) por las variables concretas $"N"overline(k_1), "N"overline(k_2)$ y $"P"overline(j_1)$ con $k_1, k_2, j_1 in NN$.
         + Las variables auxiliares por variables concretas (distintas dos a dos) y distintas de $"N"overline(k_1), "N"overline(k_2)$, $"P"overline(j_1)$.
     ]
-    Entonces la palabra asi obtenida es un programa de #SSigma que denotaremos con
-    #let macro_con_valores = $[ "N"overline(k_2) <- f("N"overline(k_1), "P"overline(k_1)) ]$
+    Entonces la palabra así obtenida es un programa de #SSigma que denotaremos con
+    #let macro_con_valores = $[ "N"overline(k_2) <- f("N"overline(k_1), "P"overline(j_1)) ]$
     $
       #macro_con_valores
     $
@@ -863,9 +862,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       Si lo hacemos correr partiendo de un estado $e$ que le asigne a las variables $"N"overline(k_1), "N"overline(k_2)$ y $"P"overline(j_1)$ valores $x_1, x_2$ y $alpha_1$, entonces independientemente de los valores que les asigne $e$ al resto de las variables se dará que
       #set enum(numbering: "(i) (a)")
       + Si $(x_1, alpha_1) in.not D_f$ entonces #macro_con_valores *no se detiene*.
-      + Si $(x_1, alpha_1) in D_f$, entonces #macro_con_valores se detiene (i.e. intenta realizar la siguiente a su ultima instrucción) y llega a un estado $e'$ el cual cumple
+      + Si $(x_1, alpha_1) in D_f$, entonces #macro_con_valores se detiene (i.e. intenta realizar la siguiente a su última instrucción) y llega a un estado $e'$ el cual cumple
         + $e'$ le asigna a $"N"overline(k_2)$ el valor $f(x_1, alpha_1)$.
-        + $e'$ solo puede diferir de $e$ en los valores que le asigna a $"N"overline(k_2)$ o a las variables que fueran a remplazar a las variables auxiliares, al resto de las variables, no las modifica.
+        + $e'$ solo puede diferir de $e$ en los valores que le asigna a $"N"overline(k_2)$ o a las variables que fueran a reemplazar a las variables auxiliares, al resto de las variables, no las modifica.
     ]
     Finalmente el programa #macro_con_valores es llamado la *expansión del macro* #macro con respecto a la elección de variables y labels realizada.
   ],
@@ -877,7 +876,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 
 #definitionStructure(
   1,
-  [Dada un predicado $P: D_f c= omega X #sigmaa.est -> omega$, describa que tipo de objeto es y que propiedades debe tener el macro $["IF" P("V"1,"W"1) "GOTO" "A"1 ]$
+  [Dado un predicado $P: D_f c= omega X #sigmaa.est -> omega$, describa qué tipo de objeto es y qué propiedades debe tener el macro $["IF" P("V"1,"W"1) "GOTO" "A"1 ]$
   ],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.3-el-paradigma-imperativo-de-neumann-el-lenguaje-mathcalssigma#macros-asociados-a-predicados-sigma-computables",
   [
@@ -885,20 +884,20 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #let W1 = $"W"1$
     #let A1 = $"A"1$
     #let macro = $[ "IF" P(V1,W1) "GOTO" A1 ]$
-    Dada un predicado $P: D_f c= omega X #sigmaa.est -> omega$, el macro
+    Dado un predicado $P: D_f c= omega X #sigmaa.est -> omega$, el macro
     *$ #macro $*
     es de tipo palabra y  cumple las siguientes propiedades
     #set enum(numbering: "(1) (a)")
     #block(above: 12pt, below: 12pt)[
       + Las variables oficiales son #V1 y #W1.
       + #A1 es el único label oficial.
-      + Si remplazamos
+      + Si reemplazamos
         + Las variables oficiales (i.e. #V1, #W1) por las variables concretas $"N"overline(k_1)$ y $"P"overline(j_1)$ con $k_1,j_1 in NN$.
         + El label oficial #A1 por el label concreto $"L"overline(k)$ con $k in NN$.
         + Las variables auxiliares por variables concretas (distintas dos a dos) y distintas de $"N"overline(k_1)$, $"P"overline(j_1)$.
         + Los labels auxiliares por labels concretos (distintos dos a dos) y distintos de $"L"overline(k)$.
     ]
-    Entonces la palabra asi obtenida es un programa de #SSigma, salvo por la ley de los GOTO respecto de $"L"overline(k)$. \ Este programa lo denotaremos con
+    Entonces la palabra así obtenida es un programa de #SSigma, salvo por la ley de los GOTO respecto de $"L"overline(k)$. \ Este programa lo denotaremos con
     #let macro_con_valores = $[ "IF" P("N"overline(k_1),"P"overline(j_1)) "GOTO" "L"overline(k) ]$
     $
       #macro_con_valores
@@ -910,17 +909,17 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       + Si $(x_1, alpha_1) in.not D_P$ entonces #macro_con_valores *no se detiene*.
       + Si $(x_1, alpha_1) in D_P$ entonces luego de una cantidad finita de pasos de #macro_con_valores
         + Si $P(x_1, alpha_1)=bold(1)$, *direcciona al label $"L"overline(k)$*.
-        + Si $P(x_1, alpha_1)=bold(0)$, *se detiene*. (i.e. intenta realizar la siguiente a su ultima instrucción) \
+        + Si $P(x_1, alpha_1)=bold(0)$, *se detiene*. (i.e. intenta realizar la siguiente a su última instrucción) \
         #box(inset: (top: -10pt))[
-          En ambos casos quedándose en un estado $e'$ el cual solo puede diferir de $e$ en los valores que le asigna a las variables que fueran a remplazar a las variables auxiliares, al resto de las variables, no las modifica.
+          En ambos casos quedándose en un estado $e'$ el cual solo puede diferir de $e$ en los valores que le asigna a las variables que fueran a reemplazar a las variables auxiliares, al resto de las variables, no las modifica.
         ] #footnote()[
-          El punto (ii) en el apunte esta así
+          El punto (ii) en el apunte está así
           #set enum(numbering: "(i) (a)", start: 2)
-          + Si $(x_1, alpha_1) in D_P$ y *$P(x_1, alpha_1)=1$*, entonces luego de una cantidad finita de pasos #macro_con_valores *direcciona al label $"L"overline(k)$* quedándose en un estado $e'$ el cual solo puede diferir de $e$ en los valores que le asigna a las variables que fueran a remplazar a las variables auxiliares, al resto de las variables, no las modifica.
-          + Si $(x_1, alpha_1) in D_P$ y *$P(x_1, alpha_1) = 0$*, entonces luego de una cantidad finita de pasos #macro_con_valores *se detiene* quedando en un estado $e'$ el cual solo puede diferir de $e$ en los valores que le asigna a las variables que fueran a remplazar a las variables auxiliares, al resto de las variables, no las modifica.
+          + Si $(x_1, alpha_1) in D_P$ y *$P(x_1, alpha_1)=1$*, entonces luego de una cantidad finita de pasos #macro_con_valores *direcciona al label $"L"overline(k)$* quedándose en un estado $e'$ el cual solo puede diferir de $e$ en los valores que le asigna a las variables que fueran a reemplazar a las variables auxiliares, al resto de las variables, no las modifica.
+          + Si $(x_1, alpha_1) in D_P$ y *$P(x_1, alpha_1) = 0$*, entonces luego de una cantidad finita de pasos #macro_con_valores *se detiene* quedando en un estado $e'$ el cual solo puede diferir de $e$ en los valores que le asigna a las variables que fueran a reemplazar a las variables auxiliares, al resto de las variables, no las modifica.
         ]
     ]
-    Finalmente el programa #macro_con_valores es llamado la *expansión del macro* #macro con respecto a la elección de variables y labels realizada.
+    Finalmente, el programa #macro_con_valores es llamado la *expansión del macro* #macro con respecto a la elección de variables y labels realizada.
   ],
 )
 
@@ -938,18 +937,18 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #set enum(numbering: "(1)", indent: 12.8pt)
     Una *función* es un conjunto *$f$* de pares ordenados con la siguiente propiedad
     $ "Si" (x,y) in f med"y"med (x,z) in f", entonces" y = z $
-    Ademas dada una función $f$ definimos
+    Además, dada una función $f$ definimos
     $
       D_f & = "dominio de "f = {x : (x,y) in f "para algún " y} \
       I_f & = "imagen de "f = {y : (x,y) in f "para algún " x}
     $
-    A veces escribimos Dom($f$) y Im($f$) en lugar de $D_f$ e $I_f$ respectivamente. \
+    A veces escribimos Dom($f$) y Im($f$) en lugar de $D_f$ e $I_f$, respectivamente. \
     Las *convenciones notacionales* son \
     + Dado $x in D_f$ usaremos $f(x)$ para denotar el único $y in I_f$ tal que $(x,y) in f$. \
     + Escribimos $f: S c= A -> B$ para expresar que $f$ es una función tal que $D_f = S c= A$ y $I_f c= B$. \
       Escribimos $f: A -> B$ para expresar que $f$ es una función tal que $D_f = A$ y $I_f c= B$. \
-      En ese contexto llamaremos a $B$ _conjunto de llegada_ ($B$ no esta determinado por $f$, ya que $I_f c= B$ ).
-    + Muchas veces para definir una función $f$, lo que haremos es dar su dominio y su regla de asignación. Básicamente daremos precisamente el conjunto que es $D_f$ y quien es $f(x)$ para cada $x in D_f$.  Esto determina por completo a $f$ ya que $f = {(x,f(x)): x in D_f}$. Algunos ejemplos son
+      En ese contexto llamaremos a $B$ _conjunto de llegada_ ($B$ no está determinado por $f$, ya que $I_f c= B$).
+    + Muchas veces, para definir una función $f$, lo que haremos es dar su dominio y su regla de asignación. Básicamente daremos precisamente el conjunto que es $D_f$ y quién es $f(x)$ para cada $x in D_f$. Esto determina por completo a $f$, ya que $f = {(x,f(x)): x in D_f}$. Algunos ejemplos son
       #align(center)[
         #table(
           columns: 3,
@@ -985,7 +984,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #{
       set enum(numbering: "(1)", indent: 12.8pt)
       [
-        + El ejecutante de $PP$ es una persona que trabajara con papel y lápiz disponibles en forma ilimitada.
+        + El ejecutante de $PP$ es una persona que trabajará con papel y lápiz disponibles en forma ilimitada.
         + Cada paso o tarea de $PP$ debe ser simple y fácil de realizar en forma efectiva por cualquier persona.
         + El procedimiento $PP$ comienza con cierto dato de entrada y sigue uno de dos posibles comportamientos
           #block(above: 8pt, below: 8pt)[
@@ -1001,7 +1000,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         + Hay $n,m in omega$ y un alfabeto $Sigma$ tales que el conjunto de datos de entrada de $PP$ es #omega_sigma_n_m. \ Para ciertas $(n+m)$-uplas de #omega_sigma_n_m el procedimiento $PP$ se detendrá y para otras no.
       ]
     }
-    Esta definición esta con otras palabras.
+    Esta definición está con otras palabras.
     #link("https://apunte-lenguajes-logica.netlify.app/3-procedimientos-efectivos")[
       (Definición original en el apunte)
     ]
@@ -1093,16 +1092,17 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #let PRSigma_k1 = $"PR"^Sigma_(k+1)$
     #let omega_sigma_k_l = $omega^k X #sigmaa.est^l$
     #let gbar = $overline(g)$
-    ($==>$) Notar que $S = D_("Pred" med compose med chi_S^#omega_sigma_n_m) med$ #footnote([El truco esta en que $D_("Pred") = omega - {0}$ por lo tanto cada vez que $(x->,alpha->) in.not S$ (i.e. $chi_S^#omega_sigma_n_m (x->,alpha->) = 0$), $(x->,alpha->) in.not D_("Pred" compose chi_S^#omega_sigma_n_m)$]) y $"Pred" med compose med chi_S^#omega_sigma_n_m$ es claramente #sigmaa.pr ya que $S$ lo es. \
-    ($<==$) Probaremos por inducción sobre $k$ que para cada $F in #PRSigma_k$,  $D_F$ es #sigmaa.pr \
+    *($==>$)* Notar que $S = D_("Pred" med compose med chi_S^#omega_sigma_n_m) med$ #footnote([El truco está en que $D_("Pred") = omega - {0}$ por lo tanto cada vez que $(x->,alpha->) in.not S$ (i.e. $chi_S^#omega_sigma_n_m (x->,alpha->) = 0$), $(x->,alpha->) in.not D_("Pred" compose chi_S^#omega_sigma_n_m)$]) y $"Pred" med compose med chi_S^#omega_sigma_n_m$ es claramente #sigmaa.pr ya que $S$ lo es.
+
+    *($<==$)* Probaremos por inducción sobre $k$ que para cada $F in #PRSigma_k$,  $D_F$ es #sigmaa.pr \
     El caso $k=0$, es fácil ya que $#PRSigma _0 = {"Suc","Pred", C_0^(0,0), C_epsilon^(0,0)} union {d_a : a in Sigma} union {p_j^(n,m) : 1<=j<=n+m}$ y
     $D_"Suc" = omega, D_"Pred" = NN, D_(C_0^(0,0)) = D_(C_epsilon^(0,0)) = {lozenge.stroked} med"y"med D_(p_j^(n,m)) = #omega_sigma_n_m$, que claramente son todos #sigmaa.pr \ Por lo tanto supongamos que vale para un $k$ fijo y veamos que se cumple también para $F in #PRSigma_k1$. \ Hay varios casos. Veamos el caso que $F = g compose [g_1,dots,g_r]$ con $g,g_1,dots,g_r in #PRSigma_k$.\
-    Si $F = emptyset$, entonces es claro que $D_F$ es #sigmaa.pr. \
+    Si $F = emptyset$, entonces es claro que $D_F$ es #sigmaa.pr \
     Si $F != emptyset$, tenemos entonces que $r$ es de la forma $n+m$ y
     $
         g & : D_g c= #omega_sigma_n_m -> O                                             \
       g_i & : D_(g_i) c= #omega_sigma_k_l -> omega"  , para cada "i = 1,dots,n         \
-      g_i & : D_(g_j) c= #omega_sigma_k_l -> #sigmaa.est", para cada "i = n+1,dots,n+m
+      g_i & : D_(g_i) c= #omega_sigma_k_l -> #sigmaa.est", para cada "i = n+1,dots,n+m
     $
     con $O in {omega, #sigmaa.est}$ y $k,l in omega$. Por el #link(<lema-1.1>)[_Lema (1)_] , hay funciones #sigmaa.pr $overline(g)_1,dots,overline(g)_(n+m)$ las cuales son #sigmaa.totales y
     $
@@ -1130,13 +1130,13 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [
     Si $h$ es #sigmaa.recursiva, entonces $h$ es #sigmaa.computable.
   ],
-  note: [en la inducción de la prueba hacer solo el caso $h=R(f,~G~)$, con $I_h c= w$],
+  note: [en la inducción de la prueba hacer solo el caso $h=R(f,~G~)$, con $I_h c= omega$],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.4-batallas-entre-paradigmas#neumann-vence-a-godel",
   [
     #let RSigma_k = $R^Sigma_k$
     #let RSigma_k1 = $R^Sigma_(k+1)$
     // #show math.equation.where(block: true): set block(below: 1.35em, above: 1.35em)
-    Esto será probado por inducción en $k$ que _ si $h in #RSigma_k$, entonces h es #sigmaa.computable _. \
+    Esto será probado por inducción en $k$ que _ si $h in #RSigma_k$, entonces $h$ es #sigmaa.computable _. \
     El caso $k=0$, es fácil ya que $R_0 = "PR"_0$, entonces hay que hacer programas que computen \
     ${"Suc","Pred", C_0^(0,0), C_epsilon^(0,0)} union {d_a : a in Sigma} union {p_j^(n,m) : 1<=j<=n+m}$,
     los cuales son todos triviales
@@ -1254,7 +1254,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     2,
     [*Proposición* (Caracterización básica de conjuntos #sigmaa.enumerables) <combo-2-prop>],
     [
-      \ Sea $S c= #omega_sigma_n_m$ un conjunto no vació. Entonces son equivalentes \
+      \ Sea $S c= #omega_sigma_n_m$ un conjunto no vacío. Entonces son equivalentes \
       #box(width: 92%)[
         #set enum(numbering: "(1) (a)", indent: 1pt)
         + $S$ es #sigmaa.enumerable.
@@ -1269,7 +1269,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       Haremos el caso $n=2$ y $m=1$, es decir $S c= omega X omega X #sigmaa.est$. \
       #let tipo_conjunto = $omega X omega X #sigmaa.est$
       * $(1) ==> (2)$* \
-      Ya que $S$ es no vació, por definición hay una $F: omega -> #tipo_conjunto$ tal que $I_F = S$ y $F_((i))$ es #sigmaa.computable, para cada $i=1,2,3$. Entonces por el #primer_manantial existe las macros
+      Ya que $S$ es no vacío, por definición hay una $F: omega -> #tipo_conjunto$ tal que $I_F = S$ y $F_((i))$ es #sigmaa.computable, para cada $i=1,2,3$. Entonces por el #primer_manantial existen las macros
       #{
         show math.equation.where(block: true): set block(below: 1em, above: 1.4em)
         $
@@ -1290,8 +1290,8 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       \
       Primero notar que para cada $x in omega$, $~P~$ siempre se detiene partiendo de un estado $||x||$ porque las $F_((i))$ son #sigmaa.totales, entonces sus macros siempre se detienen. Luego  es fácil ver que *cumplen las condiciones*
       #set enum(numbering: "(a)")
-      + Porque ya sabemos que para cada $x in omega$, $~P~$ se detiene partiendo desde el estado $||x||$ y ademas como  $F(x) = (F_((1))(x),F_((2))(x),F_((3))(x)) = (x_1,x_2,alpha_1) in S$ entonces $~P~$ se detiene con un estado de la forma $((x_1,x_2,y_1),(alpha_1,beta_1,dots))$ donde $(x_1,x_2,alpha_1) in S$.
-      + Porque para cada $(x_1,x_2,alpha_1) in S$, sabemos por definición que existe un $x in omega$ tal que $F(x) = (F_((1))(x),F_((2))(x),F_((3))(x)) = (x_1,x_2,alpha_1)$. y como $~P~$ siempre se detiene, incluso partiendo del estado $||x||$, llegara a un estado de la forma $((x_1,x_2, y_1),(alpha_1,beta_1,dots))$.
+      + Porque ya sabemos que para cada $x in omega$, $~P~$ se detiene partiendo desde el estado $||x||$ y además como  $F(x) = (F_((1))(x),F_((2))(x),F_((3))(x)) = (x_1,x_2,alpha_1) in S$ entonces $~P~$ se detiene con un estado de la forma $((x_1,x_2,y_1),(alpha_1,beta_1,dots))$ donde $(x_1,x_2,alpha_1) in S$.
+      + Porque para cada $(x_1,x_2,alpha_1) in S$, sabemos por definición que existe un $x in omega$ tal que $F(x) = (F_((1))(x),F_((2))(x),F_((3))(x)) = (x_1,x_2,alpha_1)$. Y como $~P~$ siempre se detiene, incluso partiendo del estado $||x||$, llegará a un estado de la forma $((x_1,x_2, y_1),(alpha_1,beta_1,dots))$.
       * $(1) <== (2)$* \
       Supongamos $~P~ in #ProSigma$ que cumple (a) y (b) de (2). \ Sean
       #show math.equation.where(block: true): set block(below: 1em, above: 1em)
@@ -1369,11 +1369,11 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       + $S$ y $(#omega_sigma_n_m)-S$ son #sigmaa.enumerables
     ]
   ],
-  note: [haga solo $(b) ==> (a)$. La prueba esta la final de la Guía 3],
+  note: [haga solo $(b) ==> (a)$. La prueba está al final de la Guía 3],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/3.3-conjuntos-sigma-efectivamente-enumerables",
   [
     *$(b) ==> (a)$* \
-    Si $S = emptyset$ o $S = #omega_sigma_n_m$ es claro que se cumple (a). \ Así que supongamos que $S != emptyset$ y $S != #omega_sigma_n_m$ por lo cual $(#omega_sigma_n_m)-S != emptyset$. \ Ademas sea $PP_1$ un procedimiento efectivo que enumere a $S$ y $PP_2$ un procedimiento efectivo que enumere a $(#omega_sigma_n_m)-S$. Ahora si es fácil ver que el siguiente procedimiento efectivo $PP$ computa $chi_S^#omega_sigma_n_m$ \
+    Si $S = emptyset$ o $S = #omega_sigma_n_m$ es claro que se cumple (a). \ Así que supongamos que $S != emptyset$ y $S != #omega_sigma_n_m$ por lo cual $(#omega_sigma_n_m)-S != emptyset$. \ Además sea $PP_1$ un procedimiento efectivo que enumere a $S$ y $PP_2$ un procedimiento efectivo que enumere a $(#omega_sigma_n_m)-S$. Ahora sí es fácil ver que el siguiente procedimiento efectivo $PP$ computa $chi_S^#omega_sigma_n_m$ \
 
     #align(center)[
       #box()[
@@ -1393,7 +1393,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       ]
     ]
 
-    ya que, los procedimientos $PP_1$ y $PP_2$ siempre terminan y ademas para todo $(x->, alpha->) in #omega_sigma_n_m$ se cumple que $(x->, alpha->) in S$ o $(x->, alpha->) in.not S$, o análogamente $(x->, alpha->) in (#omega_sigma_n_m - S)$. Osea que siempre existe algún $t in omega$ tal que haga detenerse a $PP$ dando como dato de salida $1$ o $0$ respectivamente. \
+    ya que, los procedimientos $PP_1$ y $PP_2$ siempre terminan y además para todo $(x->, alpha->) in #omega_sigma_n_m$ se cumple que $(x->, alpha->) in S$ o $(x->, alpha->) in.not S$, o análogamente $(x->, alpha->) in (#omega_sigma_n_m - S)$. Osea que siempre existe algún $t in omega$ tal que haga detenerse a $PP$ dando como dato de salida $1$ o $0$ respectivamente. \
     Entonces *$S$ es #sigmaa.efectivamente.computable.* #fin_demo
   ],
 )
@@ -1423,7 +1423,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Haremos el caso $n=2$ y $m=1$, osea que $f : omega X S_1 X S_2 X L_1 -> omega$, con $S_1, S_2 c= omega$ y $L_1 c= #sigmaa.est$. \
     Sea $G = lambda t x x_1 x_2 alpha_1 [ sum_(i=x)^(i=t) f(i, x_1, x_2, alpha_1) ]$. Ya que #comentario[(es un simple cambio de lugar las variables)]
     $
-      lambda x y x_1 x_2 alpha_1 [ sum_(t=x)^(t=y) f(t,x_1, x_2 alpha_1)] = G compose [p^(2+2, 1)_2, p^(2+2, 1)_1, p^(2+2, 1)_3, p^(2+2, 1)_4, p^(2+2, 1)_5]
+      lambda x y x_1 x_2 alpha_1 [ sum_(t=x)^(t=y) f(t,x_1, x_2, alpha_1)] = G compose [p^(2+2, 1)_2, p^(2+2, 1)_1, p^(2+2, 1)_3, p^(2+2, 1)_4, p^(2+2, 1)_5]
     $
     basta probar que $G$ es #sigmaa.pr Primero notar que
     $
@@ -1453,7 +1453,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
                                        )
       $
     }
-    tenemos que $G = R(h,g)$. Es decir que solo nos falta probar que $h$ y $g$ son #sigmaa.pr Sean así
+    tenemos que $G = R(h,g)$. Es decir que sólo nos falta probar que $h$ y $g$ son #sigmaa.pr Sean así
     $
       D_1 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X S_2 X L_1 : x > 0}            \
       D_2 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X S_2 X L_1 : x = 0}            \
@@ -1469,24 +1469,24 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 
     Trivialmente $C_0^(2+1,1)$ y $C_0^(2+3,1)$ son #sigmaa.pr Luego como $f$ es #sigmaa.pr y
     $
-      lambda x x_1 x_2 alpha_1 [f(0,x_1,x_2,alpha_1)] = f compose [C_0^(2+1,1), p_2^(2+1,1), p_2^(2+1,1), p_3^(2+1,1)] \
+      lambda x x_1 x_2 alpha_1 [f(0,x_1,x_2,alpha_1)] = f compose [C_0^(2+1,1), p_2^(2+1,1), p_3^(2+1,1), p_4^(2+1,1)] \
       lambda A t x x_1 x_2 alpha_1 [A + f(t+1,x_1,x_2,alpha_1)] = lambda x y [x+y] compose [p_1^(2+3,1), f compose ["Suc" compose p_2^(2+3,1), p_4^(2+3,1), p_5^(2+3,1), p_6^(2+3,1)]]
     $
     tenemos que ambas funciones son #sigmaa.pr
-    Resta ver que los conjuntos $D_1, D_2, H_1$ y $H_2$ son #sigmaa.pr \ Primero notar que como $f$ es #sigmaa.pr por la #proposicion_caracterización_conjuntos_pr, tengo que $D_f$ también es #sigmaa.pr, por lo tanto $chi^(2+1,1)_D_1$ es #sigmaa.pr Ahora si, por el #lema_op_predicados_pr \
+    Resta ver que los conjuntos $D_1, D_2, H_1$ y $H_2$ son #sigmaa.pr \ Primero notar que como $f$ es #sigmaa.pr por la #proposicion_caracterización_conjuntos_pr, tengo que $D_f$ también es #sigmaa.pr, por lo tanto $chi^(2+1,1)_D_1$ es #sigmaa.pr Ahora sí, por el #lema_op_predicados_pr \
     $
       chi^(2+1,1)_D_1 = ( chi^(2+1,1)_D_f and lambda x x_1 x_2 alpha_1 [x > 0]) \
       chi^(2+1,1)_D_2 = ( chi^(2+1,1)_D_f and lambda x x_1 x_2 alpha_1 [x = 0])
     $
     tenemos que $D_1$ y $D_2$ son #sigmaa.pr\
-    Pero ademas que como dijimos, $D_f = omega X S_1 X S_2 X L_1$ también es #sigmaa.pr, nos dice que $S_1, S_2, L_1$ también son #sigmaa.pr Entonces $R = omega^3 X S_1 X S_2 X L_1$ también es #sigmaa.pr, todo gracias al #lema_caracterización_conjuntos_rectangulares_pr. Y de nuevo por el #lema_op_predicados_pr \
+    Pero además, como dijimos, $D_f = omega X S_1 X S_2 X L_1$ también es #sigmaa.pr, nos dice que $S_1, S_2, L_1$ también son #sigmaa.pr Entonces $R = omega^3 X S_1 X S_2 X L_1$ también es #sigmaa.pr, todo gracias al #lema_caracterización_conjuntos_rectangulares_pr. Y de nuevo por el #lema_op_predicados_pr \
     $
       chi^(2+3,1)_H_1 = ( chi^(2+3,1)_R and lambda z t x x_1 x_2 alpha_1 [x > t+1]) \
       chi^(2+3,1)_H_2 = ( chi^(2+3,1)_R and lambda z t x x_1 x_2 alpha_1 [x <= t+1]) \
     $
     tenemos que $H_1$ y $H_2$ son #sigmaa.pr
 
-    Juntando todo por el #lema_restriccion_dominios_pr todas las funciones usadas en $h$ y $g$ son #sigmaa.pr pero notar que $D_1 inter D_2 = emptyset$ y $H_1 inter H_2 = emptyset$, entonces por el #lema_division_por_casos_pr, tenemos que $h$ y $g$ son #sigmaa.pr Por lo tanto *$G = R(h,g)$ es #sigmaa.pr* #fin_demo
+    Juntando todo por el #lema_restriccion_dominios_pr, todas las funciones usadas en $h$ y $g$ son #sigmaa.pr, pero notar que $D_1 inter D_2 = emptyset$ y $H_1 inter H_2 = emptyset$, entonces por el #lema_division_por_casos_pr, tenemos que $h$ y $g$ son #sigmaa.pr Por lo tanto *$G = R(h,g)$ es #sigmaa.pr* #fin_demo
   ],
 )
 
@@ -1498,9 +1498,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   1,
   [*Lema*],
   [
-    Sea $Sigma = {@,%,!}$, Sea $f: S_1 X S_2 X L_1 X L_2 -> omega$ con $S_1,S_2 c= omega$ y $L_1,L_2 c= #sigmaa.est$ no vacíos y sea $~G~$ una familia #sigmaa.indexada de funciones tal que
+    Sea $Sigma = {@,%,!}$. Sea $f: S_1 X S_2 X L_1 X L_2 -> omega$ con $S_1,S_2 c= omega$ y $L_1,L_2 c= #sigmaa.est$ no vacíos y sea $~G~$ una familia #sigmaa.indexada de funciones tal que
     $~G~_a: omega X S_1 X S_2 X L_1 X L_2 X #sigmaa.est -> omega$
-    para cada $a in Sigma$. Si $f$ y cada $~G~_a$ son #sigmaa.efectivamente.computables, *entonces* $R(f,~G~)$, lo es. ~ ~ Nota: es un ej de la Guía 5.
+    para cada $a in Sigma$. Si $f$ y cada $~G~_a$ son #sigmaa.efectivamente.computables, *entonces* $R(f,~G~)$ lo es. ~ ~ Nota: es un ej de la Guía 5.
   ],
   [
     #let menos_letra = text(size: 8pt, baseline: -4pt, weight: "bold")[↷]
@@ -1525,7 +1525,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           \ ~ ~ ~ Etapa 2 \
           Si $I = alpha$, entonces detenerse y dar como dato de salida el valor $A$.
           \ ~ ~ ~ Etapa 3 \
-          Realizar $B = [J]_(|J|)$ y guardar la salida. #comentario[(notar que es es un solo símbolo)]
+          Realizar $B = [J]_(|J|)$ y guardar la salida. #comentario[(notar que es un solo símbolo)]
           \ ~ ~ ~ Etapa 4 \
           Si $B = @$, realizar $PP_@$ con la entrada $(A, x_1,x_2,alpha_1, alpha_2, I)$ y guardar la salida en la variable $A$. \
           Si $B = %$, realizar $PP_%$ con la entrada $(A, x_1,x_2,alpha_1, alpha_2, I)$ y guardar la salida en la variable $A$. \
@@ -1546,7 +1546,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [*Lema* (Lema de cuantificación acotada) <combo-5>],
   [
     Sea $Sigma$ un alfabeto finito. Sea $P: S X S_1 X dots X S_n X L_1 X dots X L_m -> omega$ un predicado #sigmaa.pr, con $S, S_1,dots,S_n c= omega$ y $L_1,dots,L_m c= #sigmaa.est$ no vacíos. \
-    Supongamos $overline(S) c= S$ es #sigmaa.pr Entonces $lambda x x-> alpha-> [ (forall t in overline(S))#text(size: 9pt, baseline: 3pt)[$(t<=x)$] med P(t, x->, alpha->) ]$ es #sigmaa.pr.
+    Supongamos $overline(S) c= S$ es #sigmaa.pr Entonces $lambda x x-> alpha-> [ (forall t in overline(S))#text(size: 9pt, baseline: 3pt)[$(t<=x)$] med P(t, x->, alpha->) ]$ es #sigmaa.pr
   ],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#cuantificacion",
   [
@@ -1557,19 +1557,19 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         overline(P) = P |_(overline(S) X S_1 X dots X S_n X L_1 X dots X L_m) union C_1^(1+n,m) |_((omega - overline(S)) X S_1 X dots X S_n X L_1 X dots X L_m)
       $
     }
-    veamos que es #sigmaa.pr. \ Como $overline(S) X S_1 X dots X S_n X L_1 X dots X L_m inter (omega - overline(S)) X S_1 X dots X S_n X L_1 X dots X L_m = emptyset$, $P$ y $C_1^(1+n,m)$ son #sigmaa.pr, por el #lema_division_por_casos_pr y el #lema_restriccion_dominios_pr, alcanza con ver que los siguientes conjuntos son #sigmaa.pr
+    veamos que es #sigmaa.pr \ Como $overline(S) X S_1 X dots X S_n X L_1 X dots X L_m inter (omega - overline(S)) X S_1 X dots X S_n X L_1 X dots X L_m = emptyset$, $P$ y $C_1^(1+n,m)$ son #sigmaa.pr, por el #lema_division_por_casos_pr y el #lema_restriccion_dominios_pr, alcanza con ver que los siguientes conjuntos son #sigmaa.pr
 
     $
       overline(S) X S_1 X dots X S_n X L_1 X dots X L_m quad quad"y"quad quad (omega - overline(S)) X S_1 X dots X S_n X L_1 X dots X L_m
     $
     Por la #proposicion_caracterización_conjuntos_pr sabemos que $D_P = S X S_1 X dots X S_n X L_1 X dots X L_m$ es #sigmaa.pr , por lo tanto, por el #lema_caracterización_conjuntos_rectangulares_pr, $S_1, dots, S_n, L_1, dots, L_m$ son #sigmaa.pr
-    y ademas como $overline(S)$ es #sigmaa.pr, por el #lema_op_conjuntos_pr, $(w-overline(S))$ también. Entonces nuevamente por el #lema_caracterización_conjuntos_rectangulares_pr, ambos conjuntos son #sigmaa.pr Así $overline(P)$ es #sigmaa.pr
-    Notar que $D_overline(P) = omega X S_1 X dots X S_n X L_1 X dots X L_m$. Ademas, como
+    y además como $overline(S)$ es #sigmaa.pr, por el #lema_op_conjuntos_pr, $(omega - overline(S))$ también. Entonces nuevamente por el #lema_caracterización_conjuntos_rectangulares_pr, ambos conjuntos son #sigmaa.pr Así $overline(P)$ es #sigmaa.pr
+    Notar que $D_overline(P) = omega X S_1 X dots X S_n X L_1 X dots X L_m$. Además, como
     $
       lambda x x-> alpha-> [ (forall t in overline(S))#text(size: 9pt, baseline: 3pt)[$(t<=x)$] med P(t, x->, alpha->) ] &= lambda x x-> alpha-> [ product_(t=0)^(t=x) med overline(P)(t, x->, alpha->) ] \
       &= lambda x y x-> alpha-> [ product_(t=x)^(t=y) med overline(P)(t, x->, alpha->) ] compose [C_0^(1+n,m),p_1^(1+n,m),dots,p_(1+n+m)^(1+n,m)] \
     $
-    el #lema_sumatoria implica que $lambda x x-> alpha-> [ (forall t in overline(S))#text(size: 9pt, baseline: 3pt)[$(t<=x)$] med P(t, x->, alpha->) ]$ es #sigmaa.pr. #fin_demo
+    el #lema_sumatoria implica que $lambda x x-> alpha-> [ (forall t in overline(S))#text(size: 9pt, baseline: 3pt)[$(t<=x)$] med P(t, x->, alpha->) ]$ es #sigmaa.pr #fin_demo
   ],
 )
 
@@ -1585,7 +1585,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   ],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/3.3-conjuntos-sigma-efectivamente-enumerables",
   [
-    Si $S = emptyset$, por definición es #sigmaa.efectivamente.enumerable. Supongamos entonces que $S != emptyset$ y fijamos $(arrow(z), arrow(gamma)) in S$. Sea $PP_S$ el procedimiento efectivo que compute a $chi_S^#omega_sigma_n_m$. Sea $PP_1$ un procedimiento efectivo que enumere a \ #omega_sigma_n_m, usando las bajadas y $*<$, que ya sabemos que son #sigmaa.efectivamente.computable. Entonces $PP_1$ seria
+    Si $S = emptyset$, por definición es #sigmaa.efectivamente.enumerable. 
+
+    Supongamos entonces que $S != emptyset$ y fijamos $(arrow(z), arrow(gamma)) in S$. Sea $PP_S$ el procedimiento efectivo que compute a $chi_S^#omega_sigma_n_m$. Sea $PP_1$ un procedimiento efectivo que enumere a #omega_sigma_n_m, usando las bajadas y $*<$, que ya sabemos que son #sigmaa.efectivamente.computable. Entonces $PP_1$ sería
     #align(center)[
       #box()[
         #align(left)[
@@ -1646,12 +1648,12 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       ]
     $
     Notar que $D_H_i = omega X #omega_sigma_1_1$ y $H_i$ es $sigmaa.mixta$.
-    Ademas sabemos que $"Halt"^(1,1)$ es $(Sigma union Sigma_p)$-p.r, por lo tanto resulta fácil que $H_i$ es $(Sigma union Sigma_p)$-p.r.
+    Además sabemos que $"Halt"^(1,1)$ es $(Sigma union Sigma_p)$-p.r, por lo tanto resulta fácil que $H_i$ es $(Sigma union Sigma_p)$-p.r.
     Entonces por el #teorema_independencia_del_alfabeto, $H_i$ es #sigmaa.pr, lo cual por el #segundo_manantial existen las macros
     $
       [med "IF" not H_i ("V2, V1, W1") "GOTO A1" med]
     $
-    pero para usarlas de forma mas intuitiva, las escribimos como
+    pero para usarlas de forma más intuitiva, las escribimos como
     $
       [med "IF" not "Halt"^(1,1) ("V2, V1, W1") "GOTO A1" med]
     $
@@ -1670,7 +1672,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       ]
     $
     Notar que los predicados $E_i$ son $sigmaa.mixto$s.
-    Ademas sabemos que $E^(1,1)_(\# med 1)$ y $E^(1,1)_(* med 1)$ son $(Sigma union Sigma_p)$-p.r, por lo tanto resulta fácil que los $E_i$ son $(Sigma union Sigma_p)$-p.r.
+    Además sabemos que $E^(1,1)_(\# med 1)$ y $E^(1,1)_(* med 1)$ son $(Sigma union Sigma_p)$-p.r, por lo tanto resulta fácil que los $E_i$ son $(Sigma union Sigma_p)$-p.r.
     Entonces por el #teorema_independencia_del_alfabeto, cada $E_i$ es #sigmaa.pr, lo cual por el #segundo_manantial existen las macros
     $
       [med "IF" E_i ("V2, V3, V1, W1") "GOTO A1" med]
@@ -1684,7 +1686,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         #comentario[(para $i=3,4$)]
       ]
     $
-    pero para usarlas de forma mas intuitiva, las escribimos como
+    pero para usarlas de forma más intuitiva, las escribimos como
     $
       [med "IF" "V2" != E^(1,1)_(\# med 1) ("V3, V1, W1", ~P~_i) "GOTO A1" med]
       quad quad
@@ -1697,15 +1699,15 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         #comentario[(para $i=3,4$)]
       ]
     $
-    Ahora ya que las funciones $f_1 = lambda x [ (x)_1 ], f_1 = lambda x [ (x)_2 ]$ y $f_3 = compose lambda x [ *<(med (x)_3 med) ]$ son #sigmaa.pr, nuevamente por el #teorema_independencia_del_alfabeto, son #sigmaa.pr, osea que por el#segundo_manantial existen las macros
+    Ahora ya que las funciones $f_1 = lambda x [ (x)_1 ], f_2 = lambda x [ (x)_2 ]$ y $f_3 = compose lambda x [ *<(med (x)_3 med) ]$ son #sigmaa.pr, nuevamente por el #teorema_independencia_del_alfabeto, son #sigmaa.pr, osea que por el #segundo_manantial existen las macros
     $
       [med "V2" <- f_1("V1") med] quad [med "V2" <- f_2("V1") med] quad [med "P1" <- f_3("V1") med]
     $
-    pero para usarlas de forma mas intuitiva, las escribimos como
+    pero para usarlas de forma más intuitiva, las escribimos como
     $
       [med "V2" <- ("V1")_(1) med] quad [med "V2" <- ("V1")_(2) med] quad [med "P1" <- *< ("V1")_(3) med]
     $
-    Ahora si, sea $~P~$ el siguiente programa de #SSigma
+    Ahora sí, sea $~P~$ el siguiente programa de #SSigma
     #show math.equation.where(block: true): set par(leading: 0.55em)
     $
       "L1" quad & "N20" <- "N20" + 1                                                               \
@@ -1723,14 +1725,14 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
     es fácil entender el programa si lo ves por partes y teniendo en cuenta que toma como entrada $(x_1, x_2, alpha_1, alpha_2)$\
     #box(inset: (top: 3pt, bottom: 3pt))[
-      - La linea 2 genera un candidato $t$ a cantidad de pasos.
-      - Las lineas 3 y 4, generan un candidato $(y_1, gamma_2)$ para la entrada de los $F_((i))$.
-      - Las lineas del 5 al 8, si $F_((1))$, $F_((2))$, $F_((3))$ y $F_((4))$ se detienen en $t$ pasos, con la entrada $(y_1, gamma_2)$.
-      - Las lineas del 9 al 12, verifican si $F_((1))$, $F_((2))$, $F_((3))$ y $F_((4))$ devuelven $x_1, x_2, alpha_1$ y $alpha_2$ respectivamente.
-      - Si alguna verificación *no* es cierta, se vuelve a la linea 1 y repite el proceso con nuevos candidatos.
+      - La línea 2 genera un candidato $t$ a cantidad de pasos.
+      - Las líneas 3 y 4 generan un candidato $(y_1, gamma_2)$ para la entrada de los $F_((i))$.
+      - Las líneas del 5 al 8 verifican si $F_((1))$, $F_((2))$, $F_((3))$ y $F_((4))$ se detienen en $t$ pasos, con la entrada $(y_1, gamma_2)$.
+      - Las líneas del 9 al 12 verifican si $F_((1))$, $F_((2))$, $F_((3))$ y $F_((4))$ devuelven $x_1, x_2, alpha_1$ y $alpha_2$ respectivamente.
+      - Si alguna verificación *no* es cierta, se vuelve a la línea 1 y repite el proceso con nuevos candidatos.
     ]
-    Finalmente como $F = [F_((1)), F_((2)), F_((3)), F_((4))]$ y $I_F =S$, $~P~$ se detiene solo cuando $(x_1, x_2, alpha_1, alpha_2) in S$. \
-    Sabiendo esto es fácil ver que computa la función $p^(2,2)_1|_S$. Entonces, listo porque $p^(2,2)_1|_S$ es #sigmaa.computable, por lo cual es #sigmaa.recursiva por el #teorema_godel_vence_neumann y trivialmente $"Dom"(p^(2,2)_1|_S) = S$. #fin_demo
+    Finalmente, como $F = [F_((1)), F_((2)), F_((3)), F_((4))]$ y $I_F = S$, $~P~$ se detiene sólo cuando $(x_1, x_2, alpha_1, alpha_2) in S$. \
+    Sabiendo esto, es fácil ver que computa la función $p^(2,2)_1|_S$. Entonces, listo porque $p^(2,2)_1|_S$ es #sigmaa.computable, por lo cual es #sigmaa.recursiva por el #teorema_godel_vence_neumann y trivialmente $"Dom"(p^(2,2)_1|_S) = S$. #fin_demo
   ],
 )
 
@@ -1755,22 +1757,22 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [
     #show math.equation.where(block: true): set block(above: 16.549875pt, below: 16.549875pt)
     *$(a)$* #comentario[(Idea básica, hacer que $P$ sea #sigmaa.total y que siga siendo #sigmaa.pr)] \
-    Definimos el siguiente predicado, que es #sigmaa.total y pone ceros en donde $P$ no estaba definida
+    Definimos el siguiente predicado, que es #sigmaa.total y pone ceros donde $P$ no estaba definida
     $
       overline(P)= P union C^(1+n,m)_0|_((omega X #omega_sigma_n_m) - D_P)
     $
     Dado que $P$ es #sigmaa.pr, por la #proposicion_caracterización_conjuntos_pr, $D_P$ también. \ Entonces por el #lema_op_conjuntos_pr tengo que $(omega X #omega_sigma_n_m) - D_P$ es #sigmaa.pr y por lo tanto, por el #lema_restriccion_dominios_pr, $C^(1+n,m)_0|_((omega X #omega_sigma_n_m) - D_P)$ también. Como trivialmente \ $D_P inter ((omega X #omega_sigma_n_m) - D_P) = emptyset$ por el #lema_division_por_casos_pr $overline(P)$ es #sigmaa.pr
 
-    Ahora es fácil ver que $M(P) = M(overline(P))$ ya que la minimización esta definida cuando el predicado es $1$. Osea
+    Ahora es fácil ver que $M(P) = M(overline(P))$ ya que la minimización está definida cuando el predicado es $1$. Osea
     $
       {t in omega: P(t,x->,alpha->) =1 } = {t in omega: overline(P)(t,x->,alpha->) =1 } \
     $
     Esto claramente dice que $D_(M(P)) = D_(M(overline(P)))$  y que $M(P) (x->, alpha->) = M(overline(P)) (x->, alpha->)$, para cada $(x->, alpha->) in D_(M(P))$, por lo cual $M(P) = M(overline(P))$. \
-    Ahora si con ver que $M(overline(P))$ es #sigmaa.recursiva, alcanza. Pero esto es fácil, porque si tomamos $k$ tal que  \ $overline(P) in "PR"_k^Sigma c= R_k^Sigma$ y como $overline(P)$ sea #sigmaa.total, tenemos que $M(overline(P)) in R_(k+1)^Sigma$ y por lo tanto  $M(overline(P)) in R^Sigma$. \
+    Ahora sí con ver que $M(overline(P))$ es #sigmaa.recursiva, alcanza. Pero esto es fácil, porque si tomamos $k$ tal que  \ $overline(P) in "PR"_k^Sigma c= R_k^Sigma$ y como $overline(P)$ es #sigmaa.total, tenemos que $M(overline(P)) in R_(k+1)^Sigma$ y por lo tanto  $M(overline(P)) in R^Sigma$. \
 
     *$(b)$* \
     Ya que $M(P) = M(overline(P))$, basta probar que $M(overline(P))$ es #sigmaa.pr #comentario[(va a ser necesaria la "cota" que nos da $f$)] \
-    Primero veremos que $D_(M(overline(P)))$ es un conjunto #sigmaa.pr. Para ello notar que
+    Primero veremos que $D_(M(overline(P)))$ es un conjunto #sigmaa.pr Para ello notar que
     $
       chi_(D_(M(overline(P))))^(#omega_sigma_n_m) = lambda x-> alpha-> [ (exists t in omega)_(t<= bold(f(x->,alpha->))) med overline(P)(t, x->, alpha->) ]
     $
@@ -1779,24 +1781,24 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       chi_(D_(M(overline(P))))^(#omega_sigma_n_m) = lambda x x-> alpha-> [ (exists t in omega)_(t<= x) med overline(P)(t, x->, alpha->) ] compose [bold(f), p_1^(n,m),dots,p_(n+m)^(n,m)]
     $
     Pero dado que $overline(P)$ es #sigmaa.pr, por el #link(<lema-7.1-cuantificación-acotada>)[_Lema de cuantificación acotada_], nos dice que $lambda x x-> alpha-> [ (exists t in omega)_(t<= x) med overline(P)(t, x->, alpha->) ]$ es #sigmaa.pr y como $bold(f)$ es #sigmaa.pr tengo que $chi_(D_(M(overline(P))))^(#omega_sigma_n_m)$ también.
-    Ahora definamos un predicado que sera muy util
+    Ahora definamos un predicado que será muy útil
     $
       P_1 = lambda t x-> alpha-> [ overline(P) (t,x->,alpha->) quad and quad (forall j in omega)_(j<=t) med j = t or not overline(P)(j, x->, alpha->) ] \
       #box(inset: (top: -3pt, bottom: 0pt))[
         #comentario[(Te dice si para los *$<$ a $t$* *no se cumple* $overline(P)$ y para *$t$ si se cumple*)]
       ]
     $
-    Veamos ademas que es #sigmaa.pr Si defino $Q = lambda j t x-> alpha-> [j = t or not overline(P)(j, x->, alpha->)]$ que claramente es #sigmaa.pr por el #lema_op_predicados_pr. Por el #link(<lema-7.1-cuantificación-acotada>)[_Lema de cuantificación acotada_], tengo que $lambda t x-> alpha-> [ (forall j in omega)_(j<=t) med Q(j, t, x->, alpha->) ]$ es #sigmaa.pr Pero notar que $P_1 = lambda t x-> alpha-> [ overline(P) (t,x->,alpha->) quad and quad (forall j in omega)_(j<=t) med Q(j, t, x->, alpha->) ]$ entonces nuevamente por el #lema_op_predicados_pr,  $P_1$ es #sigmaa.pr
+    Veamos además que es #sigmaa.pr Si defino $Q = lambda j t x-> alpha-> [j = t or not overline(P)(j, x->, alpha->)]$ que claramente es #sigmaa.pr por el #lema_op_predicados_pr. Por el #link(<lema-7.1-cuantificación-acotada>)[_Lema de cuantificación acotada_], tengo que $lambda t x-> alpha-> [ (forall j in omega)_(j<=t) med Q(j, t, x->, alpha->) ]$ es #sigmaa.pr Pero notar que $P_1 = lambda t x-> alpha-> [ overline(P) (t,x->,alpha->) quad and quad (forall j in omega)_(j<=t) med Q(j, t, x->, alpha->) ]$ entonces nuevamente por el #lema_op_predicados_pr,  $P_1$ es #sigmaa.pr
 
-    Notar ademas que $P_1$ es #sigmaa.total y
+    Notar además que $P_1$ es #sigmaa.total y
     $
       P_1 (t, x->, alpha->) = 1 quad"si y solo si"quad (x->, alpha->) in D_(M(overline(P))) med"y"med med t = M(overline(P))(x->, alpha->)
     $
     Esto nos dice que
     $
-      M(overline(P)) = ( lambda x-> alpha-> [product_(t=0)^(bold(f(x->,alpha->))) med t^(P_1 (t,x->,alpha->))]) |_D(M(overline(P))) \
+      M(overline(P)) = ( lambda x-> alpha-> [product_(t=0)^(bold(f(x->,alpha->))) med t^(P_1 (t,x->,alpha->))]) |_(D_(M(overline(P)))) \
       #box(inset: (top: -3pt, bottom: 0pt))[
-        #comentario[(como $t^0 = 1$ , $t^1 = t$ y un solo $t$ va cumplir $P_1$ entonces queda $1 times dots times 1 times t times 1 dots = t$ )]
+        #comentario[(como $t^0 = 1$, $t^1 = t$ y un solo $t$ va a cumplir $P_1$ entonces queda $1 times dots times 1 times t times 1 dots = t$)]
       ]
     $
     por lo cual para probar que $M(overline(P))$ es #sigmaa.pr, basta probar que
@@ -1807,7 +1809,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       F = lambda x y x-> alpha-> [ product_(t=x)^y med t^(P_1 (t,x->,alpha->))] compose [C_0^(n,m),bold(f), p_1^(n,m),dots,p_(n+m)^(n,m)] \
     $
-    y por lo tanto el #lema_sumatoria nos dice que $F$ es #sigmaa.pr, por lo cual $M(overline(P)) = M(P)$ es #sigmaa.pr. #fin_demo
+    y por lo tanto el #lema_sumatoria nos dice que $F$ es #sigmaa.pr, por lo cual $M(overline(P)) = M(P)$ es #sigmaa.pr #fin_demo
 
     #linea_dashed
 
@@ -1827,13 +1829,13 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [
     \ Supongamos $f: D_f c= #omega_sigma_n_m -> O$ es #sigmaa.recursiva, $O = {omega, #sigmaa.est}$ y $S c= D_f$ es #sigmaa.recursivamente.enumerable entonces $f|_S$ es #sigmaa.recursiva.
   ],
-  note: [haga solo el caso $S$ no vació, $n=m=1$ y $O = #sigmaa.est$],
+  note: [haga solo el caso $S$ no vacío, $n=m=1$ y $O = #sigmaa.est$],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.6-resultados-basicos-presentados-en-paradigma-recursivo#restriccion1",
   [
     #let omega_sigma_1_1 = $omega X #sigmaa.est$
     Haremos el caso $n=m=1$ y $O = #sigmaa.est$, osea que
     $f: D_f c= #omega_sigma_1_1 -> #sigmaa.est$. \
-    Dado que $S$ es #sigmaa.recursiva tenemos que hay una función $F: omega -> #omega_sigma_1_1$ tal que $I_F = S$ y $F_((1))$ y $F_((2))$ son #sigmaa.recursivas. Ademas $f$ también, entonces por el #segundo_manantial, existen las macros
+    Como $S$ es #sigmaa.recursivamente.enumerable tenemos que hay una función $F: omega -> #omega_sigma_1_1$ tal que  $I_F = S$ y $F_((1))$ y $F_((2))$ son #sigmaa.recursivas. Además $f$ también, entonces por el #segundo_manantial, existen las macros
     $
       [med "W2" <- f("V1", "W1") med]
       quad
@@ -1841,19 +1843,19 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       quad
       [med "W2" <- F_((2)) ("V1") med]
     $
-    Y como $D = lambda x y [x != y]$ y $D' = lambda alpha beta [alpha !=y beta]$ son #sigmaa.pr Por el #segundo_manantial, existen las macros
+    Y como $D = lambda x y [x != y]$ y $D' = lambda alpha beta [alpha != beta]$ son #sigmaa.pr Por el #segundo_manantial, existen las macros
     $
       [med "IF" D("V1", "V2") "GOTO A1" med]
       quad
       [med "IF" D'("W1", "W2") "GOTO A1" med]
     $
-    pero para usarlas de forma mas intuitiva, las escribimos como
+    pero para usarlas de forma más intuitiva, las escribimos como
     $
       [med "IF" "V1" != "V2" "GOTO A1" med]
       quad
       [med "IF" "W1" != "W2" "GOTO A1" med]
     $
-    Ahora si, sea $~P~$ el siguiente programa de #SSigma #comentario[(donde $"N10" = 0$ al iniciar)]
+    Ahora sí, sea $~P~$ el siguiente programa de #SSigma #comentario[(donde $"N10" = 0$ al iniciar)]
     #show math.equation.where(block: true): set par(leading: 0.55em)
     $
       "L1" quad & [med "N2" <- F_((1)) ("N10") med]     \
@@ -1867,15 +1869,14 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       "L3" quad & "SKIP"                                \
     $
     el cual es fácil ver que $~P~$ computa $f|_S$.
-    Ya que, si analizamos por lineas
+    Ya que, si analizamos por líneas
     #block()[
-      - Las *lineas 1* y 2 generan un elemento $(y, beta) in S$.
-      - Las lineas 3 y 4 comparan el input $(x,alpha)$ con $(y, beta)$.
-        - Si son iguales esto implicaría que $(x,alpha) in S$. Por eso  calculamos $f(x,alpha)$ y lo retornamos.
-        - Si no son iguales, se incrementa la variable para generar y se vuelve a la *linea 1* para generar un nuevo $(y, beta) in S$.
+      - Las *líneas 1* y 2 generan un elemento $(y, beta) in S$.
+      - Las líneas 3 y 4 comparan el input $(x,alpha)$ con $(y, beta)$.
+        - Si son iguales, esto implicaría que $(x,alpha) in S$. Por eso calculamos $f(x,alpha)$ y lo retornamos.
+        - Si no son iguales, se incrementa la variable para generar y se vuelve a la *línea 1* para generar un nuevo $(y, beta) in S$.
     ]
-    Nota que si  $(x,alpha) in.not S$, entonces $~P~$ no se detiene porque la comparación *nunca* va a dar igual. Entonces así $~P~$ computa $f|_S$, por lo tanto es
-    #sigmaa.computable y por el #teorema_neumann_vence_godel *es #sigmaa.recursiva.*~ #fin_demo
+    Notar que si $(x,alpha) in.not S$, entonces $~P~$ no se detiene porque la comparación *nunca* va a dar igual. Entonces así $~P~$ computa $f|_S$, por lo tanto es #sigmaa.computable y por el #teorema_neumann_vence_godel *es #sigmaa.recursiva.*~ #fin_demo
   ],
 )
 
@@ -1892,7 +1893,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.6-resultados-basicos-presentados-en-paradigma-recursivo#el-halting-problem-y-los-conjuntos-a-y-n",
   [
     #show math.equation.where(block: true): set block(above: 16pt, below: 16pt)
-    Lo vamos a demostrar lo el absurdo, entonces supongamos que $"AutoHalt"^Sigma$ *si es #sigmaa.recursivo*. \
+    Lo vamos a demostrar por el absurdo, entonces supongamos que $"AutoHalt"^Sigma$ *sí es #sigmaa.recursivo*. \
     Por el #segundo_manantial tenemos que hay un macro
     $
       [med "IF" "AutoHalt"^Sigma ("W1") "GOTO A1" med]
@@ -1901,7 +1902,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       "L1" quad [med "IF" "AutoHalt"^Sigma ("P1") "GOTO L1" med]
     $
-    Nota que
+    Notar que
     #align(center, block(above: 8pt)[
       $"AutoHalt"^Sigma (~P~_0) = 0$ sii $~P~_0$ se detiene partiendo del estado $||~P~_0||$
     ])
@@ -1909,7 +1910,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #align(center)[
       $"AutoHalt"^Sigma (~P~) = 1$ sii $~P~$ se detiene partiendo del estado $||~P~||$.
     ]
-    Estas dos afirmaciones se contradicen y el absurdo viene de que supusimos, $"AutoHalt"^Sigma$ si es #sigmaa.recursivo.~#fin_demo \
+    Estas dos afirmaciones se contradicen y el absurdo viene de que supusimos que $"AutoHalt"^Sigma$ sí es #sigmaa.recursivo. #fin_demo \
     #comentario[
       Otra forma de decir lo mismo, es que si corremos $~P~_0$ partiendo de $||~P~_0||$, tenemos dos posibilidades \
       - $"AutoHalt"^Sigma (~P~_0) = 0$, osea que se sale del $"IF"$ y *$~P~_0$ termina*, por lo tanto $"AutoHalt"^Sigma (~P~_0) = 1$. Absurdo.
@@ -1922,7 +1923,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   2,
   [*Teorema*],
   [
-    Supongamos que $Sigma supset.eq Sigma_p$. Entonces $"AutoHalt"^Sigma$ no es #sigmaa.efectivamente.computable. Es decir no hay ningún procedimiento efectivo que decida si un programa de #SSigma termina partiendo de si mismo.
+    Supongamos que $Sigma supset.eq Sigma_p$. Entonces $"AutoHalt"^Sigma$ no es #sigmaa.efectivamente.computable. Es decir, no hay ningún procedimiento efectivo que decida si un programa de #SSigma termina partiendo de sí mismo.
   ],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.6-resultados-basicos-presentados-en-paradigma-recursivo#autohalt%20es%20no%20EC",
   [
@@ -1938,30 +1939,29 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Entonces
     $quad A = { ~P~ in #ProSigma: "AutoHalt"^Sigma (~P~) = 1 } quad$
     es #sigmaa.recursivamente.enumerable y no #sigmaa.recursivo. \
-    Mas aun
+    Más aún
     $quad N = { ~P~ in #ProSigma: "AutoHalt"^Sigma (~P~) = 0 } quad$
     no es #sigmaa.recursivamente.enumerable.
   ],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.6-resultados-basicos-presentados-en-paradigma-recursivo#A%20es%20RE%20y%20no%20R",
   [
     Sea $P = lambda t ~P~ ["Halt"^(0,1) (t, ~P~, ~P~)]$ #footnote[
-      Recordar que $"Halt"^(n,m) = lambda t x-> alpha-> ~P~ [ i^(n,m) (t, x->, alpha->, ~P~) = n(~P~) + 1]$, osea te dice si $~P~$ con entrada $||x->, alpha->||$ luego de $t$ pasos termino.
-    ]. Notar que $P$ es #sigmaa.pr (porque $Sigma supset.eq Sigma_p$) y por lo tanto $M(P)$ es #sigmaa.recursiva. Ademas, recordar que se definió $"AutoHalt"^Sigma = lambda ~P~ [(exists t in omega) med "Halt"^(0,1) (t, ~P~, ~P~) = 1]$, entonces
+      Recordar que $"Halt"^(n,m) = lambda t x-> alpha-> ~P~ [ i^(n,m) (t, x->, alpha->, ~P~) = n(~P~) + 1]$, osea te dice si $~P~$ con entrada $||x->, alpha->||$ luego de $t$ pasos terminó.
+    ]. Notar que $P$ es #sigmaa.pr (porque $Sigma supset.eq Sigma_p$) y por lo tanto $M(P)$ es #sigmaa.recursiva. Además, recordar que se definió $"AutoHalt"^Sigma = lambda ~P~ [(exists t in omega) med "Halt"^(0,1) (t, ~P~, ~P~) = 1]$, entonces
     $
       D_(M(P)) = { ~P~ in #ProSigma: (exists t in omega) med P(t, ~P~) = 1 } = { ~P~ in #ProSigma: "AutoHalt"^Sigma (~P~) = 1 } = A
     $
-    Pero por la _Caracterización de conjuntos #sigmaa.re _ (dada en el #link(<combo-6.2>)[_Combo 6.2_]) que entre otras cosas dice, un conjunto es #sigmaa.re sii es el dominio de alguna función #sigmaa.re. Entonces como $D_(M(P)) = A$ tenemos que *$A$ si es #sigmaa.re* \
-    Supongamos ahora que $N$ es #sigmaa.re. Entonces por el _Lema de restricción de dominios de funciones #sigmaa.r _ (dado en el #link(<combo-7.2>)[_Combo 7.2_]) la función $C^(0,1)_0 |_N$ es #sigmaa.recursiva ya que $C^(0,1)_0$ lo es. Ademas como $A$ es #sigmaa.re, también lo es $C^(0,1)_0 |_A$.
+    Pero por la _Caracterización de conjuntos #sigmaa.re _(dada en el #link(<combo-6.2>)[_Combo 6.2_]) que entre otras cosas dice: un conjunto es #sigmaa.re sii es el dominio de alguna función #sigmaa.re. Entonces como $D_(M(P)) = A$ tenemos que *$A$ sí es #sigmaa.re* \
+    Supongamos ahora que $N$ es #sigmaa.re. Entonces por el _Lema de restricción de dominios de funciones #sigmaa.r _ (dado en el #link(<combo-7.2>)[_Combo 7.2_]) la función $C^(0,1)_0 |_N$ es #sigmaa.recursiva ya que $C^(0,1)_0$ lo es. Además como $A$ es #sigmaa.re, también lo es $C^(0,1)_0 |_A$.
     \
     \
     \
-    Ahora si, ya que
+    Ahora sí, ya que
     $
       "AutoHalt"^Sigma = C^(0,1)_0 |_A union C^(0,1)_0 |_N quad , quad A union N = #ProSigma quad y quad A inter N = emptyset
     $
-    por el #lema_division_por_casos_recursivas tenemos que $"AutoHalt"^Sigma$ es #sigmaa.recursiva, lo cual contradice el Lema anterior. Esto prueba que *$N$ no es #sigmaa.re *\
-    Finalmente supongamos que $A$
-    es #sigmaa.recursivo. Entonces el conjunto
+    por el #lema_division_por_casos_recursivas tenemos que $"AutoHalt"^Sigma$ es #sigmaa.recursiva, lo cual contradice el Lema anterior. Esto prueba que *$N$ no es #sigmaa.re* \
+    Finalmente, supongamos que $A$ es #sigmaa.recursivo. Entonces el conjunto
     $quad quad N = (#sigmaa.est - A) inter #ProSigma quad quad$
     debería serlo, lo cual es absurdo por lo visto anteriormente. Por lo tanto *$A$ no es #sigmaa.recursivo*. #fin_demo
   ],
@@ -1979,7 +1979,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #let RSigma_k = $R^Sigma_k$
     #let RSigma_k1 = $R^Sigma_(k+1)$
     Esto será probado por inducción en $k$, que _ si $h in #RSigma_k$, entonces h es #sigmaa.computable _. \
-    El caso $k=0$, es fácil ya que $R_0 = "PR"_0$, entonces hay que hacer programas que computen \
+    El caso $k=0$ es fácil ya que $R_0 = "PR"_0$, entonces hay que hacer programas que computen \
     ${"Suc","Pred", C_0^(0,0), C_epsilon^(0,0)} union {d_a : a in Sigma} union {p_j^(n,m) : 1<=j<=n+m}$,
     los cuales son todos triviales
     #box(inset: (top: 6pt, bottom: 6pt))[
@@ -2014,12 +2014,12 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       )
     ]
     Supongamos que la propiedad se cumple para un $k$ fijo y veamos que se cumple también para $h in #RSigma_k1$. \
-    Hay varios casos. Veamos el caso que $h = M(P)$, con $P : omega X #omega_sigma_n_m -> omega$, un predicado en #RSigma_k. Por hipótesis inductiva $P$ es #sigmaa.computable, osea que por el #primer_manantial existe el macro
+    Hay varios casos. Veamos el caso donde $h = M(P)$, con $P : omega X #omega_sigma_n_m -> omega$, un predicado en #RSigma_k. \ Por hipótesis inductiva $P$ es #sigmaa.computable, osea que por el #primer_manantial existe el macro
     $
       [med "IF" P("V1",dots,"V"overline(n+1),"W1",dots,"W"overline(m)) "GOTO A1" med]
     $
 
-    El cual nos permite realizar el siguiente programa de $~P~ in #SSigma$
+    El cual nos permite realizar el siguiente programa $~P~$ de #SSigma
     #show math.equation.where(block: true): set par(leading: 0.55em)
     $
       "L1" quad & [med "IF" P("N"overline(n+1),"N1",dots,"N"overline(n),"P1",dots,"P"overline(m)) "GOTO L2" med] \
@@ -2027,10 +2027,10 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
                 & "GOTO L1"                                                                                      \
       "L2" quad & "N1" <- "N"overline(n+1)                                                                       \
     $
-    que es fácil ver que computa $M(P)$. Pensemos que $~P~$ inicia de un estado $||x->,alpha->||$, entonces tenemos dos casos
+    que es fácil ver que computa $M(P)$. Supongamos que $~P~$ inicia de un estado $||x->,alpha->||$, entonces hay dos casos
     #block()[
-      - Si $(x->,alpha->) in.not D_(M(P))$, entonces el predicado $P$ nunca va a ser $1$, incluso al incrementar el $"N"overline(n+1)$, por lo tanto $~P~$ nunca va a detenerse.
-      - Si $(x->,alpha->) in D_(M(P))$, entonces eventualmente $P$ va a ser $1$, pero como ademas $"N"overline(n+1)$ inicia en $0$ e incremente de a $1$, cuando $P$ valga $1$ va a retornar el mínimo valor, osea $M(P) (x->,alpha->)$.
+      - Si $(x->,alpha->) in.not D_(M(P))$, entonces el predicado $P$ nunca va a ser $1$, incluso al incrementar $"N"overline(n+1)$, por lo tanto $~P~$ nunca se va a detener.
+      - Si $(x->,alpha->) in D_(M(P))$, entonces eventualmente $P$ va a ser $1$. Como además $"N"overline(n+1)$ inicia en $0$ e incrementa de a $1$, cuando $P$ valga $1$ entonces va a retornar el mínimo valor, osea $M(P) (x->,alpha->)$.
     ]
     Por esto $~P~$ computa $M(P)$ y por lo tanto *$M(P)$ es #sigmaa.computable*. #fin_demo
   ],
@@ -2042,7 +2042,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 
 #proofStructure(
   1,
-  [*Lema* (Lema division por casos para funciones #sigmaa.recursivas) <combo-9.1>],
+  [*Lema* (Lema división por casos para funciones #sigmaa.recursivas) <combo-9.1>],
   [
     \ Supongamos $f_i : D_f_i c= #omega_sigma_n_m -> O, i=1,dots,k$ son #sigmaa.recursivas. Tales que $D_f_i inter D_f_j = emptyset$ para cada $i!=j$. Entonces la función $f_1 union dots union f_k$ es #sigmaa.recursiva.
   ],
@@ -2050,16 +2050,16 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.6-resultados-basicos-presentados-en-paradigma-recursivo#lema-de-division-por-casos-para-funciones-sigma-recursivas",
   [
     #let omega_sigma_1_1 = $omega X #sigmaa.est$
-    Haremos el caso $k=2$, $n=m=1$ y $O = omega$. Osea que tenemos, $f_i: D_f_i c= #omega_sigma_1_1 -> omega$ con $i=1,2$. \
+    Haremos el caso $k=2$, $n=m=1$ y $O = omega$. Osea que tenemos $f_i: D_f_i c= #omega_sigma_1_1 -> omega$ con $i=1,2$. \
     Por el #teorema_neumann_vence_godel las funciones son #sigmaa.computables, osea que existen los programas $~P~_1$ y $~P~_2$ tales que las computan respectivamente. Entonces para $i=1,2$ definamos
     $
       H_i = lambda t x_1 alpha_1 [ "Halt"^(1,1) (t, x_1, alpha_1, ~P~_i)] \
     $
-    notar que $D_H_i = omega X #omega_sigma_1_1$ y que $H_i$ es #sigmaa.mixta. Ademas sabemos que $"Halt"^(1,1)$ es $Sigma union Sigma_p$-pr. Entonces por el #teorema_independencia_del_alfabeto, $H_i$ es #sigmaa.pr y por el #segundo_manantial existe la macro
+    notar que $D_H_i = omega X #omega_sigma_1_1$ y que $H_i$ es #sigmaa.mixta. Además sabemos que $"Halt"^(1,1)$ es $Sigma union Sigma_p$-pr. Entonces por el #teorema_independencia_del_alfabeto, $H_i$ es #sigmaa.pr y por el #segundo_manantial existe la macro
     $
       [med "IF" H_i ("V1", "V2", "W1") "GOTO A1" med]
     $
-    pero para usarla de forma mas intuitiva, la escribimos como
+    pero para usarla de forma más intuitiva, la escribimos como
     $
       [med "IF Halt"^(1,1) ("V1", "V2", "W1", ~P~_i) "GOTO A1" med]
     $
@@ -2084,7 +2084,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     el cual claramente computa $f_1 union f_2$, ya que si corremos $~P~$ partiendo del estado $||x_1,alpha_1||$, tenemos dos casos
     #block()[
       - $(x_1,alpha_1) in D_(f_1 union f_2)$, entonces en alguna cantidad de pasos se va cumplir alguno de los dos $"IF"$ #comentario[(nunca ambos ya que $D_f_1 inter D_f_2 = emptyset$)] y se va a detener retornando $f_1(x_1,alpha_1)$ o $f_2(x_1,alpha_1)$, según corresponda.
-      - $(x_1,alpha_1) in.not D_(f_1 union f_2)$, entonces nunca los $"IF"$ se va a cumplir nunca, por lo tanto $~P~$ nunca va a detenerse.
+      - $(x_1,alpha_1) in.not D_(f_1 union f_2)$, entonces nunca se van a cumplir los $"IF"$, por lo tanto $~P~$ nunca va a detenerse.
     ]
     por lo tanto *$f_1 union f_2$ es #sigmaa.computable.* #fin_demo
   ],
@@ -2120,7 +2120,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       f = Enm compose [Tnm compose [pnm_1,dots,pnm_(n+m), CnmP ], med , med pnm_1, dots, pnm_(n+m), CnmP] \
     $
-    donde $pnm_1,dots,pnm_(n+m)$ y $CnmP$ son respecto al alfabeto $Sigma union Sigma_p$, es decir que tienen dominio $omega^n X (Sigma union Sigma_p)^(*m)$. Esto nos dice que $f$ es $(Sigma union Sigma_p)$-recursiva. Osea que el #teorema_independencia_del_alfabeto nos dice que *$f$ es #sigmaa.recursiva*. #fin_demo
+    donde $pnm_1,dots,pnm_(n+m)$ y $CnmP$ son respecto al alfabeto $Sigma union Sigma_p$, es decir, tienen dominio $omega^n X (Sigma union Sigma_p)^(*m)$. Esto nos dice que $f$ es $(Sigma union Sigma_p)$-recursiva. Osea que el #teorema_independencia_del_alfabeto nos dice que *$f$ es #sigmaa.recursiva*. #fin_demo
   ],
 )
 
@@ -2133,7 +2133,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   #text(
     size: 10.2pt,
   )[
-    Las *$(star)$* indican que son un combo y el *[ n ]* es la cantidad de veces que se menciono el resultado (incluso en una misma demo).
+    Las *$(star)$* indican que son un combo y el *[ n ]* es la cantidad de veces que se mencionó el resultado (incluso en una misma demo).
   ]
 
   #table(
@@ -2165,7 +2165,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           #context { counter(<lema-op-conjuntos-pr>).display() }
         ],
         [
-          Si $S_1,S_2 c= #omega_sigma_n_m$ son #sigmaa.pr, entonces \ $S_1 union S_2 med , med S_1 inter S_2$ y $S_1 - S_2$ son #sigmaa.pr.
+          Si $S_1,S_2 c= #omega_sigma_n_m$ son #sigmaa.pr, entonces \ $S_1 union S_2 med , med S_1 inter S_2$ y $S_1 - S_2$ son #sigmaa.pr
         ],
       )
     ],
@@ -2178,7 +2178,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       #context { counter(<lema-restricción-dominios-pr>).display() }
     ],
     [
-      Supongamos $f: D_f c= #omega_sigma_n_m -> omega$ es #sigmaa.pr Si $S c= D_f$ es #sigmaa.pr, entonces $f |_S$ es #sigmaa.pr.
+      Supongamos $f: D_f c= #omega_sigma_n_m -> omega$ es #sigmaa.pr Si $S c= D_f$ es #sigmaa.pr, entonces $f |_S$ es #sigmaa.pr
     ],
   )
 
@@ -2190,7 +2190,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       #context { counter(<lema-caracterización-conjuntos-rectangulares-pr>).display() }
     ],
     [
-      Supongamos $S_1,dots,S_n c= omega$ y $L_1,dots,L_m c= #sigmaa.est$ no vacíos. Entonces $S_1 X dots X S_n X L_1 X dots X L_m$ es #sigmaa.pr sii $S_1,dots,S_n,L_1,dots,L_m$ son #sigmaa.pr.
+      Supongamos $S_1,dots,S_n c= omega$ y $L_1,dots,L_m c= #sigmaa.est$ no vacíos. Entonces $S_1 X dots X S_n X L_1 X dots X L_m$ es #sigmaa.pr sii $S_1,dots,S_n,L_1,dots,L_m$ son #sigmaa.pr
     ],
   )
 
@@ -2333,7 +2333,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 
   <lema-division-por-casos-pr>
   #statementsStructure(
-    [Lema (Lema de division por casos para funciones #sigmaa.pr)],
+    [Lema (Lema de división por casos para funciones #sigmaa.pr)],
     note: [#link(<combo-2.1>)[*Combo 2.1*]],
     frequency: [
       #counter(<lema-division-por-casos-pr>).update(c => c - 1)
@@ -2347,7 +2347,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 
   <lema-division-por-casos-recursivas>
   #statementsStructure(
-    [Lema (Lema de division por casos para funciones #sigmaa.recursivas)],
+    [Lema (Lema de división por casos para funciones #sigmaa.recursivas)],
     note: [#link(<combo-9.1>)[*Combo 9.1*]],
     frequency: [
       #counter(<lema-division-por-casos-recursivas>).update(c => c - 1)
@@ -2364,7 +2364,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 
 #text(
   size: 15pt,
-)[Referencias de los Resultados Anteriores] #comentario[(Están aca para no sobrecargar la pagina anterior)]
+)[Referencias de los Resultados Anteriores] #comentario[(Están acá para no sobrecargar la página anterior)]
 
 #set enum(spacing: 15pt)
 
@@ -2379,5 +2379,5 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 + _Teorema (Independencia del Alfabeto)_ es el teorema #link("https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#independencia")[4.2 del apunte].
 + _Teorema (Neumann vence a Gödel)_ es el teorema 1 de la Guía 8, el #link(<combo-1.2>)[*Combo 1.2*] y el #link(<combo-8.4>)[*Combo 8.4*].
 + _Teorema (Gödel vence a Neumann)_ del #link("https://apunte-lenguajes-logica.netlify.app/4.4-batallas-entre-paradigmas#godel-vence-a-neumann-1")[apunte es el 4.3] y el #link(<combo-9.2>)[*Combo 9.2*].
-+ _Lema (Lema de division por casos para funciones #sigmaa.pr)_ es el lema 4.18 del #link("https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#lema-de-division-por-casos-para-funciones-sigma-p.r.")[apunte] y el #link(<combo-2.1>)[*Combo 2.1*].
-+ _Lema (Lema de division por casos para funciones #sigmaa.recursivas)_ es el lema 4.56 del #link("https://apunte-lenguajes-logica.netlify.app/4.6-resultados-basicos-presentados-en-paradigma-recursivo#lema-de-division-por-casos-para-funciones-sigma-recursivas")[apunte] y el #link(<combo-9.1>)[*Combo 9.1*].
++ _Lema (Lema de división por casos para funciones #sigmaa.pr)_ es el lema 4.18 del #link("https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#lema-de-division-por-casos-para-funciones-sigma-p.r.")[apunte] y el #link(<combo-2.1>)[*Combo 2.1*].
++ _Lema (Lema de división por casos para funciones #sigmaa.recursivas)_ es el lema 4.56 del #link("https://apunte-lenguajes-logica.netlify.app/4.6-resultados-basicos-presentados-en-paradigma-recursivo#lema-de-division-por-casos-para-funciones-sigma-recursivas")[apunte] y el #link(<combo-9.1>)[*Combo 9.1*].
