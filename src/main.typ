@@ -1297,7 +1297,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       #show math.equation.where(block: true): set block(below: 1em, above: 1em)
       $
         ~P~_1 = ~P~ "N1" <- "N1" quad quad quad quad
-        ~P~_2 = ~P~ "N2" <- "N2" quad quad quad quad
+        ~P~_2 = ~P~ "N1" <- "N2" quad quad quad quad
         ~P~_3 = ~P~ "P1" <- "P1"
       $
       definamos las funciones
