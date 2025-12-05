@@ -96,8 +96,8 @@
     [
       Para $d,d' in bold("Des")$ y $n >= 0$, escribimos *$d |-n d'$* si existen $d_1,dots, d_(n+1) in bold("Des")$ tales que
       $
-        & d = d_1                                \
-        & d' = d_(n+1)                           \
+        & d = d_1 \
+        & d' = d_(n+1) \
         & d_i |- d_(i+1), med "para " i=1,dots,n
       $
       Luego definimos *$d |-* d'$* si y solo si $(exists n in omega) d |-n d'$.
@@ -178,7 +178,7 @@
     Sea $Sigma = {a_1,dots,a_n}$ un alfabeto no vacío, con $<=$ un orden total sobre $Sigma$ dado por $a_1 < a_2 < dots < a_n$.
     Definimos la función $s< : #sigmaa.est -> #sigmaa.est$ de la siguiente manera
     $
-      & s<((a_n)^m) = (a_1)^(m+1) quad " para cada" m>=0                                                                  \
+      & s<((a_n)^m) = (a_1)^(m+1) quad " para cada" m>=0 \
       & s<(alpha a_i (a_n)^m) = alpha a_(i+1) (a_1)^m quad " cada vez que" alpha in #sigmaa.est," con " 1<=i<n " y " m>=0
     $
   ],
@@ -208,12 +208,14 @@
     Sea $Sigma = {a_1,dots,a_n}$ un alfabeto no vacío, con $<=$ un orden total sobre $Sigma$ dado por $a_1 < a_2 < dots < a_n$.
     Definimos la función $\#< : #sigmaa.est -> omega$ de la siguiente manera
     $
-      & \#<(epsilon) = 0                                                                                     \
+      & \#<(epsilon) = 0 \
       & \#<(a_(i_k) dots a_(i_0)) = i_k n^k + dots + i_0 n^0 quad " para " i_0, i_1, dots, i_k in {1,dots,n} \
     $
-    #comentario[Otra forma (equivalente) de ver el caso recursivo sería \ *$\#<(alpha) = i_k n^k + dots + i_0 n^0$* con $alpha = a_(i_k) dots a_(i_0)$ tal que $k in omega$ y $i_0, i_1, dots, i_k in {1,dots,n}$] #footnote([
-      Sabemos que $alpha$ puede escribirse de esa manera porque $alpha != epsilon$ y el lema 2.2 (del apunte) o lema 6 (de la guía 2).
-    ])
+    #comentario[Otra forma (equivalente) de ver el caso recursivo sería \ *$\#<(alpha) = i_k n^k + dots + i_0 n^0$* con $alpha = a_(i_k) dots a_(i_0)$ tal que $k in omega$ y $i_0, i_1, dots, i_k in {1,dots,n}$] #footnote(
+      [
+        Sabemos que $alpha$ puede escribirse de esa manera porque $alpha != epsilon$ y el lema 2.2 (del apunte) o lema 6 (de la guía 2).
+      ],
+    )
   ],
 )
 
@@ -329,7 +331,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
                 D_(M(P)) & = {
                              (x->, alpha->) in #omega_sigma_n_m : (exists t in omega) P(t, x->, alpha->) = 1
-                           }                                                                  \
+                           } \
       M(P)(x->, alpha->) & = min_t P(t, x->, alpha->)", para cada" (x->, alpha->) in D_(M(P))
     $
     Diremos que _$M(P)$ se obtiene por minimización de variable numérica a partir de $P$_.
@@ -504,7 +506,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       #show math.equation.where(block: true): set block(below: 1em, above: 1em)
       #show math.equation.where(block: true): set par(leading: 1pt)
       $
-        #SP (i, s->, sigma->) & = "descripción instantánea que resulta luego de "     \
+        #SP (i, s->, sigma->) & = "descripción instantánea que resulta luego de " \
                               & quad med "realizarp" #footnote[
                                   El verbo "realizarp" una actividad es realizarla si se puede.
                                 ]" " I_i^(~P~), "estando en el estado" (s->, sigma->)
@@ -587,11 +589,11 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #show math.equation.where(block: true): set par(leading: 0em)
     $
                    D_#horquilla_n_m_num & = {
-                                          (x->, alpha->) in #omega_sigma_n_m : ~P~ "termina,"           \
+                                          (x->, alpha->) in #omega_sigma_n_m : ~P~ "termina," \
                                         & quad quad "partiendo del estado" ||x_1,dots,x_n,sigma_1,dots,sigma_m||
-                                          }                                                             \
-                      #box(height: 9pt)                                                                 \
-      #horquilla_n_m_num (x->, alpha->) & = "valor de N1 en el estado obtenido cuando" ~P~ "termina,"   \
+                                          } \
+                      #box(height: 9pt) \
+      #horquilla_n_m_num (x->, alpha->) & = "valor de N1 en el estado obtenido cuando" ~P~ "termina," \
                                         & quad med "partiendo de" ||x_1,dots,x_n,sigma_1,dots,sigma_m||
     $
   ],
@@ -638,7 +640,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
                 D_(M<(P)) & = {
                               (x->, alpha->) in #omega_sigma_n_m : (exists alpha in #sigmaa.est) P(x->, alpha->, alpha) = 1
-                            }                                                                           \
+                            } \
       M<(P)(x->, alpha->) & = min_alpha P(x->, alpha->, alpha)", para cada" (x->, alpha->) in D_(M<(P))
     $
     Diremos que _$M<(P)$ se obtiene por minimización de variable alfabética a partir de $P$_.
@@ -696,7 +698,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #{
       show math.equation.where(block: true): set block(below: 1em, above: 1em)
       $
-            #i_nm & : omega X #omega_sigma_n_m X #ProSigma -> omega           \
+            #i_nm & : omega X #omega_sigma_n_m X #ProSigma -> omega \
         #E_nm_num & : omega X #omega_sigma_n_m X #ProSigma -> #omega_floor_NN \
         #E_nm_est & : omega X #omega_sigma_n_m X #ProSigma -> #sigma_floor_NN
       $
@@ -726,7 +728,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [
     Definimos para cada $j in NN$, las funciones
     $
-      #E_nmj_num & : omega X #omega_sigma_n_m X #ProSigma -> omega       \
+      #E_nmj_num & : omega X #omega_sigma_n_m X #ProSigma -> omega \
       #E_nmj_est & : omega X #omega_sigma_n_m X #ProSigma -> #sigmaa.est
     $
     de la siguiente manera
@@ -753,7 +755,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Dado que #Halt_nm es un predicado podemos definir *$#T_nm = M(#Halt_nm)$*. Osea, dado $(x->, alpha->, ~P~) in D_#T_nm$
     #show math.equation.where(block: true): set par(leading: 2pt)
     $
-      #T_nm (x->, alpha->, ~P~) & = "cantidad de pasos necesarios para que" ~P~ "se"                \
+      #T_nm (x->, alpha->, ~P~) & = "cantidad de pasos necesarios para que" ~P~ "se" \
                                 & quad" detenga partiendo de" ||x_1,dots,x_n,alpha_1,dots,alpha_m||
     $
     Notar que $D_#T_nm = { (x->, alpha->, ~P~) : ~P~ "se detiene partiendo de" ||x_1,dots,x_n,alpha_1,dots,alpha_m||}$.
@@ -956,15 +958,15 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           column-gutter: 32pt,
           [Básico], [Con _conjunto de llegada_ y flechas], [Con flechas y por casos],
           $
-             D_f & = omega    \
+             D_f & = omega \
             f(x) & = 23 dot x
           $,
           $
-            f: omega & -> omega    \
+            f: omega & -> omega \
                    x & -> 23 dot x
           $,
           $
-            f: NN & -> omega                                                   \
+            f: NN & -> omega \
                 x & -> cases(x+1 quad "si x es par", x+2 quad "si x es impar")
           $,
         )
@@ -1100,8 +1102,8 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Si $F = emptyset$, entonces es claro que $D_F$ es #sigmaa.pr \
     Si $F != emptyset$, tenemos entonces que $r$ es de la forma $n+m$ y
     $
-        g & : D_g c= #omega_sigma_n_m -> O                                             \
-      g_i & : D_(g_i) c= #omega_sigma_k_l -> omega"  , para cada "i = 1,dots,n         \
+        g & : D_g c= #omega_sigma_n_m -> O \
+      g_i & : D_(g_i) c= #omega_sigma_k_l -> omega"  , para cada "i = 1,dots,n \
       g_i & : D_(g_i) c= #omega_sigma_k_l -> #sigmaa.est", para cada "i = n+1,dots,n+m
     $
     con $O in {omega, #sigmaa.est}$ y $k,l in omega$. Por el #link(<lema-1.1>)[_Lema (1)_] , hay funciones #sigmaa.pr $overline(g)_1,dots,overline(g)_(n+m)$ las cuales son #sigmaa.totales y
@@ -1151,8 +1153,8 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           "N"1 <- "N"1 + 1
         $,
         $
-               & "IF N1 "!=" 0 GOTO L2"      \
-          "L1" & "GOTO L1"                   \
+               & "IF N1 "!=" 0 GOTO L2" \
+          "L1" & "GOTO L1" \
           "L2" & "N1" <- "N"1 #menos_punto 1
         $,
         $
@@ -1174,7 +1176,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Supongamos que la propiedad se cumple para un $k$ fijo y veamos que se cumple también para $h in #RSigma_k1$. \
     Hay varios casos. Veamos el caso que $h = R(f,~G~)$ con $f in #RSigma_k$ y $~G~ in #RSigma_k$ que son
     $
-          f & : #bloque_fijo -> omega                                   \
+          f & : #bloque_fijo -> omega \
       ~G~_a & : omega X #bloque_fijo X #sigmaa.est -> omega, a in Sigma
     $
     Sea $Sigma = {a_1,dots,a_r}$. Por hipótesis inductiva, las funciones $f, ~G~_a$ con $a in Sigma$, son #sigmaa.computables y por lo tanto tenemos las macros
@@ -1444,8 +1446,8 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
               (x, x_1, x_2, alpha_1) & -> cases(
                                          0 #h(2.25cm) quad "si" x > 0,
                                          f(0,x_1,x_2,alpha_1) quad "si" x = 0
-                                       )        \
-                           #v(0.2cm)            \
+                                       ) \
+                           #v(0.2cm) \
         g: omega^3 X S_1 X S_2 X L_1 & -> omega \
         (A, t, x, x_1, x_2, alpha_1) & -> cases(
                                          0 #h(3.65cm) quad "si" x > t+1,
@@ -1455,14 +1457,14 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     }
     tenemos que $G = R(h,g)$. Es decir que sólo nos falta probar que $h$ y $g$ son #sigmaa.pr Sean así
     $
-      D_1 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X S_2 X L_1 : x > 0}            \
-      D_2 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X S_2 X L_1 : x = 0}            \
-      H_1 & = {(z, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X S_2 X L_1 : x > t+1}  \
+      D_1 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X S_2 X L_1 : x > 0} \
+      D_2 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X S_2 X L_1 : x = 0} \
+      H_1 & = {(z, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X S_2 X L_1 : x > t+1} \
       H_2 & = {(z, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X S_2 X L_1 : x <= t+1} \
     $
     Notar que
     $
-      h & = C_0^(2+1, 1) |_D_1 union lambda x x_1 x_2 alpha_1 [f(0,x_1,x_2,alpha_1)] |_(D_2)           \
+      h & = C_0^(2+1, 1) |_D_1 union lambda x x_1 x_2 alpha_1 [f(0,x_1,x_2,alpha_1)] |_(D_2) \
       g & = C_0^(2+3, 1) |_H_1 union lambda A t x x_1 x_2 alpha_1 [A + f(t+1,x_1,x_2,alpha_1)] |_(H_2) \
     $
     Para probarlo, vamos a ver que todas las funciones y conjuntos que aparecen en $h$ y $g$ son #sigmaa.pr
@@ -1585,7 +1587,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   ],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/3.3-conjuntos-sigma-efectivamente-enumerables",
   [
-    Si $S = emptyset$, por definición es #sigmaa.efectivamente.enumerable. 
+    Si $S = emptyset$, por definición es #sigmaa.efectivamente.enumerable.
 
     Supongamos entonces que $S != emptyset$ y fijamos $(arrow(z), arrow(gamma)) in S$. Sea $PP_S$ el procedimiento efectivo que compute a $chi_S^#omega_sigma_n_m$. Sea $PP_1$ un procedimiento efectivo que enumere a #omega_sigma_n_m, usando las bajadas y $*<$, que ya sabemos que son #sigmaa.efectivamente.computable. Entonces $PP_1$ sería
     #align(center)[
@@ -1710,18 +1712,18 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Ahora sí, sea $~P~$ el siguiente programa de #SSigma
     #show math.equation.where(block: true): set par(leading: 0.55em)
     $
-      "L1" quad & "N20" <- "N20" + 1                                                               \
-                & [med "N10" <- ("N20")_1 med]                                                     \
-                & [med "N3" <- ("N20")_2 med]                                                      \
-                & [med "P3" <- *<("N20")_3 med]                                                    \
-                & [med "IF" not "Halt"^(1,1) ("N10", "N3", "P3", ~P~_1) "GOTO L1" med]             \
-                & [med "IF" not "Halt"^(1,1) ("N10", "N3", "P3", ~P~_2) "GOTO L1" med]             \
-                & [med "IF" not "Halt"^(1,1) ("N10", "N3", "P3", ~P~_3) "GOTO L1" med]             \
-                & [med "IF" not "Halt"^(1,1) ("N10", "N3", "P3", ~P~_4) "GOTO L1" med]             \
+      "L1" quad & "N20" <- "N20" + 1 \
+                & [med "N10" <- ("N20")_1 med] \
+                & [med "N3" <- ("N20")_2 med] \
+                & [med "P3" <- *<("N20")_3 med] \
+                & [med "IF" not "Halt"^(1,1) ("N10", "N3", "P3", ~P~_1) "GOTO L1" med] \
+                & [med "IF" not "Halt"^(1,1) ("N10", "N3", "P3", ~P~_2) "GOTO L1" med] \
+                & [med "IF" not "Halt"^(1,1) ("N10", "N3", "P3", ~P~_3) "GOTO L1" med] \
+                & [med "IF" not "Halt"^(1,1) ("N10", "N3", "P3", ~P~_4) "GOTO L1" med] \
                 & [med "IF" "N1" != "E"^(1,1)_(\# med 1) ("N10", "N3", "P3", ~P~_1) "GOTO L1" med] \
                 & [med "IF" "N2" != "E"^(1,1)_(\# med 1) ("N10", "N3", "P3", ~P~_2) "GOTO L1" med] \
-                & [med "IF" "P1" != "E"^(1,1)_(* med 1) ("N10", "N3", "P3", ~P~_3) "GOTO L1" med]  \
-                & [med "IF" "P2" != "E"^(1,1)_(* med 1) ("N10", "N3", "P3", ~P~_4) "GOTO L1" med]  \
+                & [med "IF" "P1" != "E"^(1,1)_(* med 1) ("N10", "N3", "P3", ~P~_3) "GOTO L1" med] \
+                & [med "IF" "P2" != "E"^(1,1)_(* med 1) ("N10", "N3", "P3", ~P~_4) "GOTO L1" med] \
     $
     es fácil entender el programa si lo ves por partes y teniendo en cuenta que toma como entrada $(x_1, x_2, alpha_1, alpha_2)$\
     #box(inset: (top: 3pt, bottom: 3pt))[
@@ -1858,15 +1860,15 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Ahora sí, sea $~P~$ el siguiente programa de #SSigma #comentario[(donde $"N10" = 0$ al iniciar)]
     #show math.equation.where(block: true): set par(leading: 0.55em)
     $
-      "L1" quad & [med "N2" <- F_((1)) ("N10") med]     \
-                & [med "P2" <- F_((2)) ("N10") med]     \
+      "L1" quad & [med "N2" <- F_((1)) ("N10") med] \
+                & [med "P2" <- F_((2)) ("N10") med] \
                 & [med "IF" "N1" != "N2" "GOTO L2" med] \
                 & [med "IF" "P1" != "P2" "GOTO L2" med] \
-                & [med "P1" <- f("N1", "P1") med]       \
-                & "GOTO L3"                             \
-      "L2" quad & "N10" <- "N10"+ 1                     \
-                & "GOTO L1"                             \
-      "L3" quad & "SKIP"                                \
+                & [med "P1" <- f("N1", "P1") med] \
+                & "GOTO L3" \
+      "L2" quad & "N10" <- "N10"+ 1 \
+                & "GOTO L1" \
+      "L3" quad & "SKIP" \
     $
     el cual es fácil ver que $~P~$ computa $f|_S$.
     Ya que, si analizamos por líneas
@@ -1993,8 +1995,8 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           "N"1 <- "N"1 + 1
         $,
         $
-               & "IF N1 "!=" 0 GOTO L2"      \
-          "L1" & "GOTO L1"                   \
+               & "IF N1 "!=" 0 GOTO L2" \
+          "L1" & "GOTO L1" \
           "L2" & "N1" <- "N"1 #menos_punto 1
         $,
         $
@@ -2023,9 +2025,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #show math.equation.where(block: true): set par(leading: 0.55em)
     $
       "L1" quad & [med "IF" P("N"overline(n+1),"N1",dots,"N"overline(n),"P1",dots,"P"overline(m)) "GOTO L2" med] \
-                & "N"overline(n+1) <- "N"overline(n+1) + 1                                                       \
-                & "GOTO L1"                                                                                      \
-      "L2" quad & "N1" <- "N"overline(n+1)                                                                       \
+                & "N"overline(n+1) <- "N"overline(n+1) + 1 \
+                & "GOTO L1" \
+      "L2" quad & "N1" <- "N"overline(n+1) \
     $
     que es fácil ver que computa $M(P)$. Supongamos que $~P~$ inicia de un estado $||x->,alpha->||$, entonces hay dos casos
     #block()[
@@ -2072,14 +2074,14 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Con todo esto definimos el siguiente programa $~P~$ de #SSigma
     #show math.equation.where(block: true): set par(leading: 0.55em)
     $
-      "L1" quad & "N10" <- "N10" + 1                                             \
+      "L1" quad & "N10" <- "N10" + 1 \
                 & [med "IF Halt"^(1,1) ("N10", "N1", "P1", ~P~_1) "GOTO L2" med] \
                 & [med "IF Halt"^(1,1) ("N10", "N1", "P1", ~P~_2) "GOTO L3" med] \
-                & "GOTO L1"                                                      \
-      "L2" quad & [med "N1" <- f_1("N1", "N1") med]                              \
-                & "GOTO L4"                                                      \
-      "L3" quad & [med "N1" <- f_2("N1", "N1") med]                              \
-      "L4" quad & "SKIP"                                                         \
+                & "GOTO L1" \
+      "L2" quad & [med "N1" <- f_1("N1", "N1") med] \
+                & "GOTO L4" \
+      "L3" quad & [med "N1" <- f_2("N1", "N1") med] \
+      "L4" quad & "SKIP" \
     $
     el cual claramente computa $f_1 union f_2$, ya que si corremos $~P~$ partiendo del estado $||x_1,alpha_1||$, tenemos dos casos
     #block()[
