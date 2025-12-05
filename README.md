@@ -1,6 +1,6 @@
 # Combos Lenguajes Formales y Computabilidad
 
-En la carpeta `./pdfs` esta `enunciado.pdf` que contiene todos los combos enunciados (lo que mando la cátedra) y  `resumen.pdf` que tiene  los combos resueltos.
+En la carpeta `./pdfs` esta `combos.pdf` que contiene todos los combos enunciados (lo que mando la cátedra) y  `resumen.pdf` que tiene  los combos resueltos.
 
 #### ¿ Cómo renderizar el documento?
 
