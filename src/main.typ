@@ -373,6 +373,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/1.10-funciones-y-conjuntos-sigma-mixtos#el-tipo-de-un-conjunto-mixto",
   [
     Dado un conjunto #sigmaa.mixto $S$, si $n,m in omega$ son tales que $S c= #omega_sigma_n_m$, entonces diremos que *$S$ es un conjunto de tipo $(n, m)$*.
+    #footnote[Notar que si $S != emptyset$, entonces hay un único par $(n,m)$ con esa propiedad. \ Pero si $S = emptyset$, entonces hay varios pares $(n,m)$ con esa propiedad. \ Por ello para hablar de *EL TIPO DE S* tiene que ser $S != emptyset$.]
   ],
 )
 
@@ -626,7 +627,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#minimizacion-de-variable-alfabetica",
   [
     #show math.equation.where(block: true): set block(below: 1em, above: 1.3em)
-    Sea $Sigma$ un alfabeto no vacío, $<=$ un orden total sobre $Sigma$ #footnote([Recordar que $<=$ puede ser naturalmente extendido a un orden total sobre #sigmaa.est #link_arrow("https://apunte-lenguajes-logica.netlify.app/2.1-ordenes-naturales-sobre-sigmaast#extension-del-orden-total-de-sigma-a-sigmaast")]) y $P: D_P c= #omega_sigma_n_m X #sigmaa.est -> #sigmaa.est$ un predicado. Dado $(x->, alpha->) in #omega_sigma_n_m$, cuando exista al menos un $alpha in #sigmaa.est$ tal que $P(x->, alpha->, alpha) = 1$, usaremos
+    Sea $Sigma$ un alfabeto no vacío, $<=$ un orden total sobre $Sigma$ #footnote([Recordar que $<=$ puede ser naturalmente extendido a un orden total sobre #sigmaa.est #link_arrow("https://apunte-lenguajes-logica.netlify.app/2.1-ordenes-naturales-sobre-sigmaast#extension-del-orden-total-de-sigma-a-sigmaast")]) y $P: D_P c= #omega_sigma_n_m X #sigmaa.est -> omega$ un predicado. \ Dado $(x->, alpha->) in #omega_sigma_n_m$, cuando exista al menos un $alpha in #sigmaa.est$ tal que $P(x->, alpha->, alpha) = 1$, usaremos
     $
       min_alpha P(x->, alpha->, alpha)
     $
