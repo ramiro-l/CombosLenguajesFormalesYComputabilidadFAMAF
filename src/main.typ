@@ -134,7 +134,7 @@
     [
       Dado $x in NN$, usaremos *$(x)$* para denotar a la única infinitupla $(s_1, s_2, dots) in omega^(#text_floor($NN$))$ tal que
       $
-        x = angle.l s_1, s_2, dots angle.r = product_(i=1)^(infinity) "pr"(i)^(s_i) quad "donde pr"(i)" es el i-ésimo primo."
+        x = << s_1, s_2, dots >> = product_(i=1)^(infinity) "pr"(i)^(s_i) quad "donde pr"(i)" es el i-ésimo primo."
       $
     ],
   )
@@ -1385,7 +1385,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           ~ ~ Etapa 1 \
           Darle a la variable $T$ el valor $0$. \
           ~ ~ Etapa 2 \
-          Realizar $PP_1$ con el valor $T$ como entrada para obtener de salida la ulpa $(arrow(y),arrow(beta))$ .\
+          Realizar $PP_1$ con el valor $T$ como entrada para obtener de salida la ulpa $(arrow(y),arrow(beta))$ .\ //TODO: REVISAR SI ES upla O par
           ~ ~ Etapa 3 \
           Realizar $PP_2$ con el valor $T$ como entrada para obtener de salida la ulpa $(arrow(z),arrow(gamma))$. \
           ~ ~ Etapa 4 \
