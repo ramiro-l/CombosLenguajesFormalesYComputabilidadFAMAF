@@ -646,7 +646,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
                             } \
       M<(P)(x->, alpha->) & = min_alpha P(x->, alpha->, alpha)", para cada" (x->, alpha->) in D_(M<(P))
     $
-    Diremos que _$M<(P)$ se obtiene por minimización de variable alfabética a partir de $P$_.
+    // Diremos que _$M<(P)$ se obtiene por minimización de variable alfabética a partir de $P$_.
   ],
 )
 
@@ -718,8 +718,14 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       height: 13pt,
     ) $S_(~P~)(med #i_nm (t,x->, alpha->, ~P~) med , med #E_nm_num (t,x->, alpha->, ~P~) med , med #E_nm_est (t,x->, alpha->, ~P~) med)$
 
-    Notar que $(#i_nm (t,x->, alpha->, ~P~), #E_nm_num (t,x->, alpha->, ~P~), #E_nm_est (t,x->, alpha->, ~P~))$ es la descripción instantánea luego de correr $~P~$ una cantidad $t$ de pasos, partiendo de $||x_1,dots,x_n,alpha_1,dots,alpha_m||$.
-    #footnote([Osea que para el paso $t$ podemos pensar que #i_nm representa "número de instrucción", #E_nm_num representa "los valores numéricos" y #E_nm_est representa "los valores alfabéticos".]) Y además #i_nm es $(Sigma union Sigma_p)$-mixta pero #E_nm_num y #E_nm_est no.
+    Notar que
+    $
+      (#i_nm (t,x->, alpha->, ~P~), #E_nm_num (t,x->, alpha->, ~P~), #E_nm_est (t,x->, alpha->, ~P~))
+    $
+    es la descripción instantánea luego de correr $~P~$ una cantidad $t$ de pasos, partiendo de $||x_1,dots,x_n,alpha_1,dots,alpha_m||$.
+    #footnote(
+      [Osea que para el paso $t$ podemos pensar que #i_nm representa "número de instrucción", #E_nm_num representa "los valores numéricos" y #E_nm_est representa "los valores alfabéticos".],
+    ) #comentario[Además #i_nm es $(Sigma union Sigma_p)$-mixta pero #E_nm_num y #E_nm_est no.]
   ],
 )
 
@@ -739,13 +745,13 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       #E_nmj_num (t,x->, alpha->, ~P~) = j"-ésima coordenada de" #E_nm_num (t,x->, alpha->, ~P~) \
       #E_nmj_est (t,x->, alpha->, ~P~) = j"-ésima coordenada de" #E_nm_est (t,x->, alpha->, ~P~)
     $
-    Es claro que estas funciones son $(Sigma union Sigma_p)$-mixtas.
+    #comentario[y es claro que estas funciones son $(Sigma union Sigma_p)$-mixtas.]
   ],
 )
 
 #definitionStructure(
-  [6 y 7],
-  [Defina las funciones #Halt_nm y #T_nm],
+  [6],
+  [Defina #Halt_nm],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.4-batallas-entre-paradigmas#las-funciones-haltnm-y-tnm.",
   plural_def: true,
   [
@@ -753,15 +759,29 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       bold(#Halt_nm) = lambda t x-> alpha-> [ #i_nm (t,x->,alpha->) = n(~P~)+1]
     $
-    Notar que $D_#Halt_nm = omega X #omega_sigma_n_m X #ProSigma$ (ojo, la notación lambda es respecto al alfabeto $(Sigma union Sigma_p)$).
+    Es decir que dado $(t, x->, alpha->, ~P~) in omega X #omega_sigma_n_m X #ProSigma$, tenemos que\
+    $med med #Halt_nm (t, x->, alpha->, ~P~) = 1 quad$ sii $quad ~P~$ se detiene luego de $t$ pasos, partiendo del estado $||x_1,dots,x_n,alpha_1,dots,alpha_m||. med med$ \
+    #comentario[Ojo, la notación lambda es respecto al alfabeto $(Sigma union Sigma_p)$.]
+  ],
+)
 
-    Dado que #Halt_nm es un predicado podemos definir *$#T_nm = M(#Halt_nm)$*. Osea, dado $(x->, alpha->, ~P~) in D_#T_nm$
+#definitionStructure(
+  [7],
+  [Defina #T_nm],
+  link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.4-batallas-entre-paradigmas#las-funciones-haltnm-y-tnm.",
+  plural_def: true,
+  [
+    Dados $n,m in omega$ y como #Halt_nm es un predicado podemos definir
+    $
+      bold(#T_nm) = M(#Halt_nm)
+    $
+    Es decir que para $(x->, alpha->, ~P~) in D_#T_nm$:
     #show math.equation.where(block: true): set par(leading: 2pt)
     $
       #T_nm (x->, alpha->, ~P~) & = "cantidad de pasos necesarios para que" ~P~ "se" \
                                 & quad" detenga partiendo de" ||x_1,dots,x_n,alpha_1,dots,alpha_m||
     $
-    Notar que $D_#T_nm = { (x->, alpha->, ~P~) : ~P~ "se detiene partiendo de" ||x_1,dots,x_n,alpha_1,dots,alpha_m||}$.
+    #comentario[Notar que $D_#T_nm = { (x->, alpha->, ~P~) : ~P~ "se detiene partiendo de" ||x_1,dots,x_n,alpha_1,dots,alpha_m||}$.]
   ],
 )
 
@@ -776,7 +796,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
     // Notar que el dominio de #AutoHalt es #ProSigma (es interesante porque está probado que *no es* #sigmaa.recursivo).
     Pensándolo de otra manera, podemos decir que para cada $~P~ in ProSigma$ tenemos que
-    $ #AutoHalt (~P~) = 1 bold("si y solo si") ~P~ "se detiene partiendo del estado" ~P~ "(i.e de sí mismo)" $
+    $ #AutoHalt (~P~) = 1 bold("si y solo si") ~P~ "se detiene partiendo del estado" ||~P~|| "(i.e de sí mismo)" $
 
   ],
 )
@@ -816,19 +836,23 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         ]
     + Puede no involucrar variables, por lo tanto produce un valor constante.
     + Para ciertas valuaciones de sus variables $E$ puede no estar definida. #comentario([(Por ejemplo $"Pred"(x)$ con $x = 0$)])
-    + Cuando $E$ esté definida al valuar sus variables numéricas en $omega$ y alfabéticas en $#sigmaa.est$ deberá producir siempre un elemento de $omega$ o de #sigmaa.est.
+    + Cuando $E$ esté definida al valuar sus variables numéricas en $omega$ y alfabéticas en $#sigmaa.est$ deberá producir siempre un elemento de $omega$ o de #sigmaa.est. #comentario[(Es decir no puede tomar valores mixtos)]
     + Se pueden usar expresiones del lenguaje coloquial castellano. #comentario([(Por ejemplo _"es $x$ un número primo"_)])
-    + Las expresiones booleanas toman valores en ${0,1} in omega$.
+    + Las expresiones booleanas toman valores en ${0,1} c= omega$. #comentario[("1 = verdad", "0 = falso")]
 
-    Ahora definamos la *notación lambda*. Dada una expresión $E$ que sea lambdificable con respecto a un alfabeto fijo $Sigma$ y $x_1,dots,x_n,alpha_1,dots,alpha_m$ las variables numéricas y alfabéticas que ocurren en $E$. Entonces
+    Ahora definamos la *notación lambda*. \ 
+    Sea un alfabeto fijo y finito $Sigma$, $E$ una expresión que sea lambdificable con respecto a $Sigma$. 
+    Sean $x_1,dots,x_n,alpha_1,dots,alpha_m$ variables distintas tales que,
+    las variables numéricas que ocurren en $E$ están en ${x_1,dots,x_n}$
+    y las variables alfabéticas que ocurren en $E$ están en ${alpha_1,dots,alpha_m}$. 
+    Entonces
     *$ lambda x_1 dots x_n alpha_1 dots alpha_m [ E ] $*
-    denota la función definida por
-    $
-      D_(lambda x_1 dots x_n alpha_1 dots alpha_m [ E ]) = { (k_1,dots,k_n,beta_1,dots,beta_m) in #omega_sigma_n_m : E "está definida cuando se asignan" k_i med"a"med x_i med"y"med beta_j med"a"med alpha_j } \
-      lambda x_1 dots x_n alpha_1 dots alpha_m [ E ] (k_1,dots,k_n,beta_1,dots,beta_m) = "valor que toma" E "cuando se asignan" k_i med "a" med x_i med"y"med beta_j med"a"med alpha_j
-    $
+    denota la función definida por:
+    #set list(spacing: 16pt)
+    - $D_(lambda x_1 dots x_n alpha_1 dots alpha_m [ E ]) = { (k_1,dots,k_n,beta_1,dots,beta_m) in #omega_sigma_n_m : E$ está definida cuando le asignamos \ #h(103pt) a cada $x_i$ el valor $k_i$ y a cada $alpha_i$ el valor $beta_i}$
+    - $lambda x_1 dots x_n alpha_1 dots alpha_m [ E ] (k_1,dots,k_n,beta_1,dots,beta_m) =$ valor que asume o representa $E$  cuando le asignamos \ #h(205pt) a cada $x_i$ el valor $k_i$ y a cada $alpha_i$ el valor $beta_i$.
 
-    Notar que por (4) $lambda x_1 dots x_n alpha_1 dots alpha_m [ E ]$ es #sigmaa.mixta de tipo $(n,m,s)$ con $s in {\#, *}$ según corresponda.
+    #comentario[Notar que por (4) $lambda x_1 dots x_n alpha_1 dots alpha_m [ E ]$ es #sigmaa.mixta de tipo $(n,m,s)$ con $s in {\#, *}$ según corresponda.]
   ],
 )
 
@@ -846,16 +870,17 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #let V2 = $"V"2$
     #let W1 = $"W"1$
     #let macro = $[ #V2 <- f(#V1, #W1) ]$
-    Dada una función $f: D_f c= omega X #sigmaa.est -> omega$, el macro
+    Dada una función $f: D_f c= omega X #sigmaa.est -> omega$, usaremos
     *$ #macro $*
-    es de tipo palabra y cumple las siguientes propiedades
+    para denotar el macro $M$, el cual es de tipo palabra y cumple las siguientes propiedades
     #set enum(numbering: "(1) (a)")
     #block(above: 12pt, below: 12pt)[
-      + Las variables oficiales son #V1, #V2 y #W1.
-      + No tiene labels oficiales.
+      + Las variables oficiales de $M$ son #V1, #V2 y #W1.
+      + $M$ No tiene labels oficiales.
       + Si reemplazamos
-        + Las variables oficiales (i.e. #V1, #V2, #W1) por las variables concretas $"N"overline(k_1), "N"overline(k_2)$ y $"P"overline(j_1)$ con $k_1, k_2, j_1 in NN$.
-        + Las variables auxiliares por variables concretas (distintas dos a dos) y distintas de $"N"overline(k_1), "N"overline(k_2)$, $"P"overline(j_1)$.
+        + Las variables oficiales de $M$ (i.e. #V1, #V2, #W1) por las variables concretas $"N"overline(k_1), "N"overline(k_2)$ y $"P"overline(j_1)$ con $k_1, k_2, j_1 in NN$.
+        + Las variables auxiliares de $M$ por variables concretas (distintas de a dos) y distintas de $"N"overline(k_1), "N"overline(k_2)$, $"P"overline(j_1)$.
+        + Los labels auxiliares de $M$ por labels concretos (distintos de a dos).
     ]
     Entonces la palabra así obtenida es un programa de #SSigma que denotaremos con
     #let macro_con_valores = $[ "N"overline(k_2) <- f("N"overline(k_1), "P"overline(j_1)) ]$
@@ -864,12 +889,12 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
     el cual debe tener la siguiente propiedad:
     #block(inset: (left: 18pt), above: 14pt, below: 14pt)[
-      Si lo hacemos correr partiendo de un estado $e$ que le asigne a las variables $"N"overline(k_1), "N"overline(k_2)$ y $"P"overline(j_1)$ valores $x_1, x_2$ y $alpha_1$, entonces independientemente de los valores que les asigne $e$ al resto de las variables se dará que
+      Si lo hacemos correr partiendo de un estado $e$ que le asigne a las variables $"N"overline(k_1)$ y $"P"overline(j_1)$ valores $x_1$ y $alpha_1$, entonces independientemente de los valores que les asigne $e$ al resto de las variables se dará que
       #set enum(numbering: "(i) (a)")
       + Si $(x_1, alpha_1) in.not D_f$ entonces #macro_con_valores *no se detiene*.
       + Si $(x_1, alpha_1) in D_f$, entonces #macro_con_valores se detiene (i.e. intenta realizar la siguiente a su última instrucción) y llega a un estado $e'$ el cual cumple
         + $e'$ le asigna a $"N"overline(k_2)$ el valor $f(x_1, alpha_1)$.
-        + $e'$ solo puede diferir de $e$ en los valores que le asigna a $"N"overline(k_2)$ o a las variables que fueran a reemplazar a las variables auxiliares, al resto de las variables, no las modifica.
+        + $e'$ solo puede diferir de $e$ en los valores que le asigna a $"N"overline(k_2)$ o a las variables que fueran a reemplazar a las variables auxiliares de $M$. Al resto de las variables, no las modifica.
     ]
     Finalmente el programa #macro_con_valores es llamado la *expansión del macro* #macro con respecto a la elección de variables y labels realizada.
   ],
@@ -889,18 +914,18 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #let W1 = $"W"1$
     #let A1 = $"A"1$
     #let macro = $[ "IF" P(V1,W1) "GOTO" A1 ]$
-    Dado un predicado $P: D_f c= omega X #sigmaa.est -> omega$, el macro
+    Dado un predicado $P: D_f c= omega X #sigmaa.est -> omega$, usaremos
     *$ #macro $*
-    es de tipo palabra y  cumple las siguientes propiedades
+    para denotar el macro $M$, el cual es de tipo palabra y  cumple las siguientes propiedades
     #set enum(numbering: "(1) (a)")
     #block(above: 12pt, below: 12pt)[
-      + Las variables oficiales son #V1 y #W1.
-      + #A1 es el único label oficial.
+      + Las variables oficiales de $M$ son #V1 y #W1.
+      + #A1 es el único label oficial de $M$.
       + Si reemplazamos
-        + Las variables oficiales (i.e. #V1, #W1) por las variables concretas $"N"overline(k_1)$ y $"P"overline(j_1)$ con $k_1,j_1 in NN$.
+        + Las variables oficiales de $M$ (i.e. #V1, #W1) por las variables concretas $"N"overline(k_1)$ y $"P"overline(j_1)$ con $k_1,j_1 in NN$.
         + El label oficial #A1 por el label concreto $"L"overline(k)$ con $k in NN$.
-        + Las variables auxiliares por variables concretas (distintas dos a dos) y distintas de $"N"overline(k_1)$, $"P"overline(j_1)$.
-        + Los labels auxiliares por labels concretos (distintos dos a dos) y distintos de $"L"overline(k)$.
+        + Las variables auxiliares de $M$ por variables concretas (distintas de a dos) y distintas de $"N"overline(k_1)$, $"P"overline(j_1)$.
+        + Los labels auxiliares de $M$ por labels concretos (distintos de a dos) y todos distintos de $"L"overline(k)$.
     ]
     Entonces la palabra así obtenida es un programa de #SSigma, salvo por la ley de los GOTO respecto de $"L"overline(k)$. \ Este programa lo denotaremos con
     #let macro_con_valores = $[ "IF" P("N"overline(k_1),"P"overline(j_1)) "GOTO" "L"overline(k) ]$
@@ -916,7 +941,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         + Si $P(x_1, alpha_1)=bold(1)$, *direcciona al label $"L"overline(k)$*.
         + Si $P(x_1, alpha_1)=bold(0)$, *se detiene*. (i.e. intenta realizar la siguiente a su última instrucción) \
         #box(inset: (top: -10pt))[
-          En ambos casos quedándose en un estado $e'$ el cual solo puede diferir de $e$ en los valores que le asigna a las variables que fueran a reemplazar a las variables auxiliares, al resto de las variables, no las modifica.
+          En ambos casos quedándose en un estado $e'$ el cual solo puede diferir de $e$ en los valores que le asigna a las variables que fueran a reemplazar a las variables auxiliares de $M$. Al resto de las variables, no las modifica.
         ] #footnote()[
           El punto (ii) en el apunte está así
           #set enum(numbering: "(i) (a)", start: 2)
@@ -947,7 +972,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       D_f & = "dominio de "f = {x : (x,y) in f "para algún " y} \
       I_f & = "imagen de "f = {y : (x,y) in f "para algún " x}
     $
-    A veces escribimos Dom($f$) y Im($f$) en lugar de $D_f$ e $I_f$, respectivamente. \
+    #comentario[A veces escribimos Dom($f$) y Im($f$) en lugar de $D_f$ e $I_f$, respectivamente.]\
     Las *convenciones notacionales* son \
     + Dado $x in D_f$ usaremos $f(x)$ para denotar el único $y in I_f$ tal que $(x,y) in f$. \
     + Escribimos $f: S c= A -> B$ para expresar que $f$ es una función tal que $D_f = S c= A$ y $I_f c= B$. \
