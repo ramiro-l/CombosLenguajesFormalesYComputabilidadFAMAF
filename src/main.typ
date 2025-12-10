@@ -1453,72 +1453,76 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   note: [hacer el caso $n=2$ y $m=1$],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#iteracion",
   [
-    Haremos el caso $n=2$ y $m=1$, osea que $f : omega X S_1 X S_2 X L_1 -> omega$, con $S_1, S_2 c= omega$ y $L_1 c= #sigmaa.est$. \
-    Sea $G = lambda t x x_1 x_2 alpha_1 [ sum_(i=x)^(i=t) f(i, x_1, x_2, alpha_1) ]$. Ya que #comentario[(es un simple cambio de lugar las variables)]
+    // Haremos el caso $n=2$ y $m=1$, osea que $f : omega X S_1 X S_2 X L_1 -> omega$, con $S_1, S_2 c= omega$ y $L_1 c= #sigmaa.est$. \
+    Sea $G = lambda t x x-> alpha-> [ sum_(i=x)^(i=t) f(i, x->, alpha->) ]$. Ya que #comentario[(es un simple cambio de lugar las variables)]
     $
-      lambda x y x_1 x_2 alpha_1 [ sum_(t=x)^(t=y) f(t,x_1, x_2, alpha_1)] = G compose [p^(2+2, 1)_2, p^(2+2, 1)_1, p^(2+2, 1)_3, p^(2+2, 1)_4, p^(2+2, 1)_5]
+      lambda x y x-> alpha-> [ sum_(t=x)^(t=y) f(t,x->, alpha->)] = G compose[bold(p^(n+2, m)_2), bold(p^(n+2, m)_1), p^(n+2, m)_3, dots , p^(n+2, m)_(n+m+2)]
     $
     basta probar que $G$ es #sigmaa.pr Primero notar que
     $
-        G(0,x,x_1,x_2,alpha_1) & = cases(
-                                   0 #h(2.25cm) quad "si" x > 0,
-                                   f(0,x_1,x_2,alpha_1) quad "si" x = 0
-                                 ) \
-      G(t+1,x,x_1,x_2,alpha_1) & = cases(
-                                   0 #h(6.2cm) quad "si" x > t+1,
-                                   G(t,x,x_1,x_2,alpha_1) + f(t+1,x_1,x_2,alpha_1) quad "si" x <= t+1
-                                 ) \
+        G(0,x,x->,alpha->) & = cases(
+                               0 #h(2.25cm) quad "si" x > 0,
+                               f(0,x->,alpha->) quad "si" x = 0
+                             ) \
+      G(t+1,x,x->,alpha->) & = cases(
+                               0 #h(6.2cm) quad "si" x > t+1,
+                               G(t,x,x->,alpha->) + f(t+1,x->,alpha->) quad "si" x <= t+1
+                             ) \
     $
     osea que si definimos
     #{
       show math.equation.where(block: true): set par(leading: 0.2em)
       $
-          h: omega X S_1 X S_2 X L_1 & -> omega \
-              (x, x_1, x_2, alpha_1) & -> cases(
-                                         0 #h(2.25cm) quad "si" x > 0,
-                                         f(0,x_1,x_2,alpha_1) quad "si" x = 0
-                                       ) \
-                           #v(0.2cm) \
-        g: omega^3 X S_1 X S_2 X L_1 & -> omega \
-        (A, t, x, x_1, x_2, alpha_1) & -> cases(
-                                         0 #h(3.65cm) quad "si" x > t+1,
-                                         A + f(t+1,x_1,x_2,alpha_1) quad "si" x <= t+1
-                                       )
+          h: omega X S_1 X dots X S_n X L_1 X dots X L_m & -> med med med omega \
+                                       (x, x->, alpha->) & -> cases(
+                                                             0 #h(1.35cm) quad "si" x > 0,
+                                                             f(0,x->,alpha->) quad "si" x = 0
+                                                           ) \
+                                               #v(0.2cm) \
+        g: omega^3 X S_1 X dots X S_n X L_1 X dots X L_m & -> med med med omega \
+                                 (A, t, x, x->, alpha->) & -> cases(
+                                                             0 #h(2.7cm) quad "si" x > t+1,
+                                                             A + f(t+1,x->,alpha->) quad "si" x <= t+1
+                                                           )
       $
     }
     tenemos que $G = R(h,g)$. Es decir que sólo nos falta probar que $h$ y $g$ son #sigmaa.pr Sean así
     $
-      D_1 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X S_2 X L_1 : x > 0} \
-      D_2 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X S_2 X L_1 : x = 0} \
-      H_1 & = {(z, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X S_2 X L_1 : x > t+1} \
-      H_2 & = {(z, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X S_2 X L_1 : x <= t+1} \
+      D_1 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X dots X S_n X L_1 X dots X L_m : x > 0} \
+      D_2 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X dots X S_n X L_1 X dots X L_m : x = 0} \
+      H_1 & = {(z, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X dots X S_n X L_1 X dots X L_m : x > t+1} \
+      H_2 & = {(z, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X dots X S_n X L_1 X dots X L_m : x <= t+1} \
     $
     Notar que
     $
-      h & = C_0^(2+1, 1) |_D_1 union lambda x x_1 x_2 alpha_1 [f(0,x_1,x_2,alpha_1)] |_(D_2) \
-      g & = C_0^(2+3, 1) |_H_1 union lambda A t x x_1 x_2 alpha_1 [A + f(t+1,x_1,x_2,alpha_1)] |_(H_2) \
+      h & = C_0^(n+1, m) |_D_1 union lambda x x-> alpha-> [f(0,x->,alpha->)] |_(D_2) \
+      g & = C_0^(n+3, m) |_H_1 union lambda A t x x-> alpha-> [A + f(t+1,x->,alpha->)] |_(H_2) \
     $
     Para probarlo, vamos a ver que todas las funciones y conjuntos que aparecen en $h$ y $g$ son #sigmaa.pr
 
-    Trivialmente $C_0^(2+1,1)$ y $C_0^(2+3,1)$ son #sigmaa.pr Luego como $f$ es #sigmaa.pr y
+    Trivialmente $C_0^(n+1,m)$ y $C_0^(n+3,m)$ son #sigmaa.pr Luego como $f$ es #sigmaa.pr y
     $
-      lambda x x_1 x_2 alpha_1 [f(0,x_1,x_2,alpha_1)] = f compose [C_0^(2+1,1), p_2^(2+1,1), p_3^(2+1,1), p_4^(2+1,1)] \
-      lambda A t x x_1 x_2 alpha_1 [A + f(t+1,x_1,x_2,alpha_1)] = lambda x y [x+y] compose [p_1^(2+3,1), f compose ["Suc" compose p_2^(2+3,1), p_4^(2+3,1), p_5^(2+3,1), p_6^(2+3,1)]]
+      lambda x x-> alpha-> [f(0,x->,alpha->)] = f compose [C_0^(n+1,m), p_2^(n+1,m), dots , p_(n+1+m)^(n+1,m)] \
+      lambda A t x x-> alpha-> [A + f(t+1,x->,alpha->)] = lambda x y [x+y] compose [p_1^(n+3,m), f compose ["Suc" compose p_2^(n+3,m), p_4^(n+3,m), dots, p_(n+3+m)^(n+3,m)]]
     $
     tenemos que ambas funciones son #sigmaa.pr
-    Resta ver que los conjuntos $D_1, D_2, H_1$ y $H_2$ son #sigmaa.pr \ Primero notar que como $f$ es #sigmaa.pr por la #proposicion_caracterización_conjuntos_pr, tengo que $D_f$ también es #sigmaa.pr, por lo tanto $chi^(2+1,1)_D_1$ es #sigmaa.pr Ahora sí, por el #lema_op_predicados_pr \
-    $
-      chi^(2+1,1)_D_1 = ( chi^(2+1,1)_D_f and lambda x x_1 x_2 alpha_1 [x > 0]) \
-      chi^(2+1,1)_D_2 = ( chi^(2+1,1)_D_f and lambda x x_1 x_2 alpha_1 [x = 0])
-    $
-    tenemos que $D_1$ y $D_2$ son #sigmaa.pr\
-    Pero además, como dijimos, $D_f = omega X S_1 X S_2 X L_1$ también es #sigmaa.pr, nos dice que $S_1, S_2, L_1$ también son #sigmaa.pr Entonces $R = omega^3 X S_1 X S_2 X L_1$ también es #sigmaa.pr, todo gracias al #lema_caracterización_conjuntos_rectangulares_pr. Y de nuevo por el #lema_op_predicados_pr \
-    $
-      chi^(2+3,1)_H_1 = ( chi^(2+3,1)_R and lambda z t x x_1 x_2 alpha_1 [x > t+1]) \
-      chi^(2+3,1)_H_2 = ( chi^(2+3,1)_R and lambda z t x x_1 x_2 alpha_1 [x <= t+1]) \
-    $
-    tenemos que $H_1$ y $H_2$ son #sigmaa.pr
-
+    Resta ver que los conjuntos $D_1, D_2, H_1$ y $H_2$ son #sigmaa.pr \
+    - *$D_1$ y $D_2$* : Como $f$ es #sigmaa.pr, por la #proposicion_caracterización_conjuntos_pr, tengo que \ $D_f = omega X S_1 X dots X S_n X L_1 X dots X L_m$ también es #sigmaa.pr. Ahora como \
+      #box(width: 100%)[
+        $
+          chi^(omega^(n+1) X #sigmaa.est_m)_D_1 = ( chi^(omega^(n+1) X #sigmaa.est_m)_D_f quad and quad lambda x x-> alpha-> [x > 0]) \
+          chi^(omega^(n+1) X #sigmaa.est_m)_D_2 = ( chi^(omega^(n+1) X #sigmaa.est_m)_D_f quad and quad lambda x x-> alpha-> [x = 0])
+        $
+      ]
+      por el #lema_op_predicados_pr, tenemos que $D_1$ y $D_2$ son #sigmaa.pr .\
+    - *$H_1$ y $H_2$* : Como $f$ es #sigmaa.pr, por la #proposicion_caracterización_conjuntos_pr, tengo que \ $D_f = omega X S_1 X dots X S_n X L_1 X dots X L_m$ también es #sigmaa.pr. \ Entonces no es difícil ver que $R = omega^3 X S_1 X dots X S_n X L_1 X dots X L_m$ es #sigmaa.pr usando el #lema_caracterización_conjuntos_rectangulares_pr. Ahora como \
+      #box(width: 100%)[
+        $
+          chi^(omega^(n+3) X #sigmaa.est_m)_H_1 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R and lambda z t x x-> alpha-> [x > t+1]) \
+          chi^(omega^(n+3) X #sigmaa.est_m)_H_2 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R and lambda z t x x-> alpha-> [x <= t+1]) \
+        $
+      ]
+      por el #lema_op_predicados_pr, tenemos que $H_1$ y $H_2$ son #sigmaa.pr .
     Juntando todo por el #lema_restriccion_dominios_pr, todas las funciones usadas en $h$ y $g$ son #sigmaa.pr, pero notar que $D_1 inter D_2 = emptyset$ y $H_1 inter H_2 = emptyset$, entonces por el #lema_division_por_casos_pr, tenemos que $h$ y $g$ son #sigmaa.pr Por lo tanto *$G = R(h,g)$ es #sigmaa.pr* #fin_demo
   ],
 )
