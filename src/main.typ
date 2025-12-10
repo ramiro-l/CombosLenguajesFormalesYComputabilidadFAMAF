@@ -689,7 +689,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
 
 #pagebreak()
 
-#combo_title(13) // TODO: REVISA (hay cosas de más)
+#combo_title(13)
 
 #definitionStructure(
   [1, 2 y 3],
@@ -840,11 +840,11 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     + Se pueden usar expresiones del lenguaje coloquial castellano. #comentario([(Por ejemplo _"es $x$ un número primo"_)])
     + Las expresiones booleanas toman valores en ${0,1} c= omega$. #comentario[("1 = verdad", "0 = falso")]
 
-    Ahora definamos la *notación lambda*. \ 
-    Sea un alfabeto fijo y finito $Sigma$, $E$ una expresión que sea lambdificable con respecto a $Sigma$. 
+    Ahora definamos la *notación lambda*. \
+    Sea un alfabeto fijo y finito $Sigma$, $E$ una expresión que sea lambdificable con respecto a $Sigma$.
     Sean $x_1,dots,x_n,alpha_1,dots,alpha_m$ variables distintas tales que,
     las variables numéricas que ocurren en $E$ están en ${x_1,dots,x_n}$
-    y las variables alfabéticas que ocurren en $E$ están en ${alpha_1,dots,alpha_m}$. 
+    y las variables alfabéticas que ocurren en $E$ están en ${alpha_1,dots,alpha_m}$.
     Entonces
     *$ lambda x_1 dots x_n alpha_1 dots alpha_m [ E ] $*
     denota la función definida por:
@@ -1205,7 +1205,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Hay varios casos. Veamos el caso que $h = R(f,~G~)$ con $f in #RSigma_k$ y $~G~ in #RSigma_k$ que son
     $
           f & : #bloque_fijo -> omega \
-      ~G~_a & : omega X #bloque_fijo X #sigmaa.est -> omega, a in Sigma
+      ~G~_a & : omega X #bloque_fijo X #sigmaa.est -> omega, quad a in Sigma
     $
     Sea $Sigma = {a_1,dots,a_r}$. Por hipótesis inductiva, las funciones $f, ~G~_a$ con $a in Sigma$, son #sigmaa.computables y por lo tanto tenemos las macros
     $
@@ -1318,10 +1318,11 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         $
       ]
       \
-      Primero notar que para cada $x in omega$, $~P~$ siempre se detiene partiendo de un estado $||x||$ porque las $F_((i))$ son #sigmaa.totales, entonces sus macros siempre se detienen. Luego  es fácil ver que *cumplen las condiciones*
+      Donde se supone que las expansiones de las macros usan variables auxiliares que no aparecen en la lista $"N1", "N2","P1"$ y tampoco repiten labels auxiliares.\
+      Notar que para cada $x in omega$, $~P~$ siempre se detiene partiendo de un estado $||x||$ porque las $F_((i))$ son #sigmaa.totales, entonces sus macros siempre se detienen. Luego  es fácil ver que *cumplen las condiciones*
       #set enum(numbering: "(a)")
-      + Porque ya sabemos que para cada $x in omega$, $~P~$ se detiene partiendo desde el estado $||x||$ y además como  $F(x) = (F_((1))(x),F_((2))(x),F_((3))(x)) = (x_1,x_2,alpha_1) in S$ entonces $~P~$ se detiene con un estado de la forma $((x_1,x_2,y_1),(alpha_1,beta_1,dots))$ donde $(x_1,x_2,alpha_1) in S$.
-      + Porque para cada $(x_1,x_2,alpha_1) in S$, sabemos por definición que existe un $x in omega$ tal que $F(x) = (F_((1))(x),F_((2))(x),F_((3))(x)) = (x_1,x_2,alpha_1)$. Y como $~P~$ siempre se detiene, incluso partiendo del estado $||x||$, llegará a un estado de la forma $((x_1,x_2, y_1),(alpha_1,beta_1,dots))$.
+      + Porque ya sabemos que para cada $x in omega$, $~P~$ se detiene partiendo desde el estado $||x||$ y además como  $F(x) = (F_((1))(x),F_((2))(x),F_((3))(x)) = (x_1,x_2,alpha_1) in S$ entonces $~P~$ se detiene con un estado de la forma $((x_1,x_2,y_1,dots),(alpha_1,beta_1,dots))$ donde $(x_1,x_2,alpha_1) in S$.
+      + Porque para cada $(x_1,x_2,alpha_1) in S$, sabemos por definición que existe un $x in omega$ tal que $F(x) = (F_((1))(x),F_((2))(x),F_((3))(x)) = (x_1,x_2,alpha_1)$. Y como $~P~$ siempre se detiene, incluso partiendo del estado $||x||$, llegará a un estado de la forma $((x_1,x_2, y_1,dots),(alpha_1,beta_1,dots))$.
       * $(1) <== (2)$* \
       Supongamos $~P~ in #ProSigma$ que cumple (a) y (b) de (2). \ Sean
       #show math.equation.where(block: true): set block(below: 1em, above: 1em)
@@ -1339,12 +1340,12 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       Notar que cada $F_i$ es #sigmaa.computable y tienen dominio igual a $omega$. Sea $F = [F_1,F_2,F_3]$, por definición $D_F = omega$ y ya que $F_i = F_((i))$, para cada $i=1,2,3$ tenemos que cada $F_((i))$ es #sigmaa.computable. Resta ver que $I_F = S$ \
       #box(inset: (top: 5pt))[
         #par(hanging-indent: 42pt)[
-          *$I_F c= S$* Por (a) tenemos que $~P~$ para todo $x in omega$ partiendo de $||x||$ llega a un estado de la forma $((x_1,x_2,y_1),(alpha_1,beta_1,dots))$ donde $(x_1,x_2,alpha_1) in S$. Por lo tanto $F(x) = (F_1(x), F_2(x), F_3(x)) = (x_1,x_2,alpha_1) in S$ entonces $I_F c= S$.
+          *$I_F c= S$* Por (a) tenemos que $~P~$ para todo $x in omega$ partiendo de $||x||$ llega a un estado de la forma $((x_1,x_2,y_1, dots),(alpha_1,beta_1,dots))$ donde $(x_1,x_2,alpha_1) in S$. Por lo tanto $F(x) = (F_1(x), F_2(x), F_3(x)) = (x_1,x_2,alpha_1) in S$ entonces $I_F c= S$.
         ]
       ]
       #box()[
         #par(hanging-indent: 42pt)[
-          *$S c= I_F$* Por (b) tenemos que para cada $(x_1,x_2,alpha_1) in S$, hay un $x in omega$ tal que $~P~$ partiendo de $||x||$ llega a un estado de la forma $((x_1,x_2,y_1),(alpha_1,beta_1,dots))$. Por lo tanto $F(x) = (F_1(x), F_2(x), F_3(x)) = (x_1,x_2,alpha_1) in I_F$ entonces $S c= I_F$.
+          *$S c= I_F$* Por (b) tenemos que para cada $(x_1,x_2,alpha_1) in S$, hay un $x in omega$ tal que $~P~$ partiendo de $||x||$ llega a un estado de la forma $((x_1,x_2,y_1,dots),(alpha_1,beta_1,dots))$. Por lo tanto $F(x) = (F_1(x), F_2(x), F_3(x)) = (x_1,x_2,alpha_1) in I_F$ entonces $S c= I_F$.
         ]
       ]
       Entonces finalmente $I_F = S$ y por lo tanto *$S$ es #sigmaa.enumerable*. #fin_demo
@@ -1412,7 +1413,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           ~ ~ Etapa 1 \
           Darle a la variable $T$ el valor $0$. \
           ~ ~ Etapa 2 \
-          Realizar $PP_1$ con el valor $T$ como entrada para obtener de salida la ulpa $(arrow(y),arrow(beta))$ .\ //TODO: REVISAR SI ES upla O par
+          Realizar $PP_1$ con el valor $T$ como entrada para obtener de salida la ulpa $(arrow(y),arrow(beta))$. \
           ~ ~ Etapa 3 \
           Realizar $PP_2$ con el valor $T$ como entrada para obtener de salida la ulpa $(arrow(z),arrow(gamma))$. \
           ~ ~ Etapa 4 \
@@ -1423,7 +1424,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       ]
     ]
 
-    ya que, los procedimientos $PP_1$ y $PP_2$ siempre terminan y además para todo $(x->, alpha->) in #omega_sigma_n_m$ se cumple que $(x->, alpha->) in S$ o $(x->, alpha->) in.not S$, o análogamente $(x->, alpha->) in (#omega_sigma_n_m - S)$. Osea que siempre existe algún $t in omega$ tal que haga detenerse a $PP$ dando como dato de salida $1$ o $0$ respectivamente. \
+    #comentario[
+      ya que, los procedimientos $PP_1$ y $PP_2$ siempre terminan y además para todo $(x->, alpha->) in #omega_sigma_n_m$ se cumple que $(x->, alpha->) in S$ o $(x->, alpha->) in.not S$. Osea que siempre existe algún $t in omega$ tal que haga detenerse a $PP$ dando como dato de salida $1$ o $0$ respectivamente.
+    ] \
     Entonces *$S$ es #sigmaa.efectivamente.computable.* #fin_demo
   ],
 )
@@ -1535,40 +1538,96 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [
     #let menos_letra = text(size: 8pt, baseline: -4pt, weight: "bold")[↷]
     Dado que $f, ~G~_@, ~G~_%$ y $~G~_!$ son #sigmaa.efectivamente.computables, entonces existen programas $PP_f, PP_@, PP_%$ y $PP_!$ que las computan respectivamente. Entonces notar que el siguiente procedimiento efectivo $PP$ computa $R(f,~G~)$ \
-    /*
-          Realizar $I = epsilon$ y $J = alpha$. \
-              Darle a la variable $I$ el valor $epsilon$ y a la variable $J$ el valor $alpha$. \
-              Realizar $PP_f$ con la entrada $(x_1,x_2,alpha_1, alpha_2)$ y guardar la salida en la variable $A$. \
-              ~ ~ ~ Etapa 2 \
-              Si $I = alpha$, entonces detenerse y dar como dato de salida el valor $A$. \
-              ~ ~ ~ Etapa 3 \
-
-    */
     #align(
       center,
       block()[
         #align(left)[
           Sea $(x_1, x_2,alpha_1, alpha_2, alpha) in S_1 X S_2 X L_1 X L_2 X #sigmaa.est$
           \ ~ ~ ~ Etapa 1  \
-          Darle a la variable $I$ el valor $epsilon$ y a la variable $J$ el valor $alpha$. \
+          Hago las asignaciones $I <- epsilon$ y $J <- alpha$. \
           Realizar $PP_f$ con la entrada $(x_1,x_2,alpha_1, alpha_2)$ y guardar la salida en la variable $A$.
           \ ~ ~ ~ Etapa 2 \
-          Si $I = alpha$, entonces detenerse y dar como dato de salida el valor $A$.
+          Si $J = epsilon$, entonces detenerse y dar como dato de salida el valor $A$.\
+          Si $J != epsilon$, realizar las asignaciones $B <- [J]_1 med$ y $med J <- #menos_letra J med$.\
+          Ahora según el caso \
+          #box(width: 100%, inset: (top: -15pt, left: 98pt))[
+            si $B = @$ voy a la Etapa 3, \
+            si $B = %$ voy a la Etapa 4, \
+            si $B = !$ voy a la Etapa 5.
+          ]
           \ ~ ~ ~ Etapa 3 \
-          Realizar $B = [J]_(|J|)$ y guardar la salida. #comentario[(notar que es un solo símbolo)]
+          Corro el procedimiento $PP_@$ con la entrada $(A, x_1,x_2,alpha_1, alpha_2, I)$ y guardar la salida en la variable $A$.\
+          Hago $I <- I @$ y voy a la Etapa 2
           \ ~ ~ ~ Etapa 4 \
-          Si $B = @$, realizar $PP_@$ con la entrada $(A, x_1,x_2,alpha_1, alpha_2, I)$ y guardar la salida en la variable $A$. \
-          Si $B = %$, realizar $PP_%$ con la entrada $(A, x_1,x_2,alpha_1, alpha_2, I)$ y guardar la salida en la variable $A$. \
-          Si $B = !$, realizar $PP_!$ con la entrada $(A, x_1,x_2,alpha_1, alpha_2, I)$ y guardar la salida en la variable $A$.
+          Corro el procedimiento $PP_%$ con la entrada $(A, x_1,x_2,alpha_1, alpha_2, I)$ y guardar la salida en la variable $A$.\
+          Hago $I <- I %$ y voy a la Etapa 2
           \ ~ ~ ~ Etapa 5 \
-          Agregar el símbolo $B$ al final de $I$, realizar $J = #menos_letra J$ y volver a la Etapa 2.
+          Corro el procedimiento $PP_!$ con la entrada $(A, x_1,x_2,alpha_1, alpha_2, I)$ y guardar la salida en la variable $A$.\
+          Hago $I <- I !$ y voy a la Etapa 2
         ]
       ],
     )
     y por ello $bold("R("f",")~G~)$* es #sigmaa.efectivamente.computable*. #fin_demo
   ],
 )
+/*
+#page(paper: "a4", flipped: true)[
 
+  $
+                                   alpha = a_1 a_2 a_3 a_4 a_5 \
+    R(f ~G~) (arrow(x), arrow(y), med med a_1 a_2 a_3 a_4 a_5) & = ~G~_a_5(
+                                                                   quad R(f ~G~) (arrow(x), arrow(y), a_1 a_2 a_3 a_4) quad,
+                                                                   arrow(x), arrow(y),quad a_1, a_2, a_3, a_4) \
+                                                               & = ~G~_a_5(
+                                                                   quad ~G~_a_4(
+                                                                     quad R(f ~G~) (arrow(x), arrow(y), a_1 a_2 a_3) quad
+                                                                     , arrow(x), arrow(y),quad a_1, a_2, a_3) quad,
+                                                                   arrow(x), arrow(y),quad a_1, a_2, a_3, a_4) \
+                                                               & =
+                                                                 ~G~_a_5( quad
+                                                                   ~G~_a_4( quad
+                                                                     ~G~_a_3( quad
+                                                                       R(f ~G~) (arrow(x), arrow(y), a_1 a_2) quad,
+                                                                       arrow(x), arrow(y),quad a_1, a_2) quad,
+                                                                     arrow(x), arrow(y),quad a_1, a_2, a_3) quad,
+                                                                   arrow(x), arrow(y),quad a_1, a_2, a_3, a_4) \
+                                                               & =
+                                                                 ~G~_a_5( quad
+                                                                   ~G~_a_4( quad
+                                                                     ~G~_a_3( quad
+                                                                       ~G~_a_2( quad
+                                                                         R(f ~G~) (arrow(x), arrow(y), a_1) quad,
+                                                                         arrow(x), arrow(y),quad a_1) quad,
+                                                                       arrow(x), arrow(y),quad a_1, a_2) quad,
+                                                                     arrow(x), arrow(y),quad a_1, a_2, a_3) quad,
+                                                                   arrow(x), arrow(y),quad a_1, a_2, a_3, a_4) \
+                                                               & =
+                                                                 ~G~_a_5( quad
+                                                                   ~G~_a_4( quad
+                                                                     ~G~_a_3( quad
+                                                                       ~G~_a_2( quad
+                                                                         ~G~_a_1( quad
+                                                                           R(f ~G~) (arrow(x), arrow(y),epsilon) quad,
+                                                                           arrow(x), arrow(y),quad epsilon) quad,
+                                                                         arrow(x), arrow(y),quad a_1) quad,
+                                                                       arrow(x), arrow(y),quad a_1, a_2) quad,
+                                                                     arrow(x), arrow(y),quad a_1, a_2, a_3) quad,
+                                                                   arrow(x), arrow(y),quad a_1, a_2, a_3, a_4) \
+                                                               & =
+                                                                 ~G~_a_5( quad
+                                                                   ~G~_a_4( quad
+                                                                     ~G~_a_3( quad
+                                                                       ~G~_a_2( quad
+                                                                         ~G~_a_1( quad
+                                                                           f (arrow(x), arrow(y)) quad,
+                                                                           arrow(x), arrow(y),quad epsilon) quad,
+                                                                         arrow(x), arrow(y),quad a_1) quad,
+                                                                       arrow(x), arrow(y),quad a_1, a_2) quad,
+                                                                     arrow(x), arrow(y),quad a_1, a_2, a_3) quad,
+                                                                   arrow(x), arrow(y),quad a_1, a_2, a_3, a_4) \
+  $
+]
+*/
 #pagebreak()
 
 #proofStructure(
@@ -1729,7 +1788,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         #comentario[(para $i=3,4$)]
       ]
     $
-    Ahora ya que las funciones $f_1 = lambda x [ (x)_1 ], f_2 = lambda x [ (x)_2 ]$ y $f_3 = compose lambda x [ *<(med (x)_3 med) ]$ son #sigmaa.pr, nuevamente por el #teorema_independencia_del_alfabeto, son #sigmaa.pr, osea que por el #segundo_manantial existen las macros
+    Ahora ya que las funciones $f_1 = lambda x [ (x)_1 ], f_2 = lambda x [ (x)_2 ]$ y $f_3 = compose lambda x [ *<(med (x)_3 med) ]$ son #sigmaa.pr, por el #segundo_manantial existen las macros
     $
       [med "V2" <- f_1("V1") med] quad [med "V2" <- f_2("V1") med] quad [med "P1" <- f_3("V1") med]
     $
@@ -1779,7 +1838,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       #set enum(numbering: "(a)", indent: 12.8pt)
       + $M(P)$ es #sigmaa.recursiva.
       + Si hay una función #sigmaa.pr $f: #omega_sigma_n_m$ tal que \
-        ~ $M(P) (x->, alpha->) = min_t P(t, x->, alpha->)$, para cada $(x->, alpha->) in D_(M(P))$ \
+        ~ $M(P) (x->, alpha->) = min_t P(t, x->, alpha->) <= f(x->, alpha->)$, para cada $(x->, alpha->) in D_(M(P))$ \
         entonces $M(P)$ es #sigmaa.pr
     ]
   ],
@@ -1906,7 +1965,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         - Si son iguales, esto implicaría que $(x,alpha) in S$. Por eso calculamos $f(x,alpha)$ y lo retornamos.
         - Si no son iguales, se incrementa la variable para generar y se vuelve a la *línea 1* para generar un nuevo $(y, beta) in S$.
     ]
-    Notar que si $(x,alpha) in.not S$, entonces $~P~$ no se detiene porque la comparación *nunca* va a dar igual. Entonces así $~P~$ computa $f|_S$, por lo tanto es #sigmaa.computable y por el #teorema_neumann_vence_godel *es #sigmaa.recursiva.*~ #fin_demo
+    Notar que si $(x,alpha) in.not S$, entonces $~P~$ no se detiene porque la comparación *nunca* va a dar igual. Entonces así $~P~$ computa $f|_S$, por lo tanto es #sigmaa.computable y por el #teorema_godel_vence_neumann *es #sigmaa.recursiva.*~ #fin_demo
   ],
 )
 
@@ -1932,14 +1991,14 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       "L1" quad [med "IF" "AutoHalt"^Sigma ("P1") "GOTO L1" med]
     $
-    Notar que
-    #align(center, block(above: 8pt)[
-      $"AutoHalt"^Sigma (~P~_0) = 0$ sii $~P~_0$ se detiene partiendo del estado $||~P~_0||$
-    ])
-    Por otra parte, por definición de $"AutoHalt"^Sigma$ sabemos que para cada $~P~ in #SSigma$ se cumple que
+    Notar que por definición de $"AutoHalt"^Sigma$ sabemos que para cada $~P~ in #SSigma$ se cumple que
     #align(center)[
       $"AutoHalt"^Sigma (~P~) = 1$ sii $~P~$ se detiene partiendo del estado $||~P~||$.
     ]
+    pero por otra parte
+    #align(center, block(above: 8pt)[
+      $"AutoHalt"^Sigma (~P~_0) = 0$ sii $~P~_0$ se detiene partiendo del estado $||~P~_0||$
+    ])
     Estas dos afirmaciones se contradicen y el absurdo viene de que supusimos que $"AutoHalt"^Sigma$ sí es #sigmaa.recursivo. #fin_demo \
     #comentario[
       Otra forma de decir lo mismo, es que si corremos $~P~_0$ partiendo de $||~P~_0||$, tenemos dos posibilidades \
@@ -2083,9 +2142,12 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     Haremos el caso $k=2$, $n=m=1$ y $O = omega$. Osea que tenemos $f_i: D_f_i c= #omega_sigma_1_1 -> omega$ con $i=1,2$. \
     Por el #teorema_neumann_vence_godel las funciones son #sigmaa.computables, osea que existen los programas $~P~_1$ y $~P~_2$ tales que las computan respectivamente. Entonces para $i=1,2$ definamos
     $
-      H_i = lambda t x_1 alpha_1 [ "Halt"^(1,1) (t, x_1, alpha_1, ~P~_i)] \
+      H_i = lambda t x_1 alpha_1 [ "Halt"^(1,1) (t, x_1, alpha_1, ~P~_i)] med \
+      #box(inset: (top: -3pt, bottom: 0pt))[
+        #comentario[(Te dice si en $t$ pasos el programa $~P~_i$ con entrada $||x_1, alpha_1||$ termina)]
+      ]
     $
-    notar que $D_H_i = omega X #omega_sigma_1_1$ y que $H_i$ es #sigmaa.mixta. Además sabemos que $"Halt"^(1,1)$ es $Sigma union Sigma_p$-pr. Entonces por el #teorema_independencia_del_alfabeto, $H_i$ es #sigmaa.pr y por el #segundo_manantial existe la macro
+    notar que $D_H_i = omega X #omega_sigma_1_1$ y que $H_i$ es #sigmaa.mixta. Además sabemos que $"Halt"^(1,1)$ es $(Sigma union Sigma_p)$-pr. Entonces por el #teorema_independencia_del_alfabeto, $H_i$ es #sigmaa.pr y por el #segundo_manantial existen las macros
     $
       [med "IF" H_i ("V1", "V2", "W1") "GOTO A1" med]
     $
