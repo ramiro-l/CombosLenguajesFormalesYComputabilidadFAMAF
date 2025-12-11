@@ -1136,7 +1136,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
     con $O in {omega, #sigmaa.est}$ y $k,l in omega$. Por el #link(<lema-1.1>)[_Lema (1)_] , hay funciones #sigmaa.pr $overline(g)_1,dots,overline(g)_(n+m)$ las cuales son #sigmaa.totales y
     $
-      g_i = overline(g)_i |_(g_i) "para" i = 1,dots,n+m
+      g_i = overline(g)_i |_(D_(g_i)) "para" i = 1,dots,n+m
     $
     Por hipótesis inductiva los conjuntos $D_g, D_(g_i), "con" i = 1,dots,n+m$, son #sigmaa.pr y por lo tanto también
     $
@@ -1147,7 +1147,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #linea_dashed
 
     #par(hanging-indent: 48pt)[
-      _Lema (1) :_ $med$ Sea $O = {omega, #sigmaa.est}$ y $n,m in omega$. Si $f: D_f c= #omega_sigma_n_m -> O$ es #sigmaa.pr, entonces existe una función #sigmaa.pr $overline(f): #omega_sigma_n_m -> O$ tal que $f = overline(f) |_(f)$. #comentario[(En la guía 5, es el lema 18 y en el #link("https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#extension")[apunte el $4.17$] )]
+      _Lema (1) :_ $med$ Sea $O = {omega, #sigmaa.est}$ y $n,m in omega$. Si $f: D_f c= #omega_sigma_n_m -> O$ es #sigmaa.pr, entonces existe una función #sigmaa.pr $overline(f): #omega_sigma_n_m -> O$ tal que $f = overline(f) |_(D_f)$. #comentario[(En la guía 5, es el lema 18 y en el #link("https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#extension")[apunte el $4.17$] )]
     ] <lema-1.1>
   ],
 )
@@ -1333,9 +1333,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       $
       definamos las funciones
       $
-        F_1 = Psi_(~P~_1)^(0,1, \#) quad quad quad quad
-        F_2 = Psi_(~P~_2)^(0,1, \#) quad quad quad quad
-        F_3 = Psi_(~P~_3)^(0,1, *)
+        F_1 = Psi_(~P~_1)^(1,0, \#) quad quad quad quad
+        F_2 = Psi_(~P~_2)^(1,0, \#) quad quad quad quad
+        F_3 = Psi_(~P~_3)^(1,0, *)
       $
       Notar que cada $F_i$ es #sigmaa.computable y tienen dominio igual a $omega$. Sea $F = [F_1,F_2,F_3]$, por definición $D_F = omega$ y ya que $F_i = F_((i))$, para cada $i=1,2,3$ tenemos que cada $F_((i))$ es #sigmaa.computable. Resta ver que $I_F = S$ \
       #box(inset: (top: 5pt))[
@@ -1450,7 +1450,6 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [
     \ Sea $Sigma$ un alfabeto finito. Si $f: omega X #bloque_fijo -> omega$ es #sigmaa.pr , con $S_1,dots,S_n c= omega$ y $L_1,dots,L_m c= #sigmaa.est$ no vacíos, entonces la función $quad lambda x y x-> alpha-> [ sum_(t=x)^(t=y) f(t,x->,alpha->)] quad$ es #sigmaa.pr
   ],
-  note: [hacer el caso $n=2$ y $m=1$],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#iteracion",
   [
     // Haremos el caso $n=2$ y $m=1$, osea que $f : omega X S_1 X S_2 X L_1 -> omega$, con $S_1, S_2 c= omega$ y $L_1 c= #sigmaa.est$. \
@@ -1505,7 +1504,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       lambda x x-> alpha-> [f(0,x->,alpha->)] = f compose [C_0^(n+1,m), p_2^(n+1,m), dots , p_(n+1+m)^(n+1,m)] \
       lambda A t x x-> alpha-> [A + f(t+1,x->,alpha->)] = lambda x y [x+y] compose [p_1^(n+3,m), f compose ["Suc" compose p_2^(n+3,m), p_4^(n+3,m), dots, p_(n+3+m)^(n+3,m)]]
     $
-    tenemos que ambas funciones son #sigmaa.pr
+    entonces tenemos que ambas funciones son #sigmaa.pr
     Resta ver que los conjuntos $D_1, D_2, H_1$ y $H_2$ son #sigmaa.pr \
     - *$D_1$ y $D_2$* : Como $f$ es #sigmaa.pr, por la #proposicion_caracterización_conjuntos_pr, tengo que \ $D_f = omega X S_1 X dots X S_n X L_1 X dots X L_m$ también es #sigmaa.pr. Ahora como \
       #box(width: 100%)[
@@ -1518,8 +1517,8 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     - *$H_1$ y $H_2$* : Como $f$ es #sigmaa.pr, por la #proposicion_caracterización_conjuntos_pr, tengo que \ $D_f = omega X S_1 X dots X S_n X L_1 X dots X L_m$ también es #sigmaa.pr. \ Entonces no es difícil ver que $R = omega^3 X S_1 X dots X S_n X L_1 X dots X L_m$ es #sigmaa.pr usando el #lema_caracterización_conjuntos_rectangulares_pr. Ahora como \
       #box(width: 100%)[
         $
-          chi^(omega^(n+3) X #sigmaa.est_m)_H_1 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R and lambda z t x x-> alpha-> [x > t+1]) \
-          chi^(omega^(n+3) X #sigmaa.est_m)_H_2 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R and lambda z t x x-> alpha-> [x <= t+1]) \
+          chi^(omega^(n+3) X #sigmaa.est_m)_H_1 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R quad and quad lambda z t x x-> alpha-> [x > t+1]) \
+          chi^(omega^(n+3) X #sigmaa.est_m)_H_2 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R quad and quad lambda z t x x-> alpha-> [x <= t+1]) \
         $
       ]
       por el #lema_op_predicados_pr, tenemos que $H_1$ y $H_2$ son #sigmaa.pr .
