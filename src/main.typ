@@ -77,7 +77,7 @@
     de la siguiente manera
 
     - $R(f, ~G~)(arrow(x), arrow(alpha), epsilon) = f(arrow(x), arrow(alpha))$
-    - $R(f, ~G~)(arrow(x), arrow(alpha), alpha a) = ~G~_a (R(f, ~G~)(arrow(x), arrow(alpha), alpha), alpha)$
+    - $R(f, ~G~)(arrow(x), arrow(alpha), alpha a) = ~G~_a ( med med R(f, ~G~)(arrow(x), arrow(alpha), alpha), med med arrow(x), arrow(alpha), med med alpha)$
 
     Diremos que $R(f, ~G~)$ es obtenida por _recursión primitiva_ a partir de $f$ y $~G~$.
   ],
