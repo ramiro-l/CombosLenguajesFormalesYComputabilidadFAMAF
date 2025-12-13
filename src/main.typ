@@ -2044,13 +2044,13 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       D_(M(P)) = { ~P~ in #ProSigma: (exists t in omega) med P(t, ~P~) = 1 } = { ~P~ in #ProSigma: "AutoHalt"^Sigma (~P~) = 1 } = A
     $
     Pero por la _Caracterización de conjuntos #sigmaa.re _(dada en el #link(<combo-6.2>)[_Combo 6.2_]) que entre otras cosas dice: un conjunto es #sigmaa.re sii es el dominio de alguna función #sigmaa.re. Entonces como $D_(M(P)) = A$ tenemos que *$A$ sí es #sigmaa.re* \
-    Supongamos ahora que $N$ es #sigmaa.re. Entonces por el _Lema de restricción de dominios de funciones #sigmaa.r _ (dado en el #link(<combo-7.2>)[_Combo 7.2_]) la función $C^(0,1)_0 |_N$ es #sigmaa.recursiva ya que $C^(0,1)_0$ lo es. Además como $A$ es #sigmaa.re, también lo es $C^(0,1)_0 |_A$.
+    Supongamos ahora que $N$ es #sigmaa.re. Entonces por el _Lema de restricción de dominios de funciones #sigmaa.r _ (dado en el #link(<combo-7.2>)[_Combo 7.2_]) la función $C^(0,1)_0 |_N$ es #sigmaa.recursiva ya que $C^(0,1)_0$ lo es. Análogamente como $A$ es #sigmaa.re, también lo es $C^(0,1)_1 |_A$.
     \
     \
     \
     Ahora sí, ya que
     $
-      "AutoHalt"^Sigma = C^(0,1)_0 |_A union C^(0,1)_0 |_N quad , quad A union N = #ProSigma quad y quad A inter N = emptyset
+      "AutoHalt"^Sigma = C^(0,1)_1 |_A union C^(0,1)_0 |_N quad , quad A union N = #ProSigma quad y quad A inter N = emptyset
     $
     por el #lema_division_por_casos_recursivas tenemos que $"AutoHalt"^Sigma$ es #sigmaa.recursiva, lo cual contradice el Lema anterior. Esto prueba que *$N$ no es #sigmaa.re* \
     Finalmente, supongamos que $A$ es #sigmaa.recursivo. Entonces el conjunto
