@@ -109,11 +109,11 @@
     [Defina $L(M)$],
     link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.1-el-paradigma-de-turing#el-lenguaje-lm",
     [
-      Sea $M$ una máquina de Turing. Diremos que una palabra $alpha in #sigmaa.est$ _es aceptada por $M$ por alcance final_ cuando
+      Sea $M$ una máquina de Turing. \ Diremos que una palabra $alpha in #sigmaa.est$ _es aceptada por $M$ por alcance de estado final_ cuando
       $ #text_floor($q_0B alpha$) |-* d", con "d" tal que St"(d) in F. $
       El *lenguaje aceptado por $M$ por alcance de estado final* se define de la siguiente manera:
       $
-        L(M) = {alpha in #sigmaa.est : alpha " es aceptada por "M" por alcance final"}
+        L(M) = {alpha in #sigmaa.est : alpha " es aceptada por "M" por alcance de estado final"}
       $
     ],
   )
