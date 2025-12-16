@@ -757,7 +757,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
   [
     Dados $n,m in omega$, definimos
     $
-      bold(#Halt_nm) = lambda t x-> alpha-> [ #i_nm (t,x->,alpha->) = n(~P~)+1]
+      bold(#Halt_nm) = lambda t x-> alpha-> ~P~ [ #i_nm (t,x->,alpha->) = n(~P~)+1]
     $
     Es decir que dado $(t, x->, alpha->, ~P~) in omega X #omega_sigma_n_m X #ProSigma$, tenemos que\
     $med med #Halt_nm (t, x->, alpha->, ~P~) = 1 quad$ sii $quad ~P~$ se detiene luego de $t$ pasos, partiendo del estado $||x_1,dots,x_n,alpha_1,dots,alpha_m||. med med$ \
@@ -1397,7 +1397,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     #box(width: 92%)[
       #set enum(numbering: "(a)", indent: 12.8pt)
       + $S$ es #sigmaa.efectivamente.computable.
-      + $S$ y $(#omega_sigma_n_m)-S$ son #sigmaa.enumerables
+      + $S$ y $(#omega_sigma_n_m)-S$ son #sigmaa.efectivamente.enumerables.
     ]
   ],
   note: [haga solo $(b) ==> (a)$. La prueba está al final de la Guía 3],

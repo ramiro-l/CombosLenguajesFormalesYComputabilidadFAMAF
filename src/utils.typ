@@ -43,6 +43,7 @@
     computable: [$Sigma$-efectivamente computable],
     computables: [$Sigma$-efectivamente computables],
     enumerable: [$Sigma$-efectivamente enumerable],
+    enumerables: [$Sigma$-efectivamente enumerables],
   ),
   turing: (
     computable: [$Sigma$-Turing computable],
