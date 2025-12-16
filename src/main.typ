@@ -1460,12 +1460,12 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     basta probar que $G$ es #sigmaa.pr Primero notar que
     $
         G(0,x,x->,alpha->) & = cases(
-                               0 #h(2.25cm) quad "si" x > 0,
-                               f(0,x->,alpha->) quad "si" x = 0
+                               0 #h(2.25cm) "si" x > 0,
+                               f(0,x->,alpha->) #h(25pt) "si" x = 0
                              ) \
       G(t+1,x,x->,alpha->) & = cases(
-                               0 #h(6.2cm) quad "si" x > t+1,
-                               G(t,x,x->,alpha->) + f(t+1,x->,alpha->) quad "si" x <= t+1
+                               0 #h(5cm) "si" x > t+1,
+                               G(t,x,x->,alpha->) + f(t+1,x->,alpha->)  #h(18pt) "si" x <= t+1
                              ) \
     $
     osea que si definimos
@@ -1489,8 +1489,8 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       D_1 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X dots X S_n X L_1 X dots X L_m : x > 0} \
       D_2 & = {(x, x_1, x_2, alpha_1) in omega X S_1 X dots X S_n X L_1 X dots X L_m : x = 0} \
-      H_1 & = {(z, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X dots X S_n X L_1 X dots X L_m : x > t+1} \
-      H_2 & = {(z, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X dots X S_n X L_1 X dots X L_m : x <= t+1} \
+      H_1 & = {(A, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X dots X S_n X L_1 X dots X L_m : x > t+1} \
+      H_2 & = {(A, t, x, x_1, x_2, alpha_1) in omega^3 X S_1 X dots X S_n X L_1 X dots X L_m : x <= t+1} \
     $
     Notar que
     $
@@ -1517,8 +1517,8 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     - *$H_1$ y $H_2$* : Como $f$ es #sigmaa.pr, por la #proposicion_caracterización_conjuntos_pr, tengo que \ $D_f = omega X S_1 X dots X S_n X L_1 X dots X L_m$ también es #sigmaa.pr. \ Entonces no es difícil ver que $R = omega^3 X S_1 X dots X S_n X L_1 X dots X L_m$ es #sigmaa.pr usando el #lema_caracterización_conjuntos_rectangulares_pr. Ahora como \
       #box(width: 100%)[
         $
-          chi^(omega^(n+3) X #sigmaa.est_m)_H_1 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R quad and quad lambda z t x x-> alpha-> [x > t+1]) \
-          chi^(omega^(n+3) X #sigmaa.est_m)_H_2 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R quad and quad lambda z t x x-> alpha-> [x <= t+1]) \
+          chi^(omega^(n+3) X #sigmaa.est_m)_H_1 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R quad and quad lambda A t x x-> alpha-> [x > t+1]) \
+          chi^(omega^(n+3) X #sigmaa.est_m)_H_2 = ( chi^(omega^(n+3) X #sigmaa.est_m)_R quad and quad lambda A t x x-> alpha-> [x <= t+1]) \
         $
       ]
       por el #lema_op_predicados_pr, tenemos que $H_1$ y $H_2$ son #sigmaa.pr .
