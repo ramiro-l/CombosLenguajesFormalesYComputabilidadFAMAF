@@ -2162,7 +2162,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
       [med "V2" <- f_1("V1", "W1") med]
       quad
-      [med "V3" <- f_2("V1", "W1") med]
+      [med "V2" <- f_2("V1", "W1") med]
     $
     Con todo esto definimos el siguiente programa $~P~$ de #SSigma
     #show math.equation.where(block: true): set par(leading: 0.55em)
@@ -2171,9 +2171,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
                 & [med "IF Halt"^(1,1) ("N10", "N1", "P1", ~P~_1) "GOTO L2" med] \
                 & [med "IF Halt"^(1,1) ("N10", "N1", "P1", ~P~_2) "GOTO L3" med] \
                 & "GOTO L1" \
-      "L2" quad & [med "N1" <- f_1("N1", "N1") med] \
+      "L2" quad & [med "N1" <- f_1("N1", "P1") med] \
                 & "GOTO L4" \
-      "L3" quad & [med "N1" <- f_2("N1", "N1") med] \
+      "L3" quad & [med "N1" <- f_2("N1", "P1") med] \
       "L4" quad & "SKIP" \
     $
     el cual claramente computa $f_1 union f_2$, ya que si corremos $~P~$ partiendo del estado $||x_1,alpha_1||$, tenemos dos casos
