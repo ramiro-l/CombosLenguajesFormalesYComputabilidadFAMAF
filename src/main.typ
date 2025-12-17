@@ -351,7 +351,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
                   D_(M(P)) & = {
                                (x->, alpha->) in #omega_sigma_n_m : (exists t in omega) P(t, x->, alpha->) = 1
                              } \
-        M(P)(x->, alpha->) & = min_t P(t, x->, alpha->)", para cada" (x->, alpha->) in D_(M(P))
+        M(P)(x->, alpha->) & = min_t P(t, x->, alpha->), quad "para cada" quad (x->, alpha->) in D_(M(P))
       $
       // Diremos que _$M(P)$ se obtiene por minimización de variable numérica a partir de $P$_.
     ],
@@ -644,7 +644,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
                 D_(M<(P)) & = {
                               (x->, alpha->) in #omega_sigma_n_m : (exists alpha in #sigmaa.est) P(x->, alpha->, alpha) = 1
                             } \
-      M<(P)(x->, alpha->) & = min_alpha P(x->, alpha->, alpha)", para cada" (x->, alpha->) in D_(M<(P))
+      M<(P)(x->, alpha->) & = min_alpha P(x->, alpha->, alpha), quad "para cada" quad (x->, alpha->) in D_(M<(P))
     $
     // Diremos que _$M<(P)$ se obtiene por minimización de variable alfabética a partir de $P$_.
   ],
@@ -1824,7 +1824,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       - Si alguna verificación *no* es cierta, se vuelve a la línea 1 y repite el proceso con nuevos candidatos.
     ]
     Finalmente, como $F = [F_((1)), F_((2)), F_((3)), F_((4))]$ y $I_F = S$, $~P~$ se detiene sólo cuando $(x_1, x_2, alpha_1, alpha_2) in S$. \
-    Sabiendo esto, es fácil ver que computa la función $p^(2,2)_1|_S$. Entonces, listo porque $p^(2,2)_1|_S$ es #sigmaa.computable, por lo cual es #sigmaa.recursiva por el #teorema_godel_vence_neumann y trivialmente $"Dom"(p^(2,2)_1|_S) = S$. #fin_demo
+    Sabiendo esto, es fácil ver que computa la función $p^(2,2)_1|_S$. Entonces, listo porque $p^(2,2)_1|_S$ es #sigmaa.computable, por lo cual es #sigmaa.recursiva por el #teorema_godel_vence_neumann y trivialmente $D_(p^(2,2)_1|_S) = S$. #fin_demo
   ],
 )
 
