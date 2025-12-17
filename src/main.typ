@@ -1125,8 +1125,13 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     *($==>$)* Notar que $S = D_("Pred" med compose med chi_S^#omega_sigma_n_m) med$ #footnote([El truco está en que $D_("Pred") = omega - {0}$ por lo tanto cada vez que $(x->,alpha->) in.not S$ (i.e. $chi_S^#omega_sigma_n_m (x->,alpha->) = 0$), $(x->,alpha->) in.not D_("Pred" compose chi_S^#omega_sigma_n_m)$]) y $"Pred" med compose med chi_S^#omega_sigma_n_m$ es claramente #sigmaa.pr ya que $S$ lo es.
 
     *($<==$)* Probaremos por inducción sobre $k$ que para cada $F in #PRSigma_k$,  $D_F$ es #sigmaa.pr \
-    El caso $k=0$, es fácil ya que $#PRSigma _0 = {"Suc","Pred", C_0^(0,0), C_epsilon^(0,0)} union {d_a : a in Sigma} union {p_j^(n,m) : 1<=j<=n+m}$ y
-    $D_"Suc" = omega, D_"Pred" = NN, D_(C_0^(0,0)) = D_(C_epsilon^(0,0)) = {lozenge.stroked} med"y"med D_(p_j^(n,m)) = #omega_sigma_n_m$, que claramente son todos #sigmaa.pr \ Por lo tanto supongamos que vale para un $k$ fijo y veamos que se cumple también para $F in #PRSigma_k1$. \ Hay varios casos. Veamos el caso que $F = g compose [g_1,dots,g_r]$ con $g,g_1,dots,g_r in #PRSigma_k$.\
+    El caso $k=0$, es fácil ya que $#PRSigma _0 = {"Suc","Pred", C_0^(0,0), C_epsilon^(0,0)} union {d_a : a in Sigma} union {p_j^(n,m) : 1<=j<=n+m}$ y \
+    #box(width: 100%, height: 10pt)[
+      $
+        D_"Suc" = omega, quad D_"Pred" = NN, quad D_(C_0^(0,0)) = D_(C_epsilon^(0,0)) = {lozenge.stroked}, quad D_d_a = #sigmaa.est quad "y" quad D_(p_j^(n,m)) = #omega_sigma_n_m
+      $
+    ] \
+    que claramente son todos #sigmaa.pr \ Por lo tanto supongamos que vale para un $k$ fijo y veamos que se cumple también para $F in #PRSigma_k1$. \ Hay varios casos. Veamos el caso que $F = g compose [g_1,dots,g_r]$ con $g,g_1,dots,g_r in #PRSigma_k$.\
     Si $F = emptyset$, entonces es claro que $D_F$ es #sigmaa.pr \
     Si $F != emptyset$, tenemos entonces que $r$ es de la forma $n+m$ y
     $
@@ -1465,7 +1470,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
                              ) \
       G(t+1,x,x->,alpha->) & = cases(
                                0 #h(5cm) "si" x > t+1,
-                               G(t,x,x->,alpha->) + f(t+1,x->,alpha->)  #h(18pt) "si" x <= t+1
+                               G(t,x,x->,alpha->) + f(t+1,x->,alpha->) #h(18pt) "si" x <= t+1
                              ) \
     $
     osea que si definimos
