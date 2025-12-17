@@ -2186,7 +2186,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       - $(x_1,alpha_1) in D_(f_1 union f_2)$, entonces en alguna cantidad de pasos se va cumplir alguno de los dos $"IF"$ #comentario[(nunca ambos ya que $D_f_1 inter D_f_2 = emptyset$)] y se va a detener retornando $f_1(x_1,alpha_1)$ o $f_2(x_1,alpha_1)$, según corresponda.
       - $(x_1,alpha_1) in.not D_(f_1 union f_2)$, entonces nunca se van a cumplir los $"IF"$, por lo tanto $~P~$ nunca va a detenerse.
     ]
-    por lo tanto *$f_1 union f_2$ es #sigmaa.computable.* #fin_demo
+    por lo tanto *$f_1 union f_2$ es #sigmaa.computable.* entonces por #teorema_neumann_vence_godel es #sigmaa.recursiva. #fin_demo
   ],
 )
 
