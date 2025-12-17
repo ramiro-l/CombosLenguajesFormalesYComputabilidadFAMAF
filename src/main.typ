@@ -77,7 +77,7 @@
     de la siguiente manera
 
     - $R(f, ~G~)(arrow(x), arrow(alpha), epsilon) = f(arrow(x), arrow(alpha))$
-    - $R(f, ~G~)(arrow(x), arrow(alpha), alpha a) = ~G~_a ( med med R(f, ~G~)(arrow(x), arrow(alpha), alpha), med med arrow(x), arrow(alpha), med med alpha)$
+    - $R(f, ~G~)(arrow(x), arrow(alpha), alpha a) = ~G~_a (med R(f, ~G~)(arrow(x), arrow(alpha), alpha), med arrow(x), arrow(alpha), med alpha)$
 
     Diremos que $R(f, ~G~)$ es obtenida por _recursión primitiva_ a partir de $f$ y $~G~$.
   ],
@@ -110,7 +110,7 @@
     link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.1-el-paradigma-de-turing#el-lenguaje-lm",
     [
       Sea $M$ una máquina de Turing. \ Diremos que una palabra $alpha in #sigmaa.est$ _es aceptada por $M$ por alcance de estado final_ cuando
-      $ #text_floor($q_0B alpha$) |-* d", con "d" tal que St"(d) in F. $
+      $ #text_floor($q_0B alpha$) |-* d, med "con" med d "tal que" "St"(d) in F. $
       El *lenguaje aceptado por $M$ por alcance de estado final* se define de la siguiente manera:
       $
         L(M) = {alpha in #sigmaa.est : alpha " es aceptada por "M" por alcance de estado final"}
@@ -134,7 +134,7 @@
     [
       Dado $x in NN$, usaremos *$(x)$* para denotar a la única infinitupla $(s_1, s_2, dots) in omega^(#text_floor($NN$))$ tal que
       $
-        x = << s_1, s_2, dots >> = product_(i=1)^(infinity) "pr"(i)^(s_i) quad "donde pr"(i)" es el i-ésimo primo."
+        x = << s_1, s_2, dots >> = product_(i=1)^(infinity) "pr"(i)^(s_i) quad "donde " "pr"(i)" es el i-ésimo primo."
       $
     ],
   )
@@ -327,7 +327,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           ]
       ]
 
-      Si $M$ y $f$ cumplen los items (1) y (2), diremos que *"la maquina de Turing $M$ computa a la función $f$"*.
+      Si $M$ y $f$ cumplen los items (1) y (2), diremos que *"la máquina de Turing $M$ computa a la función $f$"*.
     ],
   )
 
@@ -510,8 +510,8 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       #show math.equation.where(block: true): set par(leading: 1pt)
       $
         #SP (i, s->, sigma->) & = "descripción instantánea que resulta luego de " \
-                              & quad med "realizarp"^""^#footnote[
-                                  El verbo "realizarp" una actividad es realizarla si se puede.
+                              & quad med "realizar"^""^#footnote[
+                                  El verbo "realizar" una actividad es realizarla si se puede.
                                 ]" " I_i^(~P~), "estando en el estado" (s->, sigma->)
       $
       Para definirla formalmente damos los siguientes casos \
@@ -795,7 +795,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
       bold(#AutoHalt) = lambda ~P~ [(exists t in omega) italic("Halt"^(0,1)) (t, ~P~, ~P~)]
     $
     // Notar que el dominio de #AutoHalt es #ProSigma (es interesante porque está probado que *no es* #sigmaa.recursivo).
-    Pensándolo de otra manera, podemos decir que para cada $~P~ in ProSigma$ tenemos que
+    Pensándolo de otra manera, podemos decir que para cada $~P~ in #ProSigma$ tenemos que
     $ #AutoHalt (~P~) = 1 bold("si y solo si") ~P~ "se detiene partiendo del estado" ||~P~|| "(i.e de sí mismo)" $
 
   ],
@@ -1570,7 +1570,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
         ]
       ],
     )
-    y por ello $bold("R("f",")~G~)$* es #sigmaa.efectivamente.computable*. #fin_demo
+    y por ello *$bold("R("f",")~G~)$ es #sigmaa.efectivamente.computable*. #fin_demo
   ],
 )
 /*
@@ -1817,9 +1817,9 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
     $
     es fácil entender el programa si lo ves por partes y teniendo en cuenta que toma como entrada $(x_1, x_2, alpha_1, alpha_2)$\
     #box(inset: (top: 3pt, bottom: 3pt))[
-      - La línea 2 genera un candidato $t$ a cantidad de pasos.
-      - Las líneas 3 y 4 generan un candidato $(y_1, gamma_2)$ para la entrada de los $F_((i))$.
-      - Las líneas del 5 al 8 verifican si $F_((1))$, $F_((2))$, $F_((3))$ y $F_((4))$ se detienen en $t$ pasos, con la entrada $(y_1, gamma_2)$.
+      - La línea 1 incrementa N20 para generar nuevos candidatos.
+      - Las líneas 2, 3 y 4 decodifican N20 generando candidatos $t$ (cantidad de pasos), $y_1$ y $gamma_1$ para la entrada de los $F_((i))$.
+      - Las líneas del 5 al 8 verifican si $F_((1))$, $F_((2))$, $F_((3))$ y $F_((4))$ se detienen en $t$ pasos, con la entrada $(y_1, gamma_1)$.
       - Las líneas del 9 al 12 verifican si $F_((1))$, $F_((2))$, $F_((3))$ y $F_((4))$ devuelven $x_1, x_2, alpha_1$ y $alpha_2$ respectivamente.
       - Si alguna verificación *no* es cierta, se vuelve a la línea 1 y repite el proceso con nuevos candidatos.
     ]
