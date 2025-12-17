@@ -159,7 +159,7 @@
 
 #definitionStructure(
   1,
-  [Defina cuando un conjunto $S subset.eq #omega_sigma_n_m$ es llamado *#sigmaa.recursivamente.enumerable*.],
+  [Defina cuando un conjunto $S c= #omega_sigma_n_m$ es llamado *#sigmaa.recursivamente.enumerable*.],
   note: [no hace falta que defina "función #sigmaa.recursiva".],
   link_apunte: "https://apunte-lenguajes-logica.netlify.app/4.2-el-paradigma-de-godel-funciones-sigma-recursivas#conjuntos-sigma-recursivamente-enumerables",
   [
@@ -1181,7 +1181,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           "N"1 <- "N"1 + 1
         $,
         $
-               & "IF N1 "!=" 0 GOTO L2" \
+               & "IF N1" != "0 GOTO L2" \
           "L1" & "GOTO L1" \
           "L2" & "N1" <- "N"1 #menos_punto 1
         $,
@@ -2085,7 +2085,7 @@ En los combos 4, 5 y 6 usamos la *definición de procedimiento efectivo* que est
           "N"1 <- "N"1 + 1
         $,
         $
-               & "IF N1 "!=" 0 GOTO L2" \
+               & "IF N1" != "0 GOTO L2" \
           "L1" & "GOTO L1" \
           "L2" & "N1" <- "N"1 #menos_punto 1
         $,
